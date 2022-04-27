@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ghiblify",
+  "version": "1.0.0",
+  "short_name": "ghiblify",
+  "options_page": "options.html",
+  "description": "add some ghibli magic into your everyday life",
+  "permissions": ["storage", "bookmarks", "tabs", "geolocation"],
+  "icons": {
+    "48": "icons/heen48.png",
+    "128": "icons/heen128.png"
+  },
+  "action": {
+   "default_title": "Test",
+   "default_popup": "options.html"
+ },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}

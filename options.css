@@ -1,0 +1,129 @@
+body {
+  width: 300px;
+  margin: 0.5;
+  padding: 1.5em;
+  color: black;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+#h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0.4em;
+	color:white;
+	text-align: center;
+}
+#h2 {
+  font-size: 1.2em;
+  font-weight: 100;
+  margin: 0.2;
+	color:white;
+	text-align: center;
+}
+#h3 {
+	font-size: 1.2em;
+  font-weight: 100;
+  margin: 1em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	color:white;
+	text-align:left;
+}
+#h4 {
+	font-size: 1em;
+  font-weight: 100;
+	padding-left:0.4em;
+	text-align:center;
+  /* margin: 1em;
+	padding-left: 0.8em;
+	padding-right: 0.8em; */
+	color:white;
+}
+#container {
+	/* padding-left:2em;
+	padding-right: 2em; */
+}
+
+/* body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+	color: white;
+} */
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label-text {
+  margin-left: 20px;
+	color: white;
+	font-weight: 100;
+
+}
+
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 24px;
+  width: 48px;
+  border-radius: 15px;
+  background: #808080;
+  overflow: hidden;
+}
+
+.toggle-inner {
+  z-index: 2;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 22px;
+  width: 46px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+img {
+  max-width:5em;
+  vertical-align:middle;
+  text-align:center;
+}
+.active-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  background: #4ee44e;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.05s linear 0.17s;
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: white;
+  border-radius: 13px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+.toggle-state:checked ~ .active-bg {
+   transform: translate3d(-50%, 0, 0);
+}
+
+.toggle-state:checked ~ .toggle-inner .indicator {
+   transform: translate3d(25%, 0, 0);
+}

@@ -1,0 +1,251 @@
+<!-- immense credit to suitangi https://suitangi.github.io/Minimal-Newtab/ - using minimal tab as basis for this extension -->
+
+  <!DOCTYPE html>
+  <html>
+  <!-- head, scripts and fonts -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>New Tab</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" href="styles/jquery-confirm.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
+    <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+    <script type="text/javascript" src="scripts/weather.js"></script>
+    <script type="text/javascript" src="scripts/hidetoggle.js"></script>
+  </head>
+
+  <body>
+
+    <!-- the backgrond cinemagraph (video) -->
+    <div class="backloader" ID="backloader" style="">
+      <div ID="progress-line"></div>
+      <img src="" ID="backdropimg" class="backdrop" draggable="false" width="100%">
+      <video ID="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- the left side menu -->
+    <div ID="menu">
+
+      <!-- the menu for widgets -->
+      <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">widgets</div>
+      <div ID="infoMenuItem">
+        <div class="menuText">⏰ time ⏰</div>
+        <div class="sliderWrapper">
+          <label class="switch">
+            <input type="checkbox" ID="timeSwitch" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div ID="infoMenuItem">
+        <div class="menuText">🔍 search bar 🔍</div>
+        <div class="sliderWrapper">
+          <label class="switch">
+            <input type="checkbox" ID="searchSwitch" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div ID="infoMenuItem">
+        <div class="menuText" ID="infoMenuText">🍿 movie info 🍿</div>
+        <div class="sliderWrapper">
+          <label class="switch">
+            <input type="checkbox" ID="infoSwitch" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div ID="infoMenuItem">
+        <div class="menuText" ID="infoMenuText">📝 todo 📝</div>
+        <div class="sliderWrapper">
+          <label class="switch">
+            <input type="checkbox" ID="todoSwitch" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="menuText" style="color: transparent !important">.</div><!-- blank space divide -->
+
+      <!-- the menu for effects -->
+      <div class="menuText" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">effects</div>
+      <div class="menuText">
+        <div class="menuText">brightness</div>
+        <div class="slidecontainer">
+          <input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
+        </div>
+      </div>
+      <div class="menuText">
+        <div class="menuText">saturation</div>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
+        </div>
+      </div>
+      <div class="menuText">
+        <div class="menuText">contrast</div>
+        <div class="slidecontainer">
+          <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
+        </div>
+      </div>
+      <div class="menuText">
+        <div class="menuText">blur</div>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
+        </div>
+      </div>
+
+      <!-- the menu for background -->
+      <div class="menuText backgroundMenu" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">background</div>
+      <div ID="backgroundMenu" class="backgroundMenu">
+        <div ID="favoriteSlider">
+          <div class="menuText">favorites</div>
+          <div class="sliderWrapper">
+            <label class="switch">
+              <input type="checkbox" ID="favSwitch">
+              <span class="slider round"></span>
+            </label> </div>
+        </div>
+      </div>
+      <div class="menuText backgroundMenu" style="color: transparent !important">.</div><!-- blank space divide -->
+
+      <!-- favorite button -->
+      <div class="menuText">
+        <div class="sliderWrapper">
+          <div class="like-button">
+            <i class="material-icons not-liked bouncy md-36">favorite_border</i>
+            <i class="material-icons is-liked bouncy md-36">favorite</i>
+          </div>
+        </div>
+      </div>
+      <div class="menuText">
+        <!-- delete button -->
+        <div class="sliderWrapper">
+          <div class="delete-button">
+            <i class="material-icons not-deleted bouncy md-36">delete_outline</i>
+            <i class="material-icons is-deleted bouncy md-36">delete</i>
+          </div>
+        </div>
+      </div>
+      <div class="menuText backgroundMenu" style="color: transparent !important">.</div><!-- blank space divide -->
+
+
+      <!-- Buttons -->
+      <div class="menuText" style="color: transparent !important">.</div><!-- blank space divide -->
+      <div class="sliderWrapper buttonWrapper" >
+        <button ID="advButton" class="button">
+          <i class="material-icons buttIcons md-36">settings</i>
+        </button>
+      </div>
+      <div class="sliderWrapper buttonWrapper">
+        <button ID="aboutButton" class="button">
+          <i class="material-icons buttIcons md-36">info</i>
+        </button>
+      </div>
+      <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div><!-- blank space divide -->
+
+    </div>
+
+    <!-- the time widget -->
+    <div class="timeWrapper" ID="timeWrapper">
+      <h1 class="time" ID="time"></h1>
+      <div class="pa" ID="pa"></div>
+    </div>
+
+    <!-- the info widget -->
+    <div class="infoWrapper" ID="infoWrapper">
+      <div class="info" ID="info"></div>
+    </div>
+
+    <!-- the search bar widget -->
+    <div class="searchWrapper" ID="searchWrapper">
+      <div class="searchDiv" ID="searchDiv"></div>
+      <form id=search action="https://www.google.com/search" method="get">
+        <input id="searchInput" class="search" data-placeholder=" Google Search" type="searh" name="q" autocomplete="off" />
+        <input type="submit" style="display: none;" />
+      </form>
+      <div id="searchChange">⯈</div>
+    </div>
+
+    <!-- todo list widget -->
+    <div class="todoWrapper" ID="todoWrapper">
+      <div class="todoHover">
+        <div ID="todoDiv" class="header">
+          <h2 style="margin:5px">to-do list</h2>
+        </div>
+        <ul ID="myUL">
+        </ul>
+        <input class="todoInput" autocomplete="off" type="text" id="todoInput" style="display: none;" placeholder="New Item . . ." />
+      </div>
+    </div>
+
+    <!-- the rightMenus side panel -->
+  <div ID="rightMenus">
+    <div id="menuText" class = "top-space">
+      <div class="breathe-box" id="content2">
+        <center><img src="icons/breathe1.gif" width = "150"/></center>
+      </div>
+
+      <div class="break"/>
+      <div class="weather-box" id="content1">
+          <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">weather</div>
+          <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 15px !important;font-weight: 500;">now</div>
+
+            <ol class="weather-icon"><img src="icon/unknown.gif" width = "70"/></ol>
+            <div id="weather" style="color: rgba(255,255,255,0.8)"></div>
+            <ol id="temperature" style="!important; color: rgba(255,255,255,0.8) !important; font-size: 20px !important;font-weight: 700;"></ol>
+            <ol id="description" style="color: rgba(255,255,255,0.8)"></ol>
+            <ol id="location" style="color: rgba(255,255,255,0.8)"></ol>
+            <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
+        </div>
+      <div class="break"/>
+      <div class="widget-box" id="content">
+        <center><img src="icons/radish.gif" width = "300"/></center>
+      </div>
+      <div class="break"/>
+
+        <div class="centeredwidget">
+          <p>breathe off</p>
+          <label class="switch">
+              <input type='checkbox' id='hideshow2'>
+              <span class="slider round"></span>
+          </label>
+
+        <div class="break"/>
+
+          <p>weather off</p>
+          <label class="switch">
+              <input type='checkbox' id='hideshow1'>
+              <span class="slider round"></span>
+          </label>
+
+      <div class="break">
+
+        <p>gif off</p>
+        <label class="switch">
+            <input type='checkbox' id='hideshow'>
+            <span class="slider round"></span>
+        </label>
+      <div class="break">
+      </div>
+    </div>
+  </div>
+    <ol id="bkList"></ol>
+  </div>
+</div>
+
+
+  </body>
+        <script src="weather.js"></script>
+  </html>
