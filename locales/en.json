@@ -1,0 +1,212 @@
+{
+  "time-name": {
+    "message": "time",
+    "description": "time (clock) widget toggle title in the menu."
+  },
+  "search-bar-name": {
+    "message": "search bar",
+    "description": "search bar widget toggle title in the menu."
+  },
+  "to-do-list-name": {
+    "message": "to-do List",
+    "description": "to do list widget toggle title in the menu and on the widget itself"
+  },
+  "background-title": {
+    "message": "background",
+    "description": "background (section title in menu) and others"
+  },
+  "favorites-title": {
+    "message": "favorites",
+    "description": "favorites, in menu and others"
+  },
+  "effects-title": {
+    "message": "effects",
+    "description": "Effects section title in the menu"
+  },
+  "brightness": {
+    "message": "brightness",
+    "description": "brightness effect in the menu"
+  },
+  "saturation": {
+    "message": "saturation",
+    "description": "saturation effect in the menu"
+  },
+  "contrast": {
+    "message": "contrast",
+    "description": "contrast effect in the menu"
+  },
+  "blur": {
+    "message": "blur",
+    "description": "blur effect in the menu"
+  },
+  "advanced-options": {
+    "message": "advanced options",
+    "description": "advanced options in the menu"
+  },
+  "about-this-extension": {
+    "message": "about this Extension",
+    "description": "about this extension button in the menu"
+  },
+  "bookmark-title": {
+    "message": "bookmarks",
+    "description": "title of bookmark section"
+  },
+  "time-menu-desc": {
+    "message": "toggles the time display",
+    "description": "menu description of time toggle"
+  },
+  "seach-menu-desc": {
+    "message": "toggles the search bar",
+    "description": "menu description of search bar toggle"
+  },
+  "info-menu-desc": {
+    "message": "toggles the $info",
+    "description": "menu description of info name toggle"
+  },
+  "todo-menu-desc": {
+    "message": "toggles the to-do list",
+    "description": "menu description of todo list toggle"
+  },
+  "source-menu-desc": {
+    "message": "toggles backgrounds from $source",
+    "description": "menu description of sources toggle"
+  },
+  "fav-menu-desc": {
+    "message": "toggles your favorite backgrounds",
+    "description": "menu description of favorites toggle"
+  },
+  "fav-button-desc": {
+    "message": "add or remove this background from your favorites",
+    "description": "menu description of favorites button"
+  },
+  "remove-button-desc": {
+    "message": "remove this background",
+    "description": "menu description of remove button"
+  },
+  "brightness-desc": {
+    "message": "adjust the brightness of the background",
+    "description": "menu description of brightness slider"
+  },
+  "saturation-desc": {
+    "message": "adjust the saturation of the background",
+    "description": "menu description of saturation slider"
+  },
+  "contrast-desc": {
+    "message": "adjust the contrast of the background",
+    "description": "menu description of contrast slider"
+  },
+  "blur-desc": {
+    "message": "adjust the blurring of the background",
+    "description": "menu description of blur slider"
+  },
+  "no-source-title": {
+    "message": "no background sources selected",
+    "description": "title of no source selected message"
+  },
+  "no-source-content": {
+    "message": "a default background was loaded. Please select a source in the left hand menu, and then refresh the page.",
+    "description": "content of no source selected message"
+  },
+  "too-many-removed-title": {
+    "message": "too many backgrounds removed",
+    "description": "title of too many backgrounds removed message"
+  },
+  "too-many-removed-content": {
+    "message": "a default background was loaded. you have removed all backgrounds in the sources you selected, you can reset your removed backgrounds or select more background sources.",
+    "description": "content of too many backgrounds removed message"
+  },
+  "too-many-removed-reset": {
+    "message": "reset my removed backgrounds",
+    "description": "reset button of too many backgrounds removed message"
+  },
+  "remove-bg-title": {
+    "message": "are you sure?",
+    "description": "title of remove background message"
+  },
+  "remove-bg-content": {
+    "message": "this will remove the background. you can't undo this action unless you reset the extension with the reset button in the menu.",
+    "description": "content of remove background message"
+  },
+  "remove-bg-confirm": {
+    "message": "remove this background",
+    "description": "confirm button of remove background message"
+  },
+  "cancel": {
+    "message": "cancel",
+    "description": "cancel button on messages"
+  },
+  "no-fav-title": {
+    "message": "no favorites",
+    "description": "title of no favorites message"
+  },
+  "no-fav-content": {
+    "message": "you don't have any favorite backgrounds. to add backgrounds to favorites, scroll down the menu and click the heart when you see a background you like.",
+    "description": "content of no favorites message"
+  },
+  "okay": {
+    "message": "okay",
+    "description": "okay button on messages"
+  },
+  "reset-title": {
+    "message": "are you sure you want to reset your data?",
+    "description": "title of reset message"
+  },
+  "reset-content": {
+    "message": "choose what data you would like to reset: ",
+    "description": "content of reset message"
+  },
+  "reset-widget-location": {
+    "message": "widgets Location",
+    "description": "widgets location option of reset menu"
+  },
+  "reset-widget-data": {
+    "message": "widgets Preferences and Data",
+    "description": "widgets pref and data option of reset menu"
+  },
+  "reset-fav-backgrounds": {
+    "message": "favrite backgrounds",
+    "description": "favorite backgrounds option of reset menu"
+  },
+  "reset-removed-backgrounds": {
+    "message": "removed backgrounds",
+    "description": "removed backgrounds option of reset menu"
+  },
+  "reset-warning": {
+    "message": "this action cannot be undone!",
+    "description": "warning line of reset menu"
+  },
+  "reset-confirm": {
+    "message": "i understand, reset",
+    "description": "confirm button of reset menu"
+  },
+  "ui-animations": {
+    "message": "ui aniamtions",
+    "description": "ui animation option in advanced options"
+  },
+  "ui-animations-desc": {
+    "message": "toggles ui and widget animations",
+    "description": "ui animation option description in advanced options"
+  },
+  "avoid-repeats": {
+    "message": "avoid repeats",
+    "description": "avoid repeats option in advanced options"
+  },
+  "avoid-repeats-desc": {
+    "message": "avoid repeats of backgrounds",
+    "description": "avoid repeats option description in advanced options"
+  },
+  "auto-pause-background": {
+    "message": "auto-Pause background",
+    "description": "auto-Pause background option in advanced options"
+  },
+  "auto-pause-background-desc": {
+    "message": "automatically pause animated backgrounds when tab is not active",
+    "description": "auto-Pause background option description in advanced options"
+  },
+  "no-internet-title": {
+    "message": "no internet access. Please check your connection and try again.",
+    "description": "title of no internet message"
+  }
+
+
+}
