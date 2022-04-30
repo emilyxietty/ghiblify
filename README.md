@@ -2,13 +2,12 @@
 
 #   ![heen-small](https://user-images.githubusercontent.com/40601891/165597566-3c6fa7fa-0553-4ec2-80cc-bee568ce7a6b.gif) ghiblify2 new tab chrome extension
 
-Replace new tab page with a personal, studio ghibli-inspired tab, tailored to your liking. Every refresh is another chance for another picture. This page is flexible to many preferences, allowing you to get the most out of every new tab.<br><br>
+Replace new tab page with a personal, studio ghibli-inspired tab, tailored to your liking. Every refresh is another chance for another picture. This page is flexible to many preferences, allowing you to get the most out of every new tab.<br>
 
-I was always inspired to make this because I was always a bit sad that many commonly used new tab chrome extensions had paywalls that stopped me from further customizing my themes. This hit the nail on the head. 
+I was always inspired to make this because I was always a bit sad that many commonly used new tab chrome extensions had paywalls that stopped me from further customizing my themes. Studio Ghibli is nostalgic and soothing, known for Hayao Miyazaki's captivating visual style. They recently (in 2020/2021) released 1,000 pictures for personal use, making this extension possible. <br>
 
-UPDATE 1.0.1: right hand side is now transparent, customize your widgets, smaller weather screen, lofi girl study music, fixed toggle switches.
+**UPDATE 1.0.1: ** right hand side is now transparent, customize your widgets, smaller weather screen, lofi girl study music, fixed toggle switches, testing mindfulness beta.
 
-Studio Ghibli is nostalgic and soothing, known for Hayao Miyazaki's captivating visual style. <br><br>
 ✨ Features ✨ <br>
 🌄 Curated collection of studio ghibli photos <br>
 🌄 Easy access customization bar on left when you move your mouse left<br>
