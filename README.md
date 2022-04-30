@@ -2,6 +2,10 @@
 
 Replace new tab page with a personal, studio ghibli-inspired tab, tailored to your liking. Every refresh is another chance for another picture. This page is flexible to many preferences, allowing you to get the most out of every new tab.<br><br>
 
+I was always inspired to make this because I was always a bit sad that many commonly used new tab chrome extensions had paywalls that stopped me from further customizing my themes. This hit the nail on the head. 
+
+UPDATE 1.0.1: right hand side is now transparent, customize your widgets, smaller weather screen, lofi girl study music, fixed toggle switches.
+
 Studio Ghibli is nostalgic and soothing, known for Hayao Miyazaki's captivating visual style. <br><br>
 ![marquee-giblify](https://user-images.githubusercontent.com/40601891/165597366-b27eea5b-948d-4dbc-a2e3-c51e4909afc5.png)
 
