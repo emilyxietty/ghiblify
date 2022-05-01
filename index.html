@@ -6,23 +6,44 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>New Tab</title>
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/jquery-confirm.min.css">
     <link rel="stylesheet" href="styles/jquery-ui.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
     <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-confirm.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="scripts/weather.js"></script>
     <script type="text/javascript" src="scripts/hidetoggle.js"></script>
+    <script type="text/javascript" src="scripts/audio.js"></script>
+
   </head>
 
   <body>
@@ -36,122 +57,191 @@
       </video>
     </div>
 
+
     <!-- the left side menu -->
     <div ID="menu">
+      <!-- <div ID="infoMenuItem"> -->
+      <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 0.9em !important;font-weight: 300">credit goes to</div>
 
+        <div class="sliderWrapper">
+
+        <div ID="buttonsmore">
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+
+          <a role="button" class="btn btn-outline-light" href="https://www.ghibli.jp/works/" target="_blank">studio ghibli<br>works</a>
+          <a role="button" class="btn btn-outline-light" href="https://mienar.com/" target="_blank">mienar<br>works</a>
+        <!-- </div>-->
+        <!-- <br> -->
+        <!--<div class="btn-group" role="group" aria-label="Basic example"> -->
+          <a role="button" class="btn btn-outline-light"href="https://github.com/emilyxietty" target="_blank">emilyxietty<br>github</a>
+          <a role="button" class="btn btn-outline-light"href="https://github.com/suitangi/Minimal-Newtab" target="_blank">suitangi<br>github</a>
+        </div>
+        </div>
+      </div>
+      <br>
+      <!-- </div> -->
       <!-- the menu for widgets -->
-      <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">widgets</div>
+      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 1em !important;font-weight: 700;">widgets</div> -->
       <div ID="infoMenuItem">
-        <div class="menuText">⏰ time ⏰</div>
+        <!-- <div class="menuText">⏰ time ⏰</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="timeSwitch" checked>
             <span class="slider round"></span>
-          </label>
+          </label>        <span class="menuText">⏰ time</span>
+
         </div>
       </div>
+
       <div ID="infoMenuItem">
-        <div class="menuText">🔍 search bar 🔍</div>
+        <!-- <div class="menuText">🔍 search bar 🔍</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="searchSwitch" checked>
             <span class="slider round"></span>
-          </label>
+          </label>         <span class="menuText">🔍 search bar</span>
+
         </div>
       </div>
       <div ID="infoMenuItem">
-        <div class="menuText" ID="infoMenuText">🍿 movie info 🍿</div>
+        <!-- <div class="menuText" ID="infoMenuText">🍿<3 movie info 🍿</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="infoSwitch" checked>
             <span class="slider round"></span>
-          </label>
+          </label>        <span class="menuText" ID="infoMenuText">🍿 movie info 🍿</span>
+
         </div>
       </div>
       <div ID="infoMenuItem">
-        <div class="menuText" ID="infoMenuText">📝 todo 📝</div>
+        <!-- <div class="menuText" ID="infoMenuText">📝 todo</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="todoSwitch" checked>
             <span class="slider round"></span>
-          </label>
+          </label>        <span class="menuText" ID="infoMenuText">📝 todo</span>
+
         </div>
       </div>
-      <div class="menuText" style="color: transparent !important">.</div><!-- blank space divide -->
+      <div class="sliderWrapper">
+
+        <label class="switch">
+            <input type='checkbox' id='hidefav'>
+            <span class="slider round"></span>
+        </label>      <span class="menuText" id="infoMenuText">background preferences</span>
+      </div>
+      <!-- <div class="menuText" style="color: transparent !important">.</div> -->
+      <!-- blank space divide -->
 
       <!-- the menu for effects -->
-      <div class="menuText" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">effects</div>
-      <div class="menuText">
-        <div class="menuText">brightness</div>
-        <div class="slidecontainer">
-          <input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
-        </div>
-      </div>
-      <div class="menuText">
-        <div class="menuText">saturation</div>
-        <div class="slidecontainer">
-          <input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
-        </div>
-      </div>
-      <div class="menuText">
-        <div class="menuText">contrast</div>
-        <div class="slidecontainer">
-          <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
-        </div>
-      </div>
-      <div class="menuText">
-        <div class="menuText">blur</div>
-        <div class="slidecontainer">
-          <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
-        </div>
-      </div>
-
-      <!-- the menu for background -->
-      <div class="menuText backgroundMenu" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">background</div>
-      <div ID="backgroundMenu" class="backgroundMenu">
-        <div ID="favoriteSlider">
-          <div class="menuText">favorites</div>
-          <div class="sliderWrapper">
-            <label class="switch">
-              <input type="checkbox" ID="favSwitch">
-              <span class="slider round"></span>
-            </label> </div>
-        </div>
-      </div>
-      <div class="menuText backgroundMenu" style="color: transparent !important">.</div><!-- blank space divide -->
+      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">effects</div> -->
+      <!-- <div class="menuText"> -->
+      <!-- <br> -->
 
       <!-- favorite button -->
-      <div class="menuText">
-        <div class="sliderWrapper">
-          <div class="like-button">
-            <i class="material-icons not-liked bouncy md-36">favorite_border</i>
-            <i class="material-icons is-liked bouncy md-36">favorite</i>
+      <div class="btn-group-2" role="group" aria-label="Basic example">
+        <div class="menuText b2">
+          <!-- <div class="sliderWrapper"> -->
+            <div class="like-button">
+              <i class="material-icons not-liked bouncy md-36">favorite_border</i>
+              <i class="material-icons is-liked bouncy md-36">favorite</i>
+            </div>
+          <!-- </div> -->
+        </div>
+        <div class="menuText b2">
+          <!-- delete button -->
+          <!-- <div class="sliderWrapper"> -->
+            <div class="delete-button">
+              <i class="material-icons not-deleted bouncy md-36">delete_outline</i>
+              <i class="material-icons is-deleted bouncy md-36">delete</i>
+            </div>
+          <!-- </div> -->
+        </div>
+        <!-- <div class="menuText backgroundMenu" style="color: transparent !important">.</div> -->
+      </div>
+
+
+      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 1em !important;font-weight: 700;">background</div> -->
+
+
+
+
+        <div id="favinfo" class="hidden">
+          <!-- the menu for background -->
+          <!-- <div class="menuText backgroundMenu" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">background</div> -->
+          <div ID="backgroundMenu" class="backgroundMenu">
+            <div ID="favoriteSlider">
+              <div class="menuText">favorites</div>
+              <div class="sliderWrapper">
+                <label class="switch">
+                  <input type="checkbox" ID="favSwitch">
+                  <span class="slider round"></span>
+                </label> </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="menuText">
-        <!-- delete button -->
-        <div class="sliderWrapper">
-          <div class="delete-button">
-            <i class="material-icons not-deleted bouncy md-36">delete_outline</i>
-            <i class="material-icons is-deleted bouncy md-36">delete</i>
-          </div>
+
+
+
+      <div class="slidecontainer">
+        <div class="menuText" style="text-align: center">brightness</div>
+
+          <input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
         </div>
+      <!-- </div> -->
+      <!-- <div class="menuText"> -->
+      <div class="slidecontainer">
+        <div class="menuText" style="text-align: center">saturation</div>
+
+          <input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
+        <!-- </div> -->
       </div>
-      <div class="menuText backgroundMenu" style="color: transparent !important">.</div><!-- blank space divide -->
+      <!-- <div class="menuText"> -->
+      <div class="slidecontainer">
+
+        <div class="menuText" style="text-align: center">contrast</div>
+          <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
+        </div>
+      <!-- </div> -->
+      <!-- <div class="menuText"> -->
+      <div class="slidecontainer">
+
+        <div class="menuText" style="text-align: center">blur</div>
+          <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
+        </div>
+      <!-- </div> -->
+
+
+
+
+      <!-- <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div> -->
+
+
+
 
 
       <!-- Buttons -->
-      <div class="menuText" style="color: transparent !important">.</div><!-- blank space divide -->
-      <div class="sliderWrapper buttonWrapper" >
-        <button ID="advButton" class="button">
-          <i class="material-icons buttIcons md-36">settings</i>
-        </button>
-      </div>
-      <div class="sliderWrapper buttonWrapper">
-        <button ID="aboutButton" class="button">
-          <i class="material-icons buttIcons md-36">info</i>
-        </button>
+      <div class="btn-group-3" role="group" aria-label="Basic example">
+        <div class=" buttonWrapper" >
+          <button ID="advButton" class="btn btn-dark">
+            <i class="material-icons buttIcons md-36">settings</i>
+          </button>
+        </div>
+        <div class=" buttonWrapper">
+          <button ID="aboutButton" class="btn btn-dark">
+            <i class="material-icons buttIcons md-36">info</i>
+          </button>
+        </div>
       </div>
       <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div><!-- blank space divide -->
 
@@ -193,59 +283,139 @@
     <!-- the rightMenus side panel -->
   <div ID="rightMenus">
     <div id="menuText" class = "top-space">
-      <div class="breathe-box" id="content2">
-        <center><img src="icons/breathe1.gif" width = "150"/></center>
-      </div>
+      <div class="widgetcont">
 
-      <div class="break"/>
-      <div class="weather-box" id="content1">
-          <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">weather</div>
-          <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 15px !important;font-weight: 500;">now</div>
+      <div class="row">
+        <div class="column">
+          <div class="widget-box" id="content">
+            <center id="totgif"><img src="icons/tot.gif" width = "120"/></center>
+            <center id="chigif"><img src="icons/chi.gif" width = "120"/></center>
+            <center id="calgif"><img src="icons/cal.gif" width = "120"/></center>
+            <center id="sopgif"><img src="icons/sop.gif" width = "120"/></center>
 
-            <ol class="weather-icon"><img src="icon/unknown.gif" width = "70"/></ol>
-            <div id="weather" style="color: rgba(255,255,255,0.8)"></div>
-            <ol id="temperature" style="!important; color: rgba(255,255,255,0.8) !important; font-size: 20px !important;font-weight: 700;"></ol>
-            <ol id="description" style="color: rgba(255,255,255,0.8)"></ol>
-            <ol id="location" style="color: rgba(255,255,255,0.8)"></ol>
-            <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
+          </div>
+          </div>
+          <div class="column">
+            <div class="weather-box" id="content1">
+                <!-- <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">weather</div>
+                <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 15px !important;font-weight: 500;">now</div> -->
+
+                  <ol class="weather-icon"><img src="icon/unknown.gif" width = "50"/></ol>
+                  <div id="weather" style="color: rgba(255,255,255,0.8)"></div>
+                  <ol id="temperature" style="!important; color: rgba(255,255,255,0.8) !important; font-size: 20px !important;font-weight: 700;"></ol>
+                  <ol id="description" style="color: rgba(255,255,255,0.8)"></ol>
+                  <ol id="location" style="color: rgba(255,255,255,0.8)"></ol>
+                  <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
+              </div>
+          </div>
         </div>
-      <div class="break"/>
-      <div class="widget-box" id="content">
-        <center><img src="icons/radish.gif" width = "300"/></center>
+        <div class="break"></div>
+      </div>
+
+      <div class="breathe-box" id="content2">
+        <center><img src="icons/breathe1.gif" width = "200"/></center>
       </div>
       <div class="break"/>
+
+      <div class="music-box" id="content3">
+
+        <iframe width="100%" src="https://www.youtube.com/embed/5qap5aO4i9A?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+      </div>
 
         <div class="centeredwidget">
-          <p>breathe off</p>
-          <label class="switch">
-              <input type='checkbox' id='hideshow2'>
-              <span class="slider round"></span>
-          </label>
+          <!-- <button type="button" class="btn btn-outline-dark" id="test"><img src="/icons/play.png"/></button> -->
 
-        <div class="break"/>
+          <div class="break"/>
+          <div id="otherright" class="hidden">
+            <div id="content" class="content">
 
-          <p>weather off</p>
-          <label class="switch">
-              <input type='checkbox' id='hideshow1'>
-              <span class="slider round"></span>
-          </label>
+              <!-- <div class="grid-btn float-right"> -->
+                <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
+                  <!-- <div class="text-right"> -->
+                  <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
+                      <button role="button" class="btn btn-outline-light" id="tot">1</button>
+                      <button role="button" class="btn btn-outline-light"id="sop">2</button>
+                      <button role="button" class="btn btn-outline-light"id="cal">3</button>
+                      <button role="button" class="btn btn-outline-light"id="chi">4</button>
+                    <!-- </div>-->
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="break">
+            <span>right preferences</span>
+            <label class="switch">
+                <input type='checkbox' id='hideright'>
+                <span class="slider round"></span>
+            </label>
+            <div class="break">
+          <!-- <div class="break"/> -->
 
+          <div id="rightpref" class="hidden">
+            <span>weather</span>
+            <label class="switch">
+                <input type='checkbox' class= 'weatherswitch'id='hideshow1' checked>
+                <span class="slider round"></span>
+            </label>
+            <div class="break">
+            <span>breathe</span>
+            <label class="switch">
+                <input type='checkbox' class= 'breatheswitch'id='hideshow2' checked>
+                <span class="slider round"></span>
+            </label>
+            <div class="break">
+            <div class="hideshow3wrapper" id="hideshow3wrapper">
+              <span>music</span>
+
+            <label class="switch">
+                <input type='checkbox' id='hideshow3' checked>
+                <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
       <div class="break">
 
-        <p>gif off</p>
+
+        <span>avatar</span>
         <label class="switch">
-            <input type='checkbox' id='hideshow'>
+            <input type='checkbox' id='hideshow' checked>
             <span class="slider round"></span>
         </label>
+
+        <!-- <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div> -->
       <div class="break">
       </div>
+
+      </div>
     </div>
-  </div>
     <ol id="bkList"></ol>
   </div>
 </div>
 
 
   </body>
+      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery-confirm.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="scripts/index.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+
         <script src="weather.js"></script>
+        <script src="scripts/audio.js"></script>
+
   </html>

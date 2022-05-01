@@ -1,0 +1,78 @@
+{
+  "default": {
+    "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+    "title": "モナリザ",
+    "year": "1503",
+    "painter": "レオナルド・ダ・ヴィンチ"
+  },
+  "info_title": "絵画情報",
+  "support_link": "https://suitangi.github.io/Minimal-Newtab/resources/Background%20JSON",
+  "report_embed": "<iframe src='https://docs.google.com/forms/d/e/1FAIpQLSeeJuD-3LOxM2pJniVo2BCOLmIPctBQDdOkEg4Ejr9n29gNng/viewform?embedded=true?usp=pp_url&entry.2076178066=\\back' width='640' height='640' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>",
+  "type": "image",
+  "info": [
+    [
+      {
+        "name": "title",
+        "size": "large"
+      },
+      {
+        "name": "painter",
+        "size": "medium"
+      },
+      {
+        "name": "year",
+        "size": "small"
+      }
+    ],
+    [
+      {
+        "name": "title",
+        "size": "medium"
+      },
+      {
+        "name": "painter",
+        "size": "small"
+      },
+      {
+        "name": "source",
+        "size": "small"
+      }
+    ],
+    [
+      {
+        "name": "title",
+        "size": "medium"
+      }
+    ]],
+  "sources": [{
+      "name": "ルネサンス",
+      "list": [{
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+        "title": "モナリザ",
+        "year": "1503",
+        "painter": "レオナルド・ダ・ヴィンチ"
+      },
+      {
+        "link": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+        "title": "アテナイの学堂",
+        "year": "1509 - 1511",
+        "painter": "ラファエル"
+      }]
+    },
+    {
+      "name": "印象派",
+      "list": [{
+        "link": "https://upload.wikimedia.org/wikipedia/commons/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg",
+        "title": "印象・日の出",
+        "year": "1872",
+        "painter": "クロード・モネ"
+      },
+      {
+        "link": "https://upload.wikimedia.org/wikipedia/commons/3/30/The_Fighting_Temeraire%2C_JMW_Turner%2C_National_Gallery.jpg",
+        "title": "戦艦テメレール号",
+        "year": "1839",
+        "painter": "J. M.W.ターナー"
+      }]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ function setEndOfContenteditable(contentEditableElement) {
   }
 }
 
-//Helper: insert an element after aanother
+//Helper: insert an element after another
 function insertAfter(el, referenceNode) {
   referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
 }
@@ -356,6 +356,30 @@ function updateTodo() {
     }, function() {});
   }
 }
+
+//Todo: toggles the visibility of the todo list
+// function updatehideshow() {
+//
+//   let todoWrapper = document.getElementById("hideshow");
+//   let todoSwitch = document.getElementById("todoSwitch");
+//
+//   todoWrapper.classList.remove("firstStart");
+//   if (todoSwitch.checked) {
+//     todoSwitch.checked = false;
+//     todoWrapper.classList.add("exit");
+//     todoWrapper.classList.remove("entrance");
+//     chrome.storage.local.set({
+//       todo_switch: "off"
+//     }, function() {});
+//   } else {
+//     todoSwitch.checked = true;
+//     todoWrapper.classList.add("entrance");
+//     todoWrapper.classList.remove("exit");
+//     chrome.storage.local.set({
+//       todo_switch: "on"
+//     }, function() {});
+//   }
+// }
 
 //Filters: Updates the filter Effects
 function updateFilter() {

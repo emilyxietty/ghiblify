@@ -1,0 +1,216 @@
+{
+  "widgets-title": {
+    "message": "ウィジェット",
+    "description": "Widgets title in the menu."
+  },
+  "time-name": {
+    "message": "時間",
+    "description": "Time (clock) widget toggle title in the menu."
+  },
+  "search-bar-name": {
+    "message": "検索バー",
+    "description": "Search bar widget toggle title in the menu."
+  },
+  "to-do-list-name": {
+    "message": "やることリスト",
+    "description": "To do list widget toggle title in the menu and on the widget itself"
+  },
+  "background-title": {
+    "message": "背景",
+    "description": "Background (section title in menu) and others"
+  },
+  "favorites-title": {
+    "message": "お気に入り",
+    "description": "Favorites, in menu and others"
+  },
+  "effects-title": {
+    "message": "Effects",
+    "description": "Effects section title in the menu"
+  },
+  "brightness": {
+    "message": "Brightness",
+    "description": "Brightness effect in the menu"
+  },
+  "saturation": {
+    "message": "Saturation",
+    "description": "Saturation effect in the menu"
+  },
+  "contrast": {
+    "message": "Contrast",
+    "description": "Contrast effect in the menu"
+  },
+  "blur": {
+    "message": "Blur",
+    "description": "Blur effect in the menu"
+  },
+  "advanced-options": {
+    "message": "Advanced Options",
+    "description": "Advanced options in the menu"
+  },
+  "about-this-extension": {
+    "message": "About This Extension",
+    "description": "About this extension button in the menu"
+  },
+  "bookmark-title": {
+    "message": "Bookmarks",
+    "description": "Title of Bookmark section"
+  },
+  "Time-menu-desc": {
+    "message": "Toggles the time display",
+    "description": "Menu description of Time toggle"
+  },
+  "seach-menu-desc": {
+    "message": "Toggles the search bar",
+    "description": "Menu description of Search bar toggle"
+  },
+  "info-menu-desc": {
+    "message": "Toggles the $info",
+    "description": "Menu description of info name toggle"
+  },
+  "todo-menu-desc": {
+    "message": "Toggles the to-do list",
+    "description": "Menu description of todo list toggle"
+  },
+  "source-menu-desc": {
+    "message": "Toggles backgrounds from $source",
+    "description": "Menu description of sources toggle"
+  },
+  "fav-menu-desc": {
+    "message": "Toggles your favorite backgrounds",
+    "description": "Menu description of favorites toggle"
+  },
+  "fav-button-desc": {
+    "message": "Add or remove this background from your favorites",
+    "description": "Menu description of favorites button"
+  },
+  "remove-button-desc": {
+    "message": "Remove this background",
+    "description": "Menu description of remove button"
+  },
+  "brightness-desc": {
+    "message": "Adjust the brightness of the background",
+    "description": "Menu description of brightness slider"
+  },
+  "saturation-desc": {
+    "message": "Adjust the saturation of the background",
+    "description": "Menu description of saturation slider"
+  },
+  "contrast-desc": {
+    "message": "Adjust the contrast of the background",
+    "description": "Menu description of contrast slider"
+  },
+  "blur-desc": {
+    "message": "Adjust the blurring of the background",
+    "description": "Menu description of blur slider"
+  },
+  "no-source-title": {
+    "message": "No Background sources selected",
+    "description": "Title of no source selected message"
+  },
+  "no-source-content": {
+    "message": "A default background was loaded. Please select a source in the left hand menu, and then refresh the page.",
+    "description": "content of no source selected message"
+  },
+  "too-many-removed-title": {
+    "message": "Too many backgrounds removed",
+    "description": "Title of Too many backgrounds removed message"
+  },
+  "too-many-removed-content": {
+    "message": "A default background was loaded. You have removed all backgrounds in the sources you selected, you can reset your removed backgrounds or select more background sources.",
+    "description": "content of Too many backgrounds removed message"
+  },
+  "too-many-removed-reset": {
+    "message": "Reset my removed backgrounds",
+    "description": "Reset button of Too many backgrounds removed message"
+  },
+  "remove-bg-title": {
+    "message": "Are you sure?",
+    "description": "Title of remove background message"
+  },
+  "remove-bg-content": {
+    "message": "This will remove the background. You can't undo this action unless you reset the extension with the reset button in the menu.",
+    "description": "content of remove background message"
+  },
+  "remove-bg-confirm": {
+    "message": "Remove this background",
+    "description": "Confirm button of remove background message"
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Cancel button on messages"
+  },
+  "no-fav-title": {
+    "message": "No favorites",
+    "description": "Title of no favorites message"
+  },
+  "no-fav-content": {
+    "message": "You don't have any favorite backgrounds. To add backgrounds to favorites, scroll down the menu and click the heart when you see a background you like.",
+    "description": "content of no favorites message"
+  },
+  "okay": {
+    "message": "Okay",
+    "description": "Okay button on messages"
+  },
+  "reset-title": {
+    "message": "Are you sure you want to reset your data?",
+    "description": "Title of reset message"
+  },
+  "reset-content": {
+    "message": "Choose what data you would like to reset: ",
+    "description": "content of reset message"
+  },
+  "reset-widget-location": {
+    "message": "Widgets Location",
+    "description": "Widgets location option of reset menu"
+  },
+  "reset-widget-data": {
+    "message": "Widgets Preferences and Data",
+    "description": "Widgets pref and data option of reset menu"
+  },
+  "reset-fav-backgrounds": {
+    "message": "Favrite Backgrounds",
+    "description": "Favorite backgrounds option of reset menu"
+  },
+  "reset-removed-backgrounds": {
+    "message": "Removed Backgrounds",
+    "description": "Removed backgrounds option of reset menu"
+  },
+  "reset-warning": {
+    "message": "This action cannot be undone!",
+    "description": "Warning line of reset menu"
+  },
+  "reset-confirm": {
+    "message": "I understand, reset",
+    "description": "Confirm button of reset menu"
+  },
+  "ui-animations": {
+    "message": "UI Aniamtions",
+    "description": "UI Animation option in advanced options"
+  },
+  "ui-animations-desc": {
+    "message": "Toggles UI and Widget animations",
+    "description": "UI Animation option description in advanced options"
+  },
+  "avoid-repeats": {
+    "message": "Avoid Repeats",
+    "description": "Avoid Repeats option in advanced options"
+  },
+  "avoid-repeats-desc": {
+    "message": "Avoid Repeats of backgrounds",
+    "description": "Avoid Repeats option description in advanced options"
+  },
+  "auto-pause-background": {
+    "message": "Auto-Pause Background",
+    "description": "Auto-Pause Background option in advanced options"
+  },
+  "auto-pause-background-desc": {
+    "message": "Automatically pause animated backgrounds when tab is not active",
+    "description": "Auto-Pause Background option description in advanced options"
+  },
+  "no-internet-title": {
+    "message": "No internet access. Please check your connection and try again.",
+    "description": "Title of no internet message"
+  }
+
+
+}
