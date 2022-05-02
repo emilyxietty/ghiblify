@@ -107,14 +107,14 @@
    padding: 0px;
    border: 0px;
    margin: 0px;
-   width: 100%;
+   width: 110%;
    position: absolute;
    left: 0;
-   min-height: 100%;
+   min-height: 110%;
    filter: saturate(1.5);
    object-fit: cover;
    display:flex;
-   justify-content: center center;
+   justify-content: center;
  }
 
  #backdropimg, #backdropvid {
