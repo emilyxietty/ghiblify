@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap');
+
  /* no scrolling! */
  body {
    overflow: hidden;
    background-color: #999;
    margin: 0px;
-   font-family: "open sans";
+   font-family: "Open Sans";
    user-select: none;
  }
 
@@ -74,7 +76,7 @@
    border-radius: 4px;
  }
 
- /* no ugly focus border */
+ /* no  focus border */
  input:focus,
  select:focus,
  textarea:focus,
@@ -84,8 +86,8 @@
 
  /* background wrapper */
  .backloader {
-   text-align: center;
-   padding: 0px;
+   /* text-align: center; */
+   /* padding: 0px;
    border: 0px;
    margin: 0px;
    width: 100%;
@@ -93,10 +95,14 @@
    bottom: 0;
    left: 0;
    min-height: 100%;
-   height: 100%;
-   background-color: #999;
-   background-size: cover;
-   background-repeat: no-repeat;
+   height: 100%; */
+   background-color: #151f2e;
+   /* background-size: cover; */
+   /* background-repeat: no-repeat; */
+   /* background-image: url(../icons/load1.gif); */
+   /* background-repeat: no-repeat;
+   background-size: 10rem; */
+   /* background-position: bottom; */
    filter: brightness(1) saturation(0.9) blur(0px) contrast(100%);
    transition: 0s;
    z-index: 1;
@@ -104,9 +110,9 @@
 
  /* the actual background cinemagraph (video) */
  .backdrop {
-   padding: 0px;
+   /* padding: 0px;
    border: 0px;
-   margin: 0px;
+   margin: 0px; */
    width: 110%;
    position: absolute;
    left: 0;
@@ -151,10 +157,10 @@
  /* the time widget */
  .time {
    color: rgba(255, 255, 255, 0.8);
-   font-family: "open sans";
+   font-family: "Open Sans";
    user-select: none;
-   font-weight: 800;
-   font-size: 11vw;
+   font-weight: 650;
+   font-size: 10vw;
    margin-bottom: 12px;
    margin-top: 30px;
    cursor: pointer;
@@ -380,7 +386,9 @@
 
  #menu:hover,
  #menu.delay {
-   background-color: rgba(0, 0, 0, 0.99);
+   /* background-color: rgba(0, 0, 0, 0.99); */
+   background-color: #151f2e;
+
    width: 350px;
    overflow: auto !important;
    /* firefox scrollbar */
@@ -413,13 +421,30 @@
 
  .menuText {
    background-color: rgba(255, 255, 255, 0) !important;
-   color: rgba(255, 255, 255, 0.9);
+   /* color: rgba(255, 255, 255, 0.9); */
+   color: rgba(255, 255, 255, 0.95);
+
    margin-top: 3px;
    margin-bottom: 3px;
    font-size: 15px;
    font-family: "open sans";
    user-select: none;
    text-align: left;
+   padding-left:30px;
+   padding-right:30px;
+ }
+ .menuText2 {
+   background-color: rgba(255, 255, 255, 0) !important;
+   /* color: rgba(255, 255, 255, 0.9); */
+   color: white;
+
+   margin-top: 3px;
+   margin-bottom: 10px;
+   font-size: 15px;
+   font-family: "open sans";
+   user-select: none;
+   text-align: left;
+   font-weight: 600;
    padding-left:30px;
    padding-right:30px;
  }
@@ -507,6 +532,14 @@
    margin-bottom: 15px;
    /* width: 43px; */
  }
+ .sliderWrapper2 {
+   margin-left: 30px;
+   margin-right:30px;
+   /* margin-right: 30px; */
+   margin-top: 5px;
+   margin-bottom: 5px;
+   /* width: 43px; */
+ }
  .b2 {
    display:block;
    /* margin-left:auto;
@@ -533,7 +566,7 @@
    left: 0;
    right: 0;
    bottom: 0;
-   background-color: #ccc;
+   background-color: #5566AA;
    transition: .4s;
    opacity: 0.7;
  }
@@ -554,11 +587,11 @@
  }
 
  input:checked+.slider {
-   background-color: #2196F3;
+   background-color: #AA7799;
  }
 
  input:focus+.slider {
-   box-shadow: 0 0 1px #2196F3;
+   box-shadow: 0 0 1px #AA7799;
  }
 
  input:checked+.slider:before {
@@ -869,6 +902,11 @@
    text-decoration: line-through;
  }
 
+ .rangeSlider{
+   background-color:#5566AA;
+   /* color:black; */
+ }
+
  /* Style the close button */
  .close {
    position: absolute;
@@ -1069,7 +1107,8 @@
    margin-right: 10px;
    padding-bottom:0px;
    padding-top: 10px;
-   background-color: black;
+   /* background-color: black; */
+   background-color: #151f2e;
    overflow: hidden;
    /* width:40%;
    height:40%; */
@@ -1101,6 +1140,12 @@
   margin-right: 0px;
   background-color: transparent;
   overflow: hidden;
+}
+.choicebtns{
+  margin-left: 13px;
+  margin-right: 0px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
 }
 
 .top-space {
@@ -1163,7 +1208,9 @@
   color:white;
 
 }
-
+/* .btn-outline-dark{
+  color:white;
+} */
 .btn-group-2{
   display:flex;
   /* align-content: center; */
@@ -1185,8 +1232,46 @@
   /* align-content: center; */
   justify-content:center;
 }
+.btn-dark{
+  /* background-color: #9fa2b2; */
+  background-color: #5566AA;
+  /* outline:none; */
+  border-width:0;
+}
+.btn-dark:hover{
+  background-color: #AA7799;
+  /* background-color: #345877; */
+  /* outline:none; */
+  border-width:0;
+}
+.btn-outline-light{
+  border-color: #5566AA;
+}
+.btn-outline-light:hover{
+  background-color: #DD9999;
+  border-color: #DD9999;
 
+}
+.btn-outline-dark{
+  font-size:0.8em;
+  color:white;
+  border-color: white;
+}
+.btn-outline-dark:hover{
+  color:white;
+  font-size:0.8em;
 
+  background-color: #5566AA;
+  border-color: #5566AA;
+
+}
+
+#advButton {
+  margin-right: 10px;
+}
+#aboutButton {
+  margin-left: 10px;
+}
 .grid-btn{
   display:flex;
   /* align-content: center; */

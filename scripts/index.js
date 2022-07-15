@@ -5,7 +5,6 @@ function createHTML(htmlString) {
 
   return div.firstChild;
 }
-
 //Helper: for setting the cursor to the end of the editable content
 function setEndOfContenteditable(contentEditableElement) {
   var range, selection;
@@ -49,7 +48,7 @@ function startTime() {
   let m = today.getMinutes();
   let pa = "";
 
-  //sets PM and AM if not in military
+  //sets PM and AM if not in 24 hr
   if (!window.newTab.clock.military) {
     if (h > 11)
       pa = " PM"
@@ -358,28 +357,28 @@ function updateTodo() {
 }
 
 //Todo: toggles the visibility of the todo list
-// function updatehideshow() {
-//
-//   let todoWrapper = document.getElementById("hideshow");
-//   let todoSwitch = document.getElementById("todoSwitch");
-//
-//   todoWrapper.classList.remove("firstStart");
-//   if (todoSwitch.checked) {
-//     todoSwitch.checked = false;
-//     todoWrapper.classList.add("exit");
-//     todoWrapper.classList.remove("entrance");
-//     chrome.storage.local.set({
-//       todo_switch: "off"
-//     }, function() {});
-//   } else {
-//     todoSwitch.checked = true;
-//     todoWrapper.classList.add("entrance");
-//     todoWrapper.classList.remove("exit");
-//     chrome.storage.local.set({
-//       todo_switch: "on"
-//     }, function() {});
-//   }
-// }
+function updatehideshow() {
+
+  let todoWrapper = document.getElementById("hideshow");
+  let todoSwitch = document.getElementById("todoSwitch");
+
+  todoWrapper.classList.remove("firstStart");
+  if (todoSwitch.checked) {
+    todoSwitch.checked = false;
+    todoWrapper.classList.add("exit");
+    todoWrapper.classList.remove("entrance");
+    chrome.storage.local.set({
+      todo_switch: "off"
+    }, function() {});
+  } else {
+    todoSwitch.checked = true;
+    todoWrapper.classList.add("entrance");
+    todoWrapper.classList.remove("exit");
+    chrome.storage.local.set({
+      todo_switch: "on"
+    }, function() {});
+  }
+}
 
 //Filters: Updates the filter Effects
 function updateFilter() {

@@ -1,5 +1,4 @@
 <!-- immense credit to suitangi https://suitangi.github.io/Minimal-Newtab/ - using minimal tab as basis for this extension -->
-
   <!DOCTYPE html>
   <html>
   <!-- head, scripts and fonts -->
@@ -12,10 +11,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
-
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/jquery-confirm.min.css">
     <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
@@ -25,13 +20,7 @@
     <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-confirm.min.js"></script>
@@ -39,7 +28,6 @@
     <script type="text/javascript" src="scripts/index.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="scripts/weather.js"></script>
     <script type="text/javascript" src="scripts/hidetoggle.js"></script>
     <script type="text/javascript" src="scripts/audio.js"></script>
@@ -50,6 +38,8 @@
 
     <!-- the backgrond cinemagraph (video) -->
     <div class="backloader" ID="backloader" style="">
+      <!-- <img src"./icons/heen.gif"/> -->
+
       <div ID="progress-line"></div>
       <img src="" ID="backdropimg" class="backdrop" draggable="false" width="100%">
       <video ID="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
@@ -58,10 +48,8 @@
     </div>
 
 
-    <!-- the left side menu -->
     <div ID="menu">
-      <!-- <div ID="infoMenuItem"> -->
-      <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 0.9em !important;font-weight: 300">credit goes to</div>
+      <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 0.9em !important; color: white !important;font-weight: 600">credit goes to</div>
 
         <div class="sliderWrapper">
 
@@ -71,21 +59,16 @@
 
           <a role="button" class="btn btn-outline-light" href="https://www.ghibli.jp/works/" target="_blank">studio ghibli<br>works</a>
           <a role="button" class="btn btn-outline-light" href="https://mienar.com/" target="_blank">mienar<br>works</a>
-        <!-- </div>-->
-        <!-- <br> -->
-        <!--<div class="btn-group" role="group" aria-label="Basic example"> -->
+
           <a role="button" class="btn btn-outline-light"href="https://github.com/emilyxietty" target="_blank">emilyxietty<br>github</a>
           <a role="button" class="btn btn-outline-light"href="https://github.com/suitangi/Minimal-Newtab" target="_blank">suitangi<br>github</a>
         </div>
         </div>
       </div>
       <br>
-      <!-- </div> -->
-      <!-- the menu for widgets -->
-      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 1em !important;font-weight: 700;">widgets</div> -->
+
       <div ID="infoMenuItem">
-        <!-- <div class="menuText">⏰ time ⏰</div> -->
-        <div class="sliderWrapper">
+        <div class="sliderWrapper2">
           <label class="switch">
             <input type="checkbox" ID="timeSwitch" checked>
             <span class="slider round"></span>
@@ -95,7 +78,6 @@
       </div>
 
       <div ID="infoMenuItem">
-        <!-- <div class="menuText">🔍 search bar 🔍</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="searchSwitch" checked>
@@ -105,7 +87,6 @@
         </div>
       </div>
       <div ID="infoMenuItem">
-        <!-- <div class="menuText" ID="infoMenuText">🍿<3 movie info 🍿</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="infoSwitch" checked>
@@ -115,7 +96,6 @@
         </div>
       </div>
       <div ID="infoMenuItem">
-        <!-- <div class="menuText" ID="infoMenuText">📝 todo</div> -->
         <div class="sliderWrapper">
           <label class="switch">
             <input type="checkbox" ID="todoSwitch" checked>
@@ -129,47 +109,29 @@
         <label class="switch">
             <input type='checkbox' id='hidefav'>
             <span class="slider round"></span>
-        </label>      <span class="menuText" id="infoMenuText">background preferences</span>
+        </label>      <span class="menuText" id="infoMenuText">show pic options</span>
       </div>
-      <!-- <div class="menuText" style="color: transparent !important">.</div> -->
-      <!-- blank space divide -->
 
-      <!-- the menu for effects -->
-      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">effects</div> -->
-      <!-- <div class="menuText"> -->
-      <!-- <br> -->
 
       <!-- favorite button -->
       <div class="btn-group-2" role="group" aria-label="Basic example">
         <div class="menuText b2">
-          <!-- <div class="sliderWrapper"> -->
             <div class="like-button">
               <i class="material-icons not-liked bouncy md-36">favorite_border</i>
               <i class="material-icons is-liked bouncy md-36">favorite</i>
             </div>
-          <!-- </div> -->
         </div>
         <div class="menuText b2">
-          <!-- delete button -->
-          <!-- <div class="sliderWrapper"> -->
             <div class="delete-button">
               <i class="material-icons not-deleted bouncy md-36">delete_outline</i>
               <i class="material-icons is-deleted bouncy md-36">delete</i>
             </div>
-          <!-- </div> -->
         </div>
-        <!-- <div class="menuText backgroundMenu" style="color: transparent !important">.</div> -->
       </div>
-
-
-      <!-- <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 1em !important;font-weight: 700;">background</div> -->
-
-
 
 
         <div id="favinfo" class="hidden">
           <!-- the menu for background -->
-          <!-- <div class="menuText backgroundMenu" style="color: rgba(255,255,255,0.95)  !important; font-size: 25px !important;font-weight: 700;">background</div> -->
           <div ID="backgroundMenu" class="backgroundMenu">
             <div ID="favoriteSlider">
               <div class="menuText">favorites</div>
@@ -185,49 +147,25 @@
 
 
       <div class="slidecontainer">
-        <div class="menuText" style="text-align: center">brightness</div>
+        <div class="menuText2" style="text-align: center">brightness</div>
 
           <input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
         </div>
-      <!-- </div> -->
-      <!-- <div class="menuText"> -->
       <div class="slidecontainer">
-        <div class="menuText" style="text-align: center">saturation</div>
+        <div class="menuText2" style="text-align: center">saturation</div>
 
           <input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
-        <!-- </div> -->
       </div>
-      <!-- <div class="menuText"> -->
       <div class="slidecontainer">
 
-        <div class="menuText" style="text-align: center">contrast</div>
+        <div class="menuText2" style="text-align: center">contrast</div>
           <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
         </div>
-      <!-- </div> -->
-      <!-- <div class="menuText"> -->
       <div class="slidecontainer">
 
-        <div class="menuText" style="text-align: center">blur</div>
+        <div class="menuText2" style="text-align: center">blur</div>
           <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
         </div>
-      <!-- </div> -->
-
-
-
-
-      <!-- <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Link with href
-        </a>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </div> -->
-
-
-
 
 
       <!-- Buttons -->
@@ -237,6 +175,7 @@
             <i class="material-icons buttIcons md-36">settings</i>
           </button>
         </div>
+
         <div class=" buttonWrapper">
           <button ID="aboutButton" class="btn btn-dark">
             <i class="material-icons buttIcons md-36">info</i>
@@ -297,14 +236,12 @@
           </div>
           <div class="column">
             <div class="weather-box" id="content1">
-                <!-- <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 25px !important;font-weight: 700;">weather</div>
-                <div id="bkTitle" style="color: rgba(255,255,255,0.95) !important; font-size: 15px !important;font-weight: 500;">now</div> -->
-
-                  <ol class="weather-icon"><img src="icon/unknown.gif" width = "50"/></ol>
-                  <div id="weather" style="color: rgba(255,255,255,0.8)"></div>
-                  <ol id="temperature" style="!important; color: rgba(255,255,255,0.8) !important; font-size: 20px !important;font-weight: 700;"></ol>
-                  <ol id="description" style="color: rgba(255,255,255,0.8)"></ol>
-                  <ol id="location" style="color: rgba(255,255,255,0.8)"></ol>
+<br>
+                  <ol class="weather-icon"><img src="icons/load1.gif" width = "50"/></ol>
+                  <div id="weather" style="color: rgba(255,255,255,0.9)"></div>
+                  <ol id="temperature" style="!important; color: rgba(255,255,255,0.9) !important; font-size: 20px !important;font-weight: 700;"></ol>
+                  <ol id="description" style="color: rgba(255,255,255,0.9)"></ol>
+                  <ol id="location" style="color: rgba(255,255,255,0.9)"></ol>
                   <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
               </div>
           </div>
@@ -313,15 +250,42 @@
       </div>
       <div class="widgetcont">
 
-        <div class="breathe-box" id="content2">
+        <!-- <div class="breathe-box" id="content2">
           <center><img src="icons/breathe1.gif" width = "200"/></center>
-        </div>
+        </div> -->
         <div class="break"/>
+        <div class="choicebtns">
+          <div class="grid-btn float-right">
+            <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
+              <!-- <div class="text-right"> -->
+              <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
+                  <button role="button" class="btn btn-outline-dark" id="onebut">lofi</button>
+                  <button role="button" class="btn btn-outline-dark"id="twobut">hisaishi</button>
+                  <button role="button" class="btn btn-outline-dark"id="threebut">ghib symphony</button>
+                  <button role="button" class="btn btn-outline-dark"id="fourbut">ghib radio</button>
+                  <button role="button" class="btn btn-outline-dark"id="fivebut">HMC</button>
 
-        <div class="music-box" id="content3">
-
-          <iframe width="100%" src="https://www.youtube.com/embed/5qap5aO4i9A?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                <!-- </div>-->
+              </div>
+              </div>
+          </div>
         </div>
+        <div class="music-box" id="content3">
+          <div id="one">
+            <iframe width="100%" src="https://www.youtube.com/embed/jfKfPfyJRdk?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+          </div>
+          <div id="two">
+            <iframe width="100%" src="https://www.youtube.com/embed/0jZNKV5ROBM?&" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <div id="three">
+            <iframe width="100%" src="https://www.youtube.com/embed/IbRkwS_xRt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <div id="four">
+            <iframe width="100%" src="https://www.youtube.com/embed/9gqDH6n3H6I?&" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <div id="five">
+            <iframe width="100%" src="https://www.youtube.com/embed/OE7u1IJzac4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
       </div>
 
           <div class="centeredwidget">
@@ -331,15 +295,14 @@
 
             <div id="otherright" class="hidden">
               <div id="content" class="content">
-
                 <!-- <div class="grid-btn float-right"> -->
                   <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
                     <!-- <div class="text-right"> -->
                     <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
-                        <button role="button" class="btn btn-outline-light" id="tot">1</button>
-                        <button role="button" class="btn btn-outline-light"id="sop">2</button>
-                        <button role="button" class="btn btn-outline-light"id="cal">3</button>
-                        <button role="button" class="btn btn-outline-light"id="chi">4</button>
+                        <button role="button" class="btn btn-outline-dark" id="tot">1</button>
+                        <button role="button" class="btn btn-outline-dark"id="sop">2</button>
+                        <button role="button" class="btn btn-outline-dark"id="cal">3</button>
+                        <button role="button" class="btn btn-outline-dark"id="chi">4</button>
                       <!-- </div>-->
                     </div>
                     </div>
@@ -362,13 +325,13 @@
                 <input type='checkbox' class= 'weatherswitch'id='hideshow1' checked>
                 <span class="slider round"></span>
             </label>
-            <div class="break">
+            <!-- <div class="break">
 
             <span>breathe</span>
             <label class="switch">
                 <input type='checkbox' class= 'breatheswitch'id='hideshow2' checked>
                 <span class="slider round"></span>
-            </label>
+            </label> -->
             <div class="break">
             <div class="hideshow3wrapper" id="hideshow3wrapper">
               <span>music</span>
@@ -387,17 +350,6 @@
             <input type='checkbox' id='hideshow' checked>
             <span class="slider round"></span>
         </label>
-
-        <!-- <p>
-          <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Link with href
-          </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </div> -->
       <div class="break">
       </div>
 
@@ -409,17 +361,6 @@
 
 
   </body>
-      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
-      <script type="text/javascript" src="scripts/jquery-confirm.min.js"></script>
-      <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-      <script type="text/javascript" src="scripts/index.js"></script>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-
-
         <script src="weather.js"></script>
         <script src="scripts/audio.js"></script>
 

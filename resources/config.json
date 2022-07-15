@@ -1,5 +1,5 @@
 {
-  "locales": ["en", "zh-cn", "zh-tw", "jp"],
+  "locales": ["en"],
   "default_locale": "en",
   "debug": false
 }

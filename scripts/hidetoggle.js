@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function(){
     jQuery('#hideshow').on('click', function(event) {
         jQuery('#content').toggle('show');
@@ -6,6 +7,70 @@ jQuery(document).ready(function(){
         jQuery('#totgif').toggle('show');
         // jQuery('#grid-btn').toggle('show');
 
+    });
+});
+jQuery(document).ready(function(){
+        $('#one').fadeIn("fast");
+        $('#two').fadeOut("fast");
+        $('#three').fadeOut("fast");
+        $('#four').fadeOut("fast");
+        $('#five').fadeOut("fast");
+
+});
+
+jQuery(document).ready(function(){
+    jQuery('#onebut').on('click', function(event) {
+        $('#one').fadeIn("fast");
+        $('#two').fadeOut("fast");
+    });
+});
+
+jQuery(document).ready(function(){
+    jQuery('#onebut').on('click', function(event) {
+        $('#one').fadeIn("fast");
+        $('#two').fadeOut("fast");
+        $('#three').fadeOut("fast");
+        $('#four').fadeOut("fast");
+        $('#five').fadeOut("fast");
+
+    });
+});
+jQuery(document).ready(function(){
+    jQuery('#twobut').on('click', function(event) {
+        $('#one').fadeOut("fast");
+        $('#two').fadeIn("fast");
+        $('#three').fadeOut("fast");
+        $('#four').fadeOut("fast");
+        $('#five').fadeOut("fast");
+
+    });
+});
+jQuery(document).ready(function(){
+    jQuery('#threebut').on('click', function(event) {
+        $('#one').fadeOut("fast");
+        $('#two').fadeOut("fast");
+        $('#three').fadeIn("fast");
+        $('#four').fadeOut("fast");
+        $('#five').fadeOut("fast");
+    });
+});
+jQuery(document).ready(function(){
+    jQuery('#fourbut').on('click', function(event) {
+        $('#one').fadeOut("fast");
+        $('#two').fadeOut("fast");
+        $('#three').fadeOut("fast");
+        $('#four').fadeIn("fast");
+        $('#five').fadeOut("fast");
+
+    });
+});
+jQuery(document).ready(function(){
+    jQuery('#fivebut').on('click', function(event) {
+        $('#one').fadeOut("fast");
+        $('#two').fadeOut("fast");
+        $('#three').fadeOut("fast");
+        $('#four').fadeOut("fast");
+        $('#five').fadeIn("fast");
     });
 });
 

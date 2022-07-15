@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap');
+
+
 body {
   width: 500px;
   margin: 0.5;
   padding: 1.5em;
   color: black;
-  background: black;
+  background: #151f2e;
+  font-family: "Open Sans";
   display: flex;
   flex-direction: column;
   user-select: none;
 }
+.btn-outline-light{
+  border-color: #5566AA;
+}
+.btn-outline-light:hover{
+  background-color: #DD9999;
+  border-color: #DD9999;
+}
 
+.btn-outline-dark{
+  font-size:1rem;
+  border-color: #5566AA;
+  color: #5566AA;
+
+}
+.btn-outline-dark:hover{
+  background-color: #DD9999;
+  border-color: #DD9999;
+
+}
 #h1 {
   font-size: 1.8em;
   font-weight: 700;
@@ -110,7 +132,19 @@ img {
 .toggle-state {
   display: none;
 }
+#videoplayer {
+  border-radius:30px;
+  /* width: 80%; */
+  /* align-content: center; */
 
+  padding-bottom:1.5rem;
+
+}
+#coffee{
+  display: block;
+  text-align: center;
+  content-align: center;
+}
 .indicator {
   height: 100%;
   width: 200%;
