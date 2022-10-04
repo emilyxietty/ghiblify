@@ -6,7 +6,7 @@ Replace new tab page with a personal, studio ghibli-inspired tab, tailored to yo
 
 I was always inspired to make this because I was always a bit sad that many commonly used new tab chrome extensions had paywalls that stopped me from further customizing my themes. Studio Ghibli is nostalgic and soothing, known for Hayao Miyazaki's captivating visual style. They recently (in 2020/2021) released 1,000 pictures for personal use, making this extension possible. <br>
 
-**UPDATE 1.0.8: ** right hand side is now transparent, customize your widgets, smaller weather screen, lofi girl study music, fixed toggle switches, testing mindfulness beta.
+**UPDATE 1.0.9: ** right hand side is now transparent, customize your widgets, smaller weather screen, lofi girl study music, fixed toggle switches, testing mindfulness beta.
 
 ✨ Features ✨ <br>
 🌄 Curated collection of studio ghibli photos <br>
