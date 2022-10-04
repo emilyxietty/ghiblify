@@ -646,7 +646,7 @@ function removeFav(bg) {
   });
 }
 
-// add a backgorund to the blacklist
+// add a background to the blacklist
 function addBlack(bg) {
   chrome.storage.local.get({
     black_list: []
@@ -798,30 +798,30 @@ function updateRepeat() {
 }
 
 //function for autoPause, set to check on tab activated
-function autoPause() {
-
-  //check if auto pause is on and if
-  if (!window.newTab.autopause || !window.newTab.back.fileType == "video")
-    return;
-
-  //on got tab info function
-  function onGot(tabInfo) {
-    var vid = document.getElementById("backdropvid");
-    if (tabInfo.active && vid.readyState === 4) {
-      vid.play();
-    } else {
-      vid.pause();
-    }
-  }
-
-  //error function
-  function onError(error) {
-    console.log(`Error: ${error}`);
-  }
-
-  const gettingCurrent = chrome.tabs.getCurrent();
-  gettingCurrent.then(onGot, onError);
-}
+// function autoPause() {
+//
+//   //check if auto pause is on and if
+//   if (!window.newTab.autopause || !window.newTab.back.fileType == "video")
+//     return;
+//
+//   //on got tab info function
+//   function onGot(tabInfo) {
+//     var vid = document.getElementById("backdropvid");
+//     if (tabInfo.active && vid.readyState === 4) {
+//       vid.play();
+//     } else {
+//       vid.pause();
+//     }
+//   }
+//
+//   //error function
+//   function onError(error) {
+//     console.log(`Error: ${error}`);
+//   }
+//
+//   const gettingCurrent = chrome.tabs.getCurrent();
+//   gettingCurrent.then(onGot, onError);
+// }
 
 
 //loads a random background
@@ -852,15 +852,15 @@ function loadBackground(backJson) {
     window.newTab.report_embed = "";
   }
 
-  let vid = document.getElementById("backdropvid");
+  // let vid = document.getElementById("backdropvid");
   let img = document.getElementById("backdropimg");
-  if (backJson.type == "video") {
-    vid.style = "";
-    img.style = "display: none;"
-  } else if (backJson.type == "image") {
-    img.style = "";
-    vid.style = "display: none;"
-  }
+  // if (backJson.type == "video") {
+  //   // vid.style = "";
+  //   img.style = "display: none;"
+  // } else if (backJson.type == "image") {
+  //   img.style = "";
+  //   // vid.style = "display: none;"
+  // }
 
   backList = backJson.sources;
   let index = 0;
@@ -868,18 +868,18 @@ function loadBackground(backJson) {
 
   //function to set background
   function setBackground() {
-    let vid = document.getElementById("backdropvid");
+    // let vid = document.getElementById("backdropvid");
     let img = document.getElementById("backdropimg");
     let str = window.newTab.back.link;
 
     //console logging
-    // console.log("Favorites:");
-    // console.log(data.fav_list);
-    // console.log("Defaulted backgorund:");
-    // console.log(str);
+    console.log("Favorites:");
+    console.log(data.fav_list);
+    console.log("Defaulted background:");
+    console.log(str);
 
     let fext = str.substring(str.length - 3).toLowerCase();
-    if (fext == 'jpg' || fext == 'png' || fext == 'gif') { //the file type is image
+    // if (fext == 'jpg' || fext == 'png' || fext == 'gif') { //the file type is image
       window.newTab.back.fileType = "image";
       img.src = str;
       img.style = "";
@@ -889,26 +889,26 @@ function loadBackground(backJson) {
         //to counteract a bug that makes the background start from Bottom
         window.scrollTo(0, 0);
       }
-      vid.style = "display: none;"
-    } else { //file type is video
-      window.newTab.back.fileType = "video";
-      img.style = "display: none;"
-      vid.style = "";
-      vid.oncanplay = function() {
-        vid.style.opacity = 100;
-        $('#progress-line').css("opacity", "0");
-        //to counteract a bug that makes the background start from Bottom
-        window.scrollTo(0, 0);
-
-      };
+      // vid.style = "display: none;"
+    // } else { //file type is video
+      // window.newTab.back.fileType = "video";
+      // img.style = "display: none;"
+      // vid.style = "";
+      // vid.oncanplay = function() {
+      //   vid.style.opacity = 100;
+      //   $('#progress-line').css("opacity", "0");
+      //   //to counteract a bug that makes the background start from Bottom
+      //   window.scrollTo(0, 0);
+      //
+      // };
       //fetch the full video to try to force caching (reduce bandwidth)
-      const videoRequest = fetch(str)
-        .then(response => response.blob());
-      videoRequest.then(blob => {
-        vid.src = window.URL.createObjectURL(blob);
-      });
-      vid.load();
-    }
+      // const videoRequest = fetch(str)
+      //   .then(response => response.blob());
+      // videoRequest.then(blob => {
+      //   vid.src = window.URL.createObjectURL(blob);
+      // });
+      // vid.load();
+    // }
     loadInfo();
   }
 
@@ -1187,7 +1187,7 @@ $(document).ready(function() {
 
       //if Chrome is online
       if (window.navigator.onLine) {
-        //loads the backgorund json
+        //loads the background json
         const jsonUrl = chrome.runtime.getURL('resources/background_' + lang + '.json');
         fetch(jsonUrl)
           .then((response) => response.json())
