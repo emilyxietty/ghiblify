@@ -215,8 +215,14 @@ function updateSearch() {
 //Search bar: changes search bar size
 function changeSearchSize(){
   if(document.getElementById("searchInput").classList[0] === 'search'){
+    chrome.storage.local.set({
+      search_large: 'true'
+    }, function() {});
     document.getElementById("searchInput").classList.replace('search', 'searchLarge')
   }else{
+    chrome.storage.local.set({
+      search_large: 'false'
+    }, function() {});
     document.getElementById("searchInput").classList.replace('searchLarge', 'search')
   }
 }
@@ -1527,7 +1533,8 @@ $(document).ready(function() {
     search_switch: 'on',
     search_top_data: '',
     search_left_data: '',
-    search_engine: 0
+    search_engine: 0,
+    search_large: 'false'
   }, function(data) {
     if (data.search_switch == 'off') {
       document.getElementById("searchSwitch").checked = false;
@@ -1542,6 +1549,9 @@ $(document).ready(function() {
     }
     if (data.search_left_data != '') {
       document.getElementById("searchWrapper").style.left = data.search_left_data;
+    }
+    if(data.search_large != 'false'){
+      document.getElementById("searchInput").classList.replace('search', 'searchLarge')
     }
 
     let searchInput = $('#searchInput');
