@@ -214,7 +214,11 @@ function updateSearch() {
 
 //Search bar: changes search bar size
 function changeSearchSize(){
-  console.log("change search size clicked")
+  if(document.getElementById("searchInput").classList[0] === 'search'){
+    document.getElementById("searchInput").classList.replace('search', 'searchLarge')
+  }else{
+    document.getElementById("searchInput").classList.replace('searchLarge', 'search')
+  }
 }
 
 //Search bar: changes the search engine
