@@ -204,11 +204,39 @@ h2 {
    border-color: rgba(255, 255, 255, 0.2) !important;
  }
 
+ .searchLarge {
+  padding: 5px;
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0) !important;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  width: 36vw;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
  /* movable part of search widget */
  .searchDiv {
    padding: 5px;
    cursor: move;
  }
+
+ /* change search size button */
+ #searchSizeChange {
+  position: absolute;
+  top: 35%;
+  left: -25px;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0);
+  transition: 0.25s;
+  user-select: none;
+}
+
+#searchSizeChange:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
 
  /* change search button */
  #searchChange {
