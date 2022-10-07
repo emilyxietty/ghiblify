@@ -210,6 +210,22 @@ h2 {
    cursor: move;
  }
 
+ /* change search size button */
+ #searchSizeChange {
+  position: absolute;
+  top: 35%;
+  left: -25px;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0);
+  transition: 0.25s;
+  user-select: none;
+}
+
+#searchSizeChange:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
  /* change search button */
  #searchChange {
    position: absolute;
