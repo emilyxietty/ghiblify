@@ -1,6 +1,6 @@
 ![marquee-giblify](https://user-images.githubusercontent.com/40601891/165597366-b27eea5b-948d-4dbc-a2e3-c51e4909afc5.png)
 
-#   ![heen-small](https://user-images.githubusercontent.com/40601891/165597566-3c6fa7fa-0553-4ec2-80cc-bee568ce7a6b.gif) ghiblify2 new tab chrome extension
+# ![heen-small](https://user-images.githubusercontent.com/40601891/165597566-3c6fa7fa-0553-4ec2-80cc-bee568ce7a6b.gif) ghiblify2 new tab chrome extension
 
 Replace new tab page with a personal, studio ghibli-inspired tab, tailored to your liking. Every refresh is another chance for another picture. This page is flexible to many preferences, allowing you to get the most out of every new tab.<br>
 
@@ -18,7 +18,7 @@ I was always inspired to make this because I was always a bit sad that many comm
 🌄 NEW animated backgrounds<br>
 🌄 NEW beta anime animations (calm)<br><br>
 ![chrome-capture-2022-3-25 (4)](https://user-images.githubusercontent.com/40601891/165195018-346683bb-0d72-4db7-9be1-799f61d243c0.gif)
-  ![chrome-capture-2022-3-25 (2)](https://user-images.githubusercontent.com/40601891/165194432-8af2d46d-c073-4f0e-a6fe-844fbbba5848.gif)
+![chrome-capture-2022-3-25 (2)](https://user-images.githubusercontent.com/40601891/165194432-8af2d46d-c073-4f0e-a6fe-844fbbba5848.gif)
 
 💻 Widgets you can put on dashboard: Clock, search bar, movie information, to-do list<br>
 💻 Toggle widgets on and off on left-hand bar<br>
@@ -28,19 +28,24 @@ I was always inspired to make this because I was always a bit sad that many comm
 💻 Right click to-do list to cross out items<br>
 💻 Click right hand side of search bar to switch between Google, Duckduckgo, Bing, and Yahoo<br><br>
 ![chrome-capture-2022-3-25 (5)](https://user-images.githubusercontent.com/40601891/165195395-45dfe764-35cc-4301-ada3-bda149823ad8.gif)
-![chrome-capture-2022-3-25 (6)](https://user-images.githubusercontent.com/40601891/165195666-7715bee3-f570-40f8-91db-a22c23d1300a.gif)
+![chrome-capture-2022-3-25 (6)](https://user-images.githubusercontent.com/40601891/165195666-7715bee3-f570-40f8-91db-a22c23d1300a.gif)<br>
 ✅ Move mouse to right side of screen to access widgets (breathing, weather, gif)<br>
 ✅ Toggle widgets on and off<br>
 
 ### Usage
+
 All pictures taken from online sources, credit to Studio Ghibli.<br>
+
 ### Browser Permissions
+
 These are the permission that the `manifest.json` asks for:
+
 - Storage: To store the data relating to preferences and widgets
 - Geolocation: To access weather information from OpenWeather API
 - Tabs: to oepn in new tab
 
 ### Code
+
 - JQuery
 - JavaScript
 - HTML
