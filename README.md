@@ -26,7 +26,8 @@ I was always inspired to make this because I was always a bit sad that many comm
 💻 Click clock to convert to 24-hour/12-hour clocks<br>
 💻 Click movie information to customize format (name, Japanese name, screen time, quote, year released)<br>
 💻 Right click to-do list to cross out items<br>
-💻 Click right hand side of search bar to switch between Google, Duckduckgo, Bing, and Yahoo<br><br>
+💻 Click right hand side of search bar to switch between Google, Duckduckgo, Bing, and Yahoo<br>
+💻 Click left hand side of search bar to switch between small and large<br><br>
 ![chrome-capture-2022-3-25 (5)](https://user-images.githubusercontent.com/40601891/165195395-45dfe764-35cc-4301-ada3-bda149823ad8.gif)
 ![chrome-capture-2022-3-25 (6)](https://user-images.githubusercontent.com/40601891/165195666-7715bee3-f570-40f8-91db-a22c23d1300a.gif)<br>
 ✅ Move mouse to right side of screen to access widgets (breathing, weather, gif)<br>
