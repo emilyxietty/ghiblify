@@ -212,7 +212,12 @@ function updateSearch() {
   }
 }
 
-//Search bar: chaanges the search engine
+//Search bar: changes search bar size
+function changeSearchSize(){
+  console.log("change search size clicked")
+}
+
+//Search bar: changes the search engine
 function changeSearch() {
   chrome.storage.local.get({
     search_engine: 0
@@ -1594,6 +1599,9 @@ $(document).ready(function() {
   //setting the switches click event listeners
   document.getElementById("searchSwitch").parentElement.addEventListener('click', function() {
     updateSearch();
+  });
+  document.getElementById("searchSizeChange").addEventListener("click", function() {
+    changeSearchSize();
   });
   document.getElementById("searchChange").addEventListener("click", function() {
     changeSearch();
