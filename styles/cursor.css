@@ -1,0 +1,31 @@
+/* body {
+    cursor: none;
+}
+*/
+.cursor {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../icons/cursors/empty.png');
+    background-size: cover;
+    pointer-events: none;
+    z-index: 10000;
+}
+  /* * {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url('../icons/cursor1.png');
+    background-size: cover;
+    pointer-events: none;
+    z-index: 10000;
+  } */
+  
+  /* * {
+    cursor: url('../icons/cursor1.png'), auto;
+  } */
+
+  /* #cursorSizeSlider {
+    
+  } */

@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "ghiblify - new tab",
-  "version": "1.0.9",
+  "version": "1.1.5",
   "short_name": "ghiblify",
   "options_page": "options.html",
-  "description": "add some magic into your everyday life. Photos sourced from the studio ghibli website, free for personal use.",
-  "permissions": ["storage", "bookmarks", "geolocation"],
+  "description": "Add some magic into your everyday life. Photos sourced from the studio ghibli website, free for personal use.",
+  "permissions": ["storage", "geolocation"],
   "icons": {
-    "48": "icons/heen48.png",
-    "128": "icons/heen128.png"
+    "48": "icons/soot_48.png",
+    "128": "icons/soot_128.png"
   },
   "action": {
    "default_title": "Test",

@@ -2,42 +2,69 @@
   "default": {
     "name": "spirited away",
     "link":"https://www.ghibli.jp/gallery/chihiro015.jpg",
-    "title": "千と千尋の神隠し",
+    "name2": "千と千尋の神隠し",
     "year": "2001",
     "screentime": "125 mins",
-    "quote":"Quit whining. It's fun to move to a new place, it's an adventure."
+    "quote":"Quit whining. it's fun to move to a new place, it's an adventure."
   },
-  "info_title": "🍿 movie info",
+  "info_name2": "🍿 movie info",
   "support_link": "https://github.com/emilyxietty",
-  "report_embed": "<iframe src='https://docs.google.com/forms/d/e/1FAIpQLSeeJuD-3LOxM2pJniVo2BCOLmIPctBQDdOkEg4Ejr9n29gNng/viewform?embedded=true?usp=pp_url&entry.2076178066=\\back' width='640' height='640' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>",
+  "report_embed": "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeeJuD-3LOxM2pJniVo2BCOLmIPctBQDdOkEg4Ejr9n29gNng/viewform?embedded=true?usp=pp_url&entry.2076178066=\\back\" width=\"640\" height=\"640\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>",
   "type": "image",
   "info": [
     [
-      {"name": "title", "size": "small"},
-      {"name": "source", "size": "large"},
+      {"name": "name2", "size": "small"},
+      {"name": "source", "size": "small"},
       {"name": "screentime", "size": "small"},
       {"name": "year", "size": "small"}
     ],
     [
-      {"name": "title", "size": "medium"},
-      {"name": "source", "size": "medium"}
+      {"name": "name2", "size": "medium"},
+      {"name": "source", "size": "medium"},
+      {"name": "screentime", "size": "medium"},
+      {"name": "year", "size": "medium"}
     ],
     [
-      {"name": "title", "size": "large"}
+      {"name": "name2", "size": "medium"},
+      {"name": "year", "size": "medium"}
     ],
     [
-      {"name": "source", "size": "large"},
-      {"name": "quote", "size": "medium"},
-      {"name": "year","size": "small"}
+      {"name": "quote", "size": "medium"}
     ],
     [
-      {"name": "title","size": "small"},
-      {"name": "source","size": "medium"},
       {"name": "quote", "size": "small"}
     ],
     [
-      {"name": "title","size": "small"},
-      {"name": "source","size": "medium"},
+      {"name": "source", "size": "medium"},
+      {"name": "quote", "size": "medium"},
+      {"name": "year","size": "medium"}
+    ],
+    [
+      {"name": "name2","size": "small"},
+      {"name": "quote","size": "small"},
+      {"name": "source", "size": "small"}
+    ],
+    [
+      {"name": "source", "size": "large"},
+      {"name": "quote", "size": "large"},
+      {"name": "year","size": "large"}
+    ],
+    [
+      {"name": "name2","size": "large"},
+      {"name": "quote", "size": "large"}
+    ],
+    [
+      {"name": "name2","size": "small"},
+      {"name": "quote", "size": "small"}
+    ],
+    [
+      {"name": "name2","size": "medium"},
+      {"name": "quote", "size": "medium"},
+      {"name": "source","size": "medium"}
+    ],
+    [
+      {"name": "name2","size": "small"},
+      {"name": "source","size": "small"},
       {"name": "year", "size": "small"}
     ]
   ],
@@ -45,326 +72,670 @@
     {"name": "soothing (mindfulness beta)",
     "list": [
       {
-        "link": "https://c.tenor.com/zMdZBjJ7gPkAAAAd/aesthetic-wallpaper.gif",
-        "title": "",
+        "link": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/ba6e5397877185.5ecf73a278179.gif",
+        "name2": "",
         "year": "",
         "screentime": "",
         "quote":""
       },
       {
-        "link": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/ba6e5397877185.5ecf73a278179.gif",
-        "title": "",
+        "link": "https://wallpaperaccess.com/full/2471303.gif",
+        "name2": "",
         "year": "",
         "screentime": "",
         "quote":""
+      },
+      {
+        "link": "https://wallpaperaccess.com/full/723262.gif",
+        "name2": "",
+        "year": "",
+        "screentime": "",
+        "quote":""
+      },
+      {
+        "link": "https://64.media.tumblr.com/6a891b24667e186b9209438673a339ce/6088d818b617caf3-6e/s540x810/2c711258b834848286dc41cf50fdc2769adf126a.gif",
+        "name2": "",
+        "year": "",
+        "screentime": "",
+        "quote":""
+      },
+      {
+        "link": "https://cutewallpaper.org/25/anime-raining-wallpaper-gif/my-hat-einen-neuen-eintrag-gepostet-triggerwarning-fanfiction--fanfiction-amreading-books-wattpad-rain-gif-garden-of-words-rain-animation.gif",
+        "name2": "",
+        "year": "",
+        "screentime": "",
+        "quote":""
+      },
+      {
+        "link": "https://cdnb.artstation.com/p/assets/images/images/029/320/295/original/bogdan-mb0sco-coffeeanim.gif",
+        "name2": "",
+        "year": "",
+        "screentime": "",
+        "quote":""
+      },
+      {
+        "link": "https://i.pinimg.com/originals/49/03/a3/4903a3afbb583f08ba69cfd96e87cf2b.gif",
+        "name2": "君の名は (your name)",
+        "year": "2017",
+        "screentime": "",
+        "quote":"\"Treasure the experience. Dreams fade away after you wake up.\" – Hitoha Miyamizu"
       }
     ]
   },
     {"name": "animated",
     "list": [
       {
-        "link": "https://64.media.tumblr.com/ed8ed0a984d5b6b153b4d94016c4105a/tumblr_ol4v982yLm1qzxv73o1_540.gif",
-        "title": "howl's moving castle",
+        "link": "https://i.gifer.com/origin/3f/3f742b930e81f768f63ce06ea3e57eea.gif",
+        "name2": "howl's moving castle",
         "year": "2004",
         "screentime": "119 mins",
-        "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://giffiles.alphacoders.com/382/3824.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://media.tenor.com/Rvx3od5mgH8AAAAC/heen-miyazaki.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://giffiles.alphacoders.com/230/2308.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://64.media.tumblr.com/ed8ed0a984d5b6b153b4d94016c4105a/tumblr_ol4v982yLm1qzxv73o1_540.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://78.media.tumblr.com/d81050ee83c39020c0dab44442477d2a/tumblr_pa2hk7BJnb1wlpc27o1_1280.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://i.imgur.com/PWb8N.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://media.tenor.com/dFRmjNDK9TwAAAAC/ghibli.gif",
+        "name2": "風立ちぬ",
+        "year": "2013",
+        "screentime": "126 mins",
+        "quote":"\"inspiration unlocks the future.\" - caproni"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/fa/0e/ff/fa0effbc69bdd5d2e7b3372e4bbcba4c.gif",
+        "name2": "風立ちぬ",
+        "year": "2013",
+        "screentime": "126 mins",
+        "quote":"\"inspiration unlocks the future.\" - caproni"
       },
       {
         "link": "https://25.media.tumblr.com/tumblr_m3bs24v9431rtr496o1_500.gif",
-        "title": "howl's moving castle",
+        "name2": "howl's moving castle",
         "year": "2004",
         "screentime": "119 mins",
-        "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://thumbs.gfycat.com/RigidThirdAnura-size_restricted.gif",
+        "name2": "もののけ姫",
+        "year": "1997",
+        "screentime": "133 mins",
+        "quote":"\"look, everyone! this is what hatred looks like!\" - prince ashitaka"
       },
       {
         "link": "https://c.tenor.com/P42_aeznb9kAAAAC/kikis-delivery-service.gif",
-        "title": "kiki's delivery service",
+        "name2": "kiki's delivery service",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
       },
       {
         "link": "https://64.media.tumblr.com/ef54d660ef19b41539113af32810aade/tumblr_ptr93kR27V1xkr0iao1_540.gif",
-        "title": "my neighbour totoro",
+        "name2": "my neighbour totoro",
         "year": "1988",
         "screentime": "86 mins",
-        "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://media.tenor.com/mJWPMHUfSD0AAAAd/kikis-delivery-service-ghibli.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://64.media.tumblr.com/9df6fe5e45470ea167f70fb7edb05d0d/tumblr_n3zllski371tomovco3_500.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://media.tenor.com/8ErGdpPQc5MAAAAC/anime-studio-ghibli.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/84/ba/11/84ba119fa9ae4dde816163ddde12e0be.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
       },
       {
         "link": "https://media.moddb.com/images/groups/1/1/84/F.G.A.P05.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"now go, and don't look back\" - haku"
+      },
+      {
+        "link": "https://media0.giphy.com/media/razd1ERwheVC8/giphy.gif?cid=6c09b952d7bc54dccd7d10a28da73fdf460a69cb3436b6fe&rid=giphy.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/d8/8b/33/d88b335ce13bab84bc018f4e486da278.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://i.pinimg.com/originals/6b/a9/68/6ba968e6872694841da8edcf8dc13d5a.gif",
-        "title": "howl's moving castle",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's not easy being old. - sophie"
+      },
+      {
+        "link": "https://i0.wp.com/iraheinichen.com/wp-content/uploads/2022/10/img_1146.gif",
+        "name2": "howl's moving castle",
+        "year": "2004",
+        "screentime": "119 mins",
+        "quote":"\"it's not easy being old. - sophie"
+      },
+      {
+        "link": "https://media.tenor.com/yXfzZyTpAP4AAAAC/my-neighbor-totoro-tree.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://i.gifer.com/79y.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://fc00.deviantart.net/fs70/f/2013/258/f/2/howl2_by_hyguy87-d6mgy1n.gif",
+        "name2": "howl's moving castle",
         "year": "2004",
         "screentime": "",
-        "quote":""
+        "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
+      },
+      {
+        "link": "https://i.imgur.com/KUwxg08.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://64.media.tumblr.com/e19ffb62744c2a7d33321fe4b7beffdf/tumblr_oopbl02Z5t1u6tm5ho1_540.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://media.tenor.com/wm6ctH1-CXkAAAAd/kikis-delivery-service-cat.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://38.media.tumblr.com/dee56239e9761b2336ff57bd2cd10825/tumblr_nwxa0w7XkN1tytavoo1_540.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://media.tenor.com/N7RVlx8b4NwAAAAd/kikis-delivery-service-rain.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://64.media.tumblr.com/60cb2ba4ecdb78eb19461b3faee08e07/ae635df109615d52-52/s540x810/be28affb718933cc68573d129aa0cf581673ac02.gif",
+        "name2": "my neighbour totoro",
+        "year": "1988",
+        "screentime": "86 mins",
+        "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
+      },
+      {
+        "link": "https://64.media.tumblr.com/3e0ff870eecbe60f4f2402eea1e5efff/tumblr_o8rgxdcHGm1vruqgxo1_1280.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://thumbs.gfycat.com/RelievedReasonableAffenpinscher-size_restricted.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/3b/5e/82/3b5e822074a34f15b7c812a773c19845.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.gifer.com/3YVx.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i've gotta get out of this place. someday i'm getting on that train.\" - lin"
+      },
+      {
+        "link": "https://thumbs.gfycat.com/AdmiredCarefulBedbug-size_restricted.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://data.whicdn.com/images/255015759/original.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://animesher.com/orig/1/199/1996/19961/animesher.com_ghibli-dark-arrietty-1996131.gif",
+        "name2": "借りぐらしのアリエッティ",
+        "year": "2010",
+        "screentime": "94 mins",
+        "quote":"\"sometimes you have to fight for the things that are worth fighting for.\" - arietty"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/a1/ac/d6/a1acd60c70d6bca876b2a65520fd4489.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://giffiles.alphacoders.com/114/114241.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.gifer.com/3TOz.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"now go, and don't look back\" - haku"
+      },
+      {
+        "link": "https://i.gifer.com/2qu6.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/a4/bf/1d/a4bf1d7a92dc2b506bac3ef499648ee2.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/f4/cf/c7/f4cfc7ab82b0a4884fab1b06eb3757db.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.pinimg.com/originals/4b/1d/ed/4b1deda56618216d1d1055c79c949d87.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://64.media.tumblr.com/6ab850c56974932f0767d34fd59deb9b/tumblr_pqlwrfTW6I1v6jtpi_540.gif",
-        "title": "kiki's delivery service",
+        "name2": "kiki's delivery service",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
       },
       {
         "link": "https://64.media.tumblr.com/2ecf0070ac6cc15e0f8895a971a0dbdb/tumblr_pqlwrgr5se1v6jtpi_500.gif",
-        "title": "kiki's delivery service",
+        "name2": "kiki's delivery service",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
       },
       {
         "link": "https://64.media.tumblr.com/c3fbdd7dfb0e2e20b41ba63329de8502/tumblr_opbll5RuZo1uxvvvzo1_500.gif",
-        "title": "kiki's delivery service",
+        "name2": "kiki's delivery service",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
+      },
+      {
+        "link": "https://animesher.com/orig/1/135/1351/13513/animesher.com_grunge-movie-gif-1351335.gif",
+        "name2": "kiki's delivery service",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
       },
       {
         "link": "https://i.imgur.com/ydLBeRI.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://cpb-ap-se2.wpmucdn.com/mediafactory.org.au/dist/9/213/files/2016/04/tumblr_o27yrsMdrf1v1u6k0o1_500-u78xdd.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://64.media.tumblr.com/46fed6399806a0ecce5eba2c235908d0/tumblr_o6bm5bpFLZ1vruqgxo1_1280.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://25.media.tumblr.com/e791c992e700b87a122e5f86c892c31c/tumblr_mshmw5bx8y1s9816mo1_500.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://thumbs.gfycat.com/MaleRegularBovine-size_restricted.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://64.media.tumblr.com/14c23eae36e8f49c38bcdeb5a01773d6/tumblr_n9ue6oISOR1qb6v6ro3_500.gif",
+        "name2": "もののけ姫",
+        "year": "1997",
+        "screentime": "133 mins",
+        "quote":"\"look, everyone! this is what hatred looks like!\" - prince ashitaka"
+      },
+      {
+        "link": "https://64.media.tumblr.com/a42b29f3ce312c27105862246d9ce111/tumblr_p0z2ecDQny1qzxv73o1_540.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://i.imgur.com/80krUnI.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://i.gifer.com/3Rd6.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
+      },
+      {
+        "link": "https://gifdb.com/images/high/spirited-away-chihiro-bored-ua9sddzj76kb2ouz.gif",
+        "name2": "spirited away",
+        "year": "2001",
+        "screentime": "125 mins",
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       },
       {
         "link": "https://thumbs.gfycat.com/LongBeneficialHectorsdolphin-size_restricted.gif",
-        "title": "spirited away",
+        "name2": "spirited away",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"''i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
       }]
   },
     {"name": "spirited away",
       "list": [
         {
         "link": "https://wallpaperaccess.com/full/371175.png",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://wallpaperaccess.com/full/371180.png",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://c4.wallpaperflare.com/wallpaper/531/850/331/spirited-away-studio-ghibli-anime-wallpaper-preview.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://preview.redd.it/i28gaepqvlo41.png?auto=webp&s=8a698d3f1a99f85f85f62e939361fe3b5563e504",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://www.ghibli.jp/images/chihiro1.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
-        {
-        "link": "https://i.pinimg.com/originals/e6/a7/e1/e6a7e183800bea422d6a5296649ebdf3.png",
-        "title": "千と千尋の神隠し",
-        "year": "2001",
-        "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
-        },
+
         {
         "link": "https://i.pinimg.com/originals/50/0e/e6/500ee649b512f89395f7610c8d990e03.png",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://i.pinimg.com/originals/43/17/08/431708ebb3ce54d8319a79d56a79bcaf.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://admin.itsnicethat.com/images/a6249vZRuhF1g1cM9UHo4Fb8mcU=/184017/format-webp%7Cwidth-2880/studio_ghibli_video_chat_backgrounds_animation_itsnicethat_chihiro1.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'quit whining. it's fun to move to a new place, it's an adventure.' - yuko ogino'"
+        "quote":"\"quit whining. it's fun to move to a new place, it's an adventure.\" - yuko ogino\""
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro001.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'quit whining. it's fun to move to a new place, it's an adventure.' - yuko ogino'"
+        "quote":"\"quit whining. it's fun to move to a new place, it's an adventure.\" - yuko ogino\""
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro002.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'you still haven’t noticed that something precious to you has been replaced.' - haku."
+        "quote":"\"you still haven’t noticed that something precious to you has been replaced.\" - haku."
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro003.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'don’t worry! you've got daddy here. he’s got credit cards and cash.' - akio ogino"
+        "quote":"\"don’t worry! you've got daddy here. he’s got credit cards and cash.\" - akio ogino"
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro005.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'you still haven’t noticed that something precious to you has been replaced.' - haku."
+        "quote":"\"you still haven’t noticed that something precious to you has been replaced.\" - haku."
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro007.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back - haku'"
+        "quote":"\"now go, and don't look back\" - haku"
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro009.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'that's how yubaba controls you... by stealing your name' - haku"
+        "quote":"\"that\"s how yubaba controls you... by stealing your name\" - haku"
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro011.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'you still haven’t noticed that something precious to you has been replaced.' - haku."
+        "quote":"\"you still haven’t noticed that something precious to you has been replaced.\" - haku."
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro014.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'something you wouldn't recognize. it's called love.' - kamaji"
+        "quote":"\"something you wouldn\"t recognize. it's called love.\" - kamaji"
         },
         {
         "link": "https://www.ghibli.jp/gallery/chihiro015.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'something you wouldn't recognize. it's called love.' - kamaji"
+        "quote":"\"something you wouldn\"t recognize. it's called love.\" - kamaji"
          },
          {
         "link": "https://www.ghibli.jp/gallery/chihiro020.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'once you do something, you never forget. even if you can't remember.' - zeniba"
+        "quote":"\"once you do something, you never forget. even if you can't remember.\" - zeniba"
          },
          {
         "link": "https://www.ghibli.jp/gallery/chihiro021.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'you still haven’t noticed that something precious to you has been replaced.' - haku."
+        "quote":"\"you still haven’t noticed that something precious to you has been replaced.\" - haku."
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro025.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'something you wouldn't recognize. it's called love.' - kamaji"
+        "quote":"\"something you wouldn\"t recognize. it's called love.\" - kamaji"
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro029.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i've gotta get out of this place. someday i'm getting on that train.' - lin"
+        "quote":"\"i've gotta get out of this place. someday i'm getting on that train.\" - lin"
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro034.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i'm not leaving here until you give me a job!' - chihiro"
+        "quote":"\"i'm not leaving here until you give me a job!\" - chihiro"
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro040.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'something you wouldn't recognize. it's called love.' - kamaji"
+        "quote":"\"something you wouldn\"t recognize. it's called love.\" - kamaji"
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro041.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'once you do something, you never forget. even if you can't remember.' - zeniba"
+        "quote":"\"once you do something, you never forget. even if you can't remember.\" - zeniba"
        },
        {
         "link": "https://www.ghibli.jp/gallery/chihiro042.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i've gotta get out of this place. someday i'm getting on that train.' - lin"
+        "quote":"\"i've gotta get out of this place. someday i'm getting on that train.\" - lin"
       },
       {
         "link": "https://www.ghibli.jp/gallery/chihiro043.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'i've gotta get out of this place. someday i'm getting on that train.' - lin"
+        "quote":"\"i've gotta get out of this place. someday i'm getting on that train.\" - lin"
       },
       {
         "link": "https://www.ghibli.jp/gallery/chihiro048.jpg",
-        "title": "千と千尋の神隠し",
+        "name2": "千と千尋の神隠し",
         "year": "2001",
         "screentime": "125 mins",
-        "quote":"'now go, and don't look back' - haku"
+        "quote":"\"now go, and don't look back\" - haku"
       }]
     },
 
@@ -372,169 +743,169 @@
      "list": [
        {
          "link": "https://wallpaperaccess.com/full/371119.jpg",
-         "title": "崖の上のポニョ",
+         "name2": "崖の上のポニョ",
          "year": "2008",
          "screentime": "101 mins",
-         "quote":"'you should never judge others by their looks' - lisa"
+         "quote":"\"you should never judge others by their looks\" - lisa"
        },
        {
          "link": "https://wallpaperaccess.com/full/370986.jpg",
-         "title": "崖の上のポニョ",
+         "name2": "崖の上のポニョ",
          "year": "2008",
          "screentime": "101 mins",
-         "quote":"'you should never judge others by their looks' - lisa"
+         "quote":"\"you should never judge others by their looks\" - lisa"
        },
        {
          "link": "https://wallpaperaccess.com/full/42644.jpg",
-         "title": "崖の上のポニョ",
+         "name2": "崖の上のポニョ",
          "year": "2008",
          "screentime": "101 mins",
-         "quote":"'you should never judge others by their looks' - lisa"
+         "quote":"\"you should never judge others by their looks\" - lisa"
        },
        {"link": "https://www.ghibli.jp/gallery/ponyo001.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you're not busy, you're five!'- koichi"
+          "quote":"\"you're not busy, you're five!\"- koichi"
         },
         {"link": "https://www.ghibli.jp/gallery/ponyo004.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'don’t worry, ponyo. no matter what, i will protect you. i promise.' - sosuke"
+          "quote":"\"don’t worry, ponyo. no matter what, i will protect you. i promise.\" - sosuke"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo005.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'she's big and beautiful, but she can be very scary' - tomoko"
+          "quote":"\"she\"s big and beautiful, but she can be very scary\" - tomoko"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo006.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i'd let a fish lick me if it'd get me out of this wheelchair' - akiko"
+          "quote":"\"i'd let a fish lick me if it'd get me out of this wheelchair\" - akiko"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo007.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo008.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'don’t worry, ponyo. no matter what, i will protect you. i promise.' - sosuke"
+          "quote":"\"don’t worry, ponyo. no matter what, i will protect you. i promise.\" - sosuke"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo012.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i say we start with dessert and go backwards. it’s been a backwards kind of day!' - lisa"
+          "quote":"\"i say we start with dessert and go backwards. it’s been a backwards kind of day!\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo013.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you're not busy, you're five!'- koichi"
+          "quote":"\"you're not busy, you're five!\"- koichi"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo020.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo023.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i say we start with dessert and go backwards. it’s been a backwards kind of day!' - lisa"
+          "quote":"\"i say we start with dessert and go backwards. it’s been a backwards kind of day!\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo025.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'don’t worry, ponyo. no matter what, i will protect you. i promise.' - sosuke"
+          "quote":"\"don’t worry, ponyo. no matter what, i will protect you. i promise.\" - sosuke"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo028.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo030.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i say we start with dessert and go backwards. it’s been a backwards kind of day!' - lisa"
+          "quote":"\"i say we start with dessert and go backwards. it’s been a backwards kind of day!\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo031.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'don’t worry, ponyo. no matter what, i will protect you. i promise.' - sosuke"
+          "quote":"\"don’t worry, ponyo. no matter what, i will protect you. i promise.\" - sosuke"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo032.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo038.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i say we start with dessert and go backwards. it’s been a backwards kind of day!' - lisa"
+          "quote":"\"i say we start with dessert and go backwards. it’s been a backwards kind of day!\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo040.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo041.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i say we start with dessert and go backwards. it’s been a backwards kind of day!' - lisa"
+          "quote":"\"i say we start with dessert and go backwards. it’s been a backwards kind of day!\" - lisa"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo044.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'i love ponyo whether she’s a fish, a human, or something in between.' - sosuke"
+          "quote":"\"i love ponyo whether she’s a fish, a human, or something in between.\" - sosuke"
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo049.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'life is mysterious and amazing, but we have work to do now, and i need you both to stay calm.' - lisa'"
+          "quote":"\"life is mysterious and amazing, but we have work to do now, and i need you both to stay calm.\" - lisa\""
         },
         {
           "link": "https://www.ghibli.jp/gallery/ponyo050.jpg",
-          "title": "崖の上のポニョ",
+          "name2": "崖の上のポニョ",
           "year": "2008",
           "screentime": "101 mins",
-          "quote":"'you should never judge others by their looks' - lisa"
+          "quote":"\"you should never judge others by their looks\" - lisa"
         }]
     },
 
@@ -542,928 +913,915 @@
       "list": [
       {
       "link": "https://www.ghibli.jp/images/arietty1.jpg",
-      "title": "借りぐらしのアリエッティ",
+      "name2": "借りぐらしのアリエッティ",
       "year": "2010",
       "screentime": "94 mins",
-      "quote":"'sometimes you have to fight for the things that are worth fighting for.' - arietty"
+      "quote":"\"sometimes you have to fight for the things that are worth fighting for.\" - arietty"
       },
       {
       "link": "https://www.ghibli.jp/gallery/karigurashi001.jpg",
-      "title": "借りぐらしのアリエッティ",
+      "name2": "借りぐらしのアリエッティ",
       "year": "2010",
       "screentime": "94 mins",
-      "quote":"'sometimes you have to fight for the things that are worth fighting for.' - arietty"
+      "quote":"\"sometimes you have to fight for the things that are worth fighting for.\" - arietty"
       },
       {
         "link": "https://www.ghibli.jp/gallery/karigurashi002.jpg",
-        "title": "借りぐらしのアリエッティ",
+        "name2": "借りぐらしのアリエッティ",
         "year": "2010",
         "screentime": "94 mins",
-        "quote":"'when I saw you, I just wanted to find a way to protect you.' - shawn"
+        "quote":"\"when I saw you, I just wanted to find a way to protect you.\" - shawn"
       },
       {
         "link": "https://www.ghibli.jp/gallery/karigurashi047.jpg",
-        "title": "借りぐらしのアリエッティ",
+        "name2": "借りぐらしのアリエッティ",
         "year": "2010",
         "screentime": "94 mins",
-        "quote":"'we've been seen, and borrowers aren't supposed to be seen!' - arietty"
+        "quote":"\"we've been seen, and borrowers aren't supposed to be seen!\" - arietty"
       },
       {
         "link": "https://www.ghibli.jp/gallery/karigurashi032.jpg",
-        "title": "借りぐらしのアリエッティ",
+        "name2": "借りぐらしのアリエッティ",
         "year": "2010",
         "screentime": "94 mins",
-        "quote":"'strange things have been happening here, and i know why.' - hara"
+        "quote":"\"strange things have been happening here, and i know why.\" - hara"
       },
       {
         "link": "https://www.ghibli.jp/gallery/karigurashi021.jpg",
-        "title": "借りぐらしのアリエッティ",
+        "name2": "借りぐらしのアリエッティ",
         "year": "2010",
         "screentime": "94 mins",
-        "quote":"'sometimes you have to fight for the things that are worth fighting for.' - arietty"
+        "quote":"\"sometimes you have to fight for the things that are worth fighting for.\" - arietty"
       },
       {
         "link": "https://www.ghibli.jp/gallery/karigurashi020.jpg",
-        "title": "借りぐらしのアリエッティ",
+        "name2": "借りぐらしのアリエッティ",
         "year": "2010",
         "screentime": "94 mins",
-        "quote":"'when I saw you, I just wanted to find a way to protect you.' - shawn"
+        "quote":"\"when I saw you, I just wanted to find a way to protect you.\" - shawn"
       }]
     },
     {"name": "howl's moving castle",
       "list": [
         {
           "link": "https://wallpaperaccess.com/full/370981.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+          "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/images/howl1.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+          "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl004.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+          "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl006.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'one thing you can always count on is that hearts change' - turnip head"
+          "quote":"\"one thing you can always count on is that hearts change\" - turnip head"
         },
         {
         "link": "https://www.ghibli.jp/gallery/howl009.jpg",
-        "title": "ハウルの動く城",
+        "name2": "ハウルの動く城",
         "year": "2004",
         "screentime": "119 mins",
-        "quote":"'one thing you can always count on is that hearts change' - turnip head"
+        "quote":"\"one thing you can always count on is that hearts change\" - turnip head"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl010.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's not easy being old. - sophie"
+          "quote":"\"it's not easy being old. - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl011.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'i give up. i see no point in living if i can't be beatuiful' - howl"
+          "quote":"\"i give up. i see no point in living if i can't be beatuiful\" - howl"
         },
         {
           "link": "https://wallpaper.dog/large/20496743.jpg",
-          "title": "howl's moving castle",
+          "name2": "howl's moving castle",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's been a pleasure meeting you, even if you are my least favourite vegetable' - sophie"
+          "quote":"\"it's been a pleasure meeting you, even if you are my least favourite vegetable\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl016.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'they say that the best blaze burns the brightest when circumstances are at their worst' - sophie"
+          "quote":"\"they say that the best blaze burns the brightest when circumstances are at their worst\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl020.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'i give up. i see no point in living if i can't be beatuiful' - howl"
+          "quote":"\"i give up. i see no point in living if i can't be beatuiful\" - howl"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl025.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'here's another curse for you - may all your bacom burn' - calcifer"
+          "quote":"\"here's another curse for you - may all your bacom burn\" - calcifer"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl035.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'there you are sweetheart, sorry i'm late, i was looking everywhere for you' - howl"
+          "quote":"\"there you are sweetheart, sorry i'm late, i was looking everywhere for you' - howl"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl037.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl043.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'one thing you can always count on is that hearts change' - turnip head"
+          "quote":"\"one thing you can always count on is that hearts change\" - turnip head"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl044.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'one thing you can always count on is that hearts change' - turnip head"
+          "quote":"\"one thing you can always count on is that hearts change\" - turnip head"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl045.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl048.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'it's not easy being old. - sophie"
+          "quote":"\"it's not easy being old. - sophie"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl049.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'there you are sweetheart, sorry i'm late, i was looking everywhere for you' - howl"
+          "quote":"\"there you are sweetheart, sorry i'm late, i was looking everywhere for you' - howl"
         },
         {
           "link": "https://www.ghibli.jp/gallery/howl050.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://wallpaperaccess.com/full/42617.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://images2.alphacoders.com/842/84252.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://images4.alphacoders.com/121/1218.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://i.pinimg.com/originals/60/a6/36/60a636b7256c3f0d6e941ead337b8f44.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://www.gablescinema.com/media/filmassets/slides/bd03_original.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
         {
           "link": "https://i.imgur.com/MtowUYC.png",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         },
-        {
-          "link": "https://i.imgur.com/MtowUYC.png",
-          "title": "ハウルの動く城",
-          "year": "2004",
-          "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
-        },
-        {
-          "link": "https://i.imgur.com/MtowUYC.png",
-          "title": "ハウルの動く城",
-          "year": "2004",
-          "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
-        },
+
         {
           "link": "http://images6.fanpop.com/image/photos/43600000/Howl-s-Moving-Castle-Wallpaper-studio-ghibli-43697665-1920-1080.jpg",
-          "title": "ハウルの動く城",
+          "name2": "ハウルの動く城",
           "year": "2004",
           "screentime": "119 mins",
-          "quote":"'a heart's a heavy burden' - sophie"
+          "quote":"\"a heart's a heavy burden\" - sophie"
         }]
     },
     {"name": "my neighbour totoro",
       "list": [
         {
           "link": "https://www.ghibli.jp/images/totoro1.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'hide! whoops, i thought that was a policeman. hello!' - satsuki"
+          "quote":"\"hide! whoops, i thought that was a policeman. hello!\" - satsuki"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro044.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'hide! whoops, i thought that was a policeman. hello!' - satsuki"
+          "quote":"\"hide! whoops, i thought that was a policeman. hello!\" - satsuki"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro040.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro036.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'i hate boys! but i love nanny's food better than anything else in the whole wide world' - satsuki"
+          "quote":"\"i hate boys! but i love nanny\"s food better than anything else in the whole wide world\" - satsuki"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro029.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'trees and people used to be good friends' - tatsuo kusakabe"
+          "quote":"\"trees and people used to be good friends\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro025.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro018.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro019.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'i've always wanted to live in a haunted house. it's been my lifelong dream' - tatsuo kusakabe"
+          "quote":"\"i've always wanted to live in a haunted house. it's been my lifelong dream\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro016.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro024.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro035.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'i've always wanted to live in a haunted house. it's been my lifelong dream' - tatsuo kusakabe"
+          "quote":"\"i've always wanted to live in a haunted house. it's been my lifelong dream\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro001.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'i've always wanted to live in a haunted house. it's been my lifelong dream' - tatsuo kusakabe"
+          "quote":"\"i've always wanted to live in a haunted house. it's been my lifelong dream\" - tatsuo kusakabe"
         },
         {
           "link": "https://www.ghibli.jp/gallery/totoro041.jpg",
-          "title": "となりのトトロ",
+          "name2": "となりのトトロ",
           "year": "1988",
           "screentime": "86 mins",
-          "quote":"'try laughing. then whatever scares you will go away.' - tatsuo kusakabe"
+          "quote":"\"try laughing. then whatever scares you will go away.\" - tatsuo kusakabe"
         }]
     },
     {"name": "castle in the sky",
       "list": [
       {
         "link": "https://www.ghibli.jp/images/laputa1.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'ah, what can i tell ya? they just really like dessert' - dola"
+        "quote":"\"ah, what can i tell ya? they just really like dessert\" - dola"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa004.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'no matter how many weapons you have, no matter how great your technology might be, the world cannot live without love.' - sheeta"
+        "quote":"\"no matter how many weapons you have, no matter how great your technology might be, the world cannot live without love.\" - sheeta"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa006.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'ah, what can i tell ya? they just really like dessert' - dola"
+        "quote":"\"ah, what can i tell ya? they just really like dessert\" - dola"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa028.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'i have really had enough of your incredible stupidity.' - muska"
+        "quote":"\"i have really had enough of your incredible stupidity.\" - muska"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa036.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'the earth speaks to all of us, and if we listen, we can understand.' - uncle pom"
+        "quote":"\"the earth speaks to all of us, and if we listen, we can understand.\" - uncle pom"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa039.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'stop wriggling, ya little worm!' - henri"
+        "quote":"\"stop wriggling, ya little worm!\" - henri"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa037.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'blast! I really hate that man.' - general"
+        "quote":"\"blast! I really hate that man.\" - general"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa041.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'full speed ahead!' - dola"
+        "quote":"\"full speed ahead!\" - dola"
       },
       {
         "link": "https://www.ghibli.jp/gallery/laputa050.jpg",
-        "title": "天空の城ラピュタ",
+        "name2": "天空の城ラピュタ",
         "year": "1986",
         "screentime": "124 mins",
-        "quote":"'time’s up. What is your answer?' - muska"
+        "quote":"\"time’s up. What is your answer?\" - muska"
       }]
     },
     {"name": "kiki's delivery service",
       "list": [
         {
           "link": "https://wallpaper.dog/large/20497080.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/6I7u6jK.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/hGmmpXS.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/xe7yn1l.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/ocYjCYd.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/lWPWsxZ.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/lOqxE7U.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/X5wt7vn.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/IqEpUGh.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/46t1ZWd.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/Dk0ScOv.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/RD3icbY.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/qbw6SOQ.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/EGyD4ZJ.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/tYQmZbR.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/BODPqG9.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/oC5F786.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/ga6efgR.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/BuqruKI.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/W6IF5IH.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/2X8lCU8.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/oMNhHde.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/xNyf2nQ.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/1VmdF8u.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/aeiU9CH.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/q7Qtpe7.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/yZLdGDR.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/GYGrpSL.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/mCbJJYO.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/YyxxQrh.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/NLzxxk8.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/9bPUHp1.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/aryd2Ne.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/Iju4SAw.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/GYGrpSL.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/GYGrpSL.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/6t2dRGL.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/Z0xB7rD.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/ftjVCKC.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/Zf3zKXb.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://i.imgur.com/UhmbkVW.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/lz1EPkO.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://i.imgur.com/HSZNtuX.png",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo001.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we need to find our own inspiration, kiki. sometimes it’s not easy.' -Ursula"
+          "quote":"\"we need to find our own inspiration, kiki. sometimes it’s not easy.\" -Ursula"
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo002.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'we can fly with our spirit.' - kiki"
+          "quote":"\"we can fly with our spirit.\" - kiki"
 
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo003.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe I need to find my own inspiration. but am i ever going to find it? it is worth all the trouble?' - kiki"
+          "quote":"\"maybe I need to find my own inspiration. but am i ever going to find it? it is worth all the trouble?\" - kiki"
 
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo024.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'all right, first: don’t panic! second: don’t panic! and third: did i mention not to panic?' - jiji"
+          "quote":"\"all right, first: don’t panic! second: don’t panic! and third: did i mention not to panic?\" - jiji"
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo047.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'just follow your heart and keep smiling.' - kokiri"
+          "quote":"\"just follow your heart and keep smiling.\" - kokiri"
         },
         {
           "link": "https://www.ghibli.jp/gallery/majo048.jpg",
-          "title": "魔女の宅急便",
+          "name2": "魔女の宅急便",
           "year": "1989",
           "screentime": "102 mins",
-          "quote":"'maybe i can stay and find some other nice people who will like me and accept me for who i am.' - kiki"
+          "quote":"\"maybe i can stay and find some other nice people who will like me and accept me for who i am.\" - kiki"
         }]
     },
     {"name": "the wind rises",
       "list": [
         {
           "link": "https://www.ghibli.jp/images/kaze1.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'inspiration unlocks the future.' - caproni"
+          "quote":"\"inspiration unlocks the future.\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu002.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'inspiration unlocks the future.' - caproni"
+          "quote":"\"inspiration unlocks the future.\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu020.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'she was beautiful, just like the wind' - caproni"
+          "quote":"\"she was beautiful, just like the wind\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu023.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'be careful. this may be a dream but you can still lose your head!' - caproni"
+          "quote":"\"be careful. this may be a dream but you can still lose your head!\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu024.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'bravo. a beautiful dream' - caproni"
+          "quote":"\"bravo. a beautiful dream\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu028.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'a summer to remember' - castorp"
+          "quote":"\"a summer to remember\" - castorp"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu050.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'life is wonderful, isn't it?' - satomi"
+          "quote":"\"life is wonderful, isn't it?\" - satomi"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu042.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'life is wonderful, isn't it?' - satomi"
+          "quote":"\"life is wonderful, isn't it?\" - satomi"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu015.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'bravo. a beautiful dream' - caproni"
+          "quote":"\"bravo. a beautiful dream\" - caproni"
         },
         {
           "link": "https://www.ghibli.jp/gallery/kazetachinu032.jpg",
-          "title": "風立ちぬ",
+          "name2": "風立ちぬ",
           "year": "2013",
           "screentime": "126 mins",
-          "quote":"'i'd forgotten what rainbows look like' - hirokoshi"
+          "quote":"\"i'd forgotten what rainbows look like\" - hirokoshi"
         }]
     },
     {"name": "the cat returns",
       "list": [
         {
           "link": "https://www.ghibli.jp/gallery/baron022.jpg",
-          "title": "猫の恩返し",
+          "name2": "猫の恩返し",
           "year": "2002",
           "screentime": "75 mins",
-          "quote":"'always believe in yourself. do this and no matter where you are, you will have nothing to fear' - baron"
+          "quote":"\"always believe in yourself. do this and no matter where you are, you will have nothing to fear\" - baron"
         },
         {
           "link": "https://www.ghibli.jp/gallery/baron046.jpg",
-          "title": "猫の恩返し",
+          "name2": "猫の恩返し",
           "year": "2002",
           "screentime": "75 mins",
-          "quote":"'whenever someone creates something with all of their heart, then that creation is given a soul' - baron"
+          "quote":"\"whenever someone creates something with all of their heart, then that creation is given a soul\" - baron"
         }]
     },
     {"name": "porco rosso",
       "list": [
         {
           "link": "https://www.ghibli.jp/gallery/porco026.jpg",
-          "title": "紅の豚",
+          "name2": "紅の豚",
           "year": "1992",
           "screentime": "93 mins",
-          "quote":"'i'd rather be a pig than a fascist.' - porco rosso"
+          "quote":"\"i'd rather be a pig than a fascist.\" - porco rosso"
         },
         {
           "link": "https://www.ghibli.jp/gallery/porco007.jpg",
-          "title": "紅の豚",
+          "name2": "紅の豚",
           "year": "1992",
           "screentime": "93 mins",
-          "quote":"'a pig's gotta fly' - porco rosso"
+          "quote":"\"a pig's gotta fly\" - porco rosso"
         }]
     },
     {"name": "princess mononoke",
       "list": [
         {
           "link": "https://www.ghibli.jp/gallery/mononoke024.jpg",
-          "title": "もののけ姫",
+          "name2": "もののけ姫",
           "year": "1997",
           "screentime": "133 mins",
-          "quote":"'look, everyone! this is what hatred looks like!' - prince ashitaka"
+          "quote":"\"look, everyone! this is what hatred looks like!\" - prince ashitaka"
         },
         {
           "link": "https://www.ghibli.jp/gallery/mononoke023.jpg",
-          "title": "もののけ姫",
+          "name2": "もののけ姫",
           "year": "1997",
           "screentime": "133 mins",
-          "quote":"'you want some of our iron? mine your own!' - townsman"
+          "quote":"\"you want some of our iron? mine your own!\" - townsman"
         },
         {
           "link": "https://www.ghibli.jp/gallery/mononoke010.jpg",
-          "title": "もののけ姫",
+          "name2": "もののけ姫",
           "year": "1997",
           "screentime": "133 mins",
-          "quote":"'ugh, I smell like a human.' - san"
+          "quote":"\"ugh, I smell like a human.\" - san"
         }]
     },
     {"name": "whisper of the heart",
       "list": [
           {
             "link": "https://www.ghibli.jp/gallery/mimi018.jpg",
-            "title": "耳をすませば",
+            "name2": "耳をすませば",
             "year": "1995",
             "screentime": "111 mins",
-            "quote":"'there’s always a voice inside me that says, 'things won’t go that smoothly.'' - shizuki"
+            "quote":"\"there’s always a voice inside me that says, 'things won’t go that smoothly.'\" - shizuki"
           },
           {
             "link": "https://www.ghibli.jp/gallery/mimi033.jpg",
-            "title": "耳をすませば",
+            "name2": "耳をすませば",
             "year": "1995",
             "screentime": "111 mins",
-            "quote":"'don't expect perfection at first' - shirou"
+            "quote":"\"don't expect perfection at first\" - shirou"
           },
           {
             "link": "https://www.ghibli.jp/gallery/mimi048.jpg",
-            "title": "耳をすませば",
+            "name2": "耳をすませば",
             "year": "1995",
             "screentime": "111 mins",
-            "quote":"'the dense one is me, isn't it' - shizuku"
+            "quote":"\"the dense one is me, isn't it' - shizuku"
           },
           {
             "link": "https://www.ghibli.jp/gallery/mimi008.jpg",
-            "title": "耳をすませば",
+            "name2": "耳をすませば",
             "year": "1995",
             "screentime": "111 mins",
-            "quote":"'i don't want to be a burden! i want to be useful!' - shizuku"
+            "quote":"\"i don't want to be a burden! i want to be useful!\" - shizuku"
           },
           {
             "link": "https://www.ghibli.jp/gallery/mimi017.jpg",
-            "title": "耳をすませば",
+            "name2": "耳をすませば",
             "year": "1995",
             "screentime": "111 mins",
-            "quote":"'why do we change, i wonder?' - shizuku"
+            "quote":"\"why do we change, i wonder?\" - shizuku"
           }]
 
   }

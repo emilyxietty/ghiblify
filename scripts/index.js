@@ -5,6 +5,53 @@ function createHTML(htmlString) {
 
   return div.firstChild;
 }
+
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        return response;
+      }
+
+      return fetch(event.request).then(function(response) {
+        return caches.open('cache-name').then(function(cache) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheName !== 'cache-name') {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open('cache-name').then(function(cache) {
+      return cache.match(event.request).then(function(response) {
+        var fetchPromise = fetch(event.request).then(function(networkResponse) {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+
+        return response || fetchPromise;
+      });
+    })
+  );
+});
 //Helper: for setting the cursor to the end of the editable content
 function setEndOfContenteditable(contentEditableElement) {
   var range, selection;
@@ -46,21 +93,21 @@ function startTime() {
   let today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
-  let pa = "";
+  // let pa = "";
 
-  //sets PM and AM if not in 24 hr
-  if (!window.newTab.clock.military) {
-    if (h > 11)
-      pa = " PM"
-    else
-      pa = " AM"
-  }
+  // //sets PM and AM if not in 24 hr
+  // if (!window.newTab.clock.military) {
+  //   if (h > 11)
+  //     pa = "PM"
+  //   else
+  //     pa = "AM"
+  // }
   if (!window.newTab.clock.military)
     h = checkHour(h);
 
   // display the time
   document.getElementById('time').innerHTML = h + ":" + checkMin(m);
-  document.getElementById("pa").innerHTML = pa;
+  // document.getElementById("pa").innerHTML = pa;
 
   today = new Date();
   let s = today.getSeconds();
@@ -89,14 +136,22 @@ function changeMinutes(h, m) {
   }
 }
 
+
+function parsePercentage(value) {
+  return parseFloat(value.replace('%', ''));
+}
+
 //Widgets: sets the element to be draggable (customized for time, search bar, todo list)
 function dragElement(elmnt) {
+  
   let pos1 = 0,
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
 
   //depends on which element it is, different place to click
+  if (elmnt.id == "dateWrapper")
+    document.getElementById("dateDisplay").onmousedown = dragMouseDown;
   if (elmnt.id == "timeWrapper")
     document.getElementById("time").onmousedown = dragMouseDown;
   if (elmnt.id == "searchWrapper")
@@ -115,25 +170,72 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
+
+    document.addEventListener("mousemove", alignWidget);
+  }
+
+  function alignWidget() {
+    const ww = window.innerWidth;
+    const widgetPos = elmnt.getBoundingClientRect();
+    const widgetWidth = widgetPos.width;
+
+    if (widgetPos.left + widgetWidth > 3 * ww/4) {
+      elmnt.style.textAlign = "right";
+      elmnt.style.alignItems = "right";
+      elmnt.style.justifyContent = "right";
+
+      // elmnt.style.
+      // console.log("Time widget aligned to the right!");
+    } else if (widgetPos.left + widgetWidth > 2*ww/4) {
+      elmnt.style.textAlign = "center";
+      elmnt.style.alignItems = "center";
+      elmnt.style.justifyContent = "center";
+
+      // console.log("Time widget aligned to the center!");
+    } else {
+      elmnt.style.textAlign = "left";
+      elmnt.style.justifyContent = "left";
+
+      elmnt.style.alignItems = "left";
+      // console.log("Time widget aligned to the left!");
+    }
   }
 
   //when element is dragged
   function elementDrag(e) {
     e = e || window.event;
     e.preventDefault();
+
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+    elmnt.style.top = ((elmnt.offsetTop - pos2)/window.innerHeight)*100 + "%";
+    elmnt.style.left = ((elmnt.offsetLeft - pos1)/window.innerWidth)*100 + "%";
+    
+    // if (data.time_left_data > 3 * ww/4) {
+    //   $('#timeWrapper').css('text-align', 'right');
+    //   $('#timeWrapper').css('transform', 'translate(-100%, 0%)');
+    //   console.log("Time widget aligned to the right!");
+    // } else  if (data.time_left_data > ww/4) {
+    //   $('#timeWrapper').css('text-align', 'center');
+    //   $('#timeWrapper').css('transform', 'translate(-50%, 0%)');
+    //   console.log("Time widget aligned to the center!");
+    // } else {
+    //   $('#timeWrapper').css('text-align', 'left');
+    //   $('#timeWrapper').css('transform', 'translate(0%, 0%)');
+    //   console.log("Time widget aligned to the left!");
+    // }
+
+
     //sets window.dragged to be true to see if an element was moved
     if (!window.newTab.dragged)
       window.newTab.dragged = true;
 
   }
+
 
   // stop moving when mouse button is released
   function closeDragElement() {
@@ -142,10 +244,24 @@ function dragElement(elmnt) {
       window.newTab.dragged = false;
 
       //saves the current location for the elements
+      if (elmnt.id == "dateWrapper") {
+        chrome.storage.local.set({
+          date_top_data: elmnt.style.top,
+          date_left_data: elmnt.style.left,
+          date_text_align_data: elmnt.style.textAlign,
+          date_align_data: elmnt.style.alignItems,
+          date_justify_data: elmnt.style.justifyContent
+        }, function() {});
+
+        
+      }
       if (elmnt.id == "timeWrapper") {
         chrome.storage.local.set({
           time_top_data: elmnt.style.top,
-          time_left_data: elmnt.style.left
+          time_left_data: elmnt.style.left,
+          time_text_align_data: elmnt.style.textAlign,
+          time_align_data: elmnt.style.alignItems,
+          time_justify_data: elmnt.style.justifyContent
         }, function() {});
         window.newTab.clock.military = !window.newTab.clock.military;
       }
@@ -153,12 +269,18 @@ function dragElement(elmnt) {
         chrome.storage.local.set({
           search_top_data: elmnt.style.top,
           search_left_data: elmnt.style.left
+          // search_text_align_data: elmnt.style.textAlign,
+          // search_align_data: elmnt.style.alignItems,
+          // search_justify_data: elmnt.style.justifyContent
         }, function() {});
       }
       if (elmnt.id == "todoWrapper") {
         chrome.storage.local.set({
           todo_top_data: elmnt.style.top,
           todo_left_data: elmnt.style.left
+          // todo_text_align_data: elmnt.style.textAlign,
+          // todo_align_data: elmnt.style.alignItems,
+          // todo_justify_data: elmnt.style.justifyContent
         }, function() {});
       }
       if (elmnt.id == "infoWrapper") {
@@ -212,7 +334,7 @@ function updateSearch() {
   }
 }
 
-//Search bar: chaanges the search engine
+//Search bar: changes the search engine
 function changeSearch() {
   chrome.storage.local.get({
     search_engine: 0
@@ -232,6 +354,30 @@ function changeSearch() {
       search_engine: index
     }, function() {});
   });
+}
+
+//Date: toggles visibility of date display
+function updateDate() {
+
+  let dateWrapper = document.getElementById("dateWrapper");
+  let dateSwitch = document.getElementById("dateSwitch");
+
+  dateWrapper.classList.remove("firstStart");
+  if (dateSwitch.checked) {
+    dateSwitch.checked = false;
+    dateWrapper.classList.add("exit");
+    dateWrapper.classList.remove("entrance");
+    chrome.storage.local.set({
+      date_switch: "off"
+    }, function() {});
+  } else {
+    dateSwitch.checked = true;
+    dateWrapper.classList.add("entrance");
+    dateWrapper.classList.remove("exit");
+    chrome.storage.local.set({
+      date_switch: "on"
+    }, function() {});
+  }
 }
 
 //Time: toggles the visibility of the time display
@@ -396,6 +542,27 @@ function updateFilter() {
     filter: arr
   }, function() {});
 }
+// function updateFilter() {
+//   let darkVal = document.getElementById("darkSlider").value;
+//   let satuVal = document.getElementById("satuSlider").value;
+//   let conVal = document.getElementById("conSlider").value;
+//   let blurVal = document.getElementById("blurSlider").value;
+
+//   let innerColor = `hsl(0, 0%, ${100 - darkVal}%)`;
+//   let outerColor = `hsl(0, 0%, 0%)`;
+
+//   document.getElementById("backloader").style = `
+//     --inner-color: ${innerColor};
+//     --outer-color: ${outerColor};
+//     filter: saturate(${satuVal / 100}) contrast(${conVal / 100}) blur(${blurVal / 10}px);
+//   `;
+
+//   let arr = [darkVal, satuVal, conVal, blurVal];
+//   chrome.storage.local.set({
+//     filter: arr
+//   }, function() {});
+// }
+
 
 //Todo: saves the Todo list to the chrome storage
 function saveTodo() {
@@ -449,6 +616,8 @@ function resetData() {
             chrome.storage.local.set({
                 time_top_data: '',
                 time_left_data: '',
+                date_top_data: '',
+                date_left_data: '',
                 info_top_data: '',
                 info_left_data: '',
                 todo_top_data: '',
@@ -464,6 +633,7 @@ function resetData() {
                 time_switch: 'on',
                 info_mode: 0,
                 info_switch: 'on',
+                date_switch: 'on',
                 search_switch: 'on',
                 todo_switch: 'on',
                 todo_data: ''
@@ -579,6 +749,7 @@ function setLiListeners(li) {
 
 //Todo: new list item, returns the list item created
 function newListItem(text, check) {
+  
   let li = document.createElement("li");
   if (check) {
     li.classList.toggle('checked');
@@ -589,6 +760,8 @@ function newListItem(text, check) {
   } else {
     t = document.createElement("br");
   }
+
+    
   let txtSpan = document.createElement("span");
   txtSpan.appendChild(t);
   li.appendChild(txtSpan);
@@ -597,6 +770,19 @@ function newListItem(text, check) {
   txtSpan.classList.add('listText');
   document.getElementById("myUL").appendChild(li);
   setLiListeners(li);
+
+  // cross out button
+  let crossOutBtn = document.createElement("SPAN");
+  // crossOutBtn.innerHTML = "<span class=\"material-icons\">done</span>";
+  // crossOutBtn.innerHTML = "<span>\u2611</span>";
+  // crossOutBtn.className = "cross-out-btn";
+  // li.appendChild(crossOutBtn);
+
+  // Add the click event listener for the cross-out button
+  // crossOutBtn.addEventListener('click', function() {
+  //   li.classList.toggle('checked');
+  // });
+
   //the spaan is the close button
   let span = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
@@ -646,7 +832,7 @@ function removeFav(bg) {
   });
 }
 
-// add a background to the blacklist
+// add a backgorund to the blacklist
 function addBlack(bg) {
   chrome.storage.local.get({
     black_list: []
@@ -683,8 +869,17 @@ function reportBk() {
   });
 }
 
+//  Relative screen size
+// function pxToPercentage(value, isWidth) {
+//   const screenSize = isWidth
+//     ? Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+//     : Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+//   return (parseInt(value) / screenSize) * 100 + "%";
+// }
+
 // loads the background information
 function loadInfo() {
+  
   if (window.newTab.infoDisplay != null) {
     let infoChosen = window.newTab.infoDisplay[window.newTab.infoMode];
     let infoText = "";
@@ -738,6 +933,7 @@ function updateInfoMode() {
 
 //change the ui animation behavior
 function updateUiAni() {
+  document.getElementById("dateWrapper").classList.toggle('noanimate');
   document.getElementById("timeWrapper").classList.toggle('noanimate');
   document.getElementById("todoWrapper").classList.toggle('noanimate');
   document.getElementById("searchWrapper").classList.toggle('noanimate');
@@ -762,22 +958,22 @@ function updateUiAni() {
 }
 
 //change the auto pause behavior
-function updateAutoPause() {
+// function updateAutoPause() {
 
-  window.newTab.autopause = !window.newTab.autopause;
+//   window.newTab.autopause = !window.newTab.autopause;
 
-  if (window.newTab.autopause) {
-    document.getElementById("autopauseswitch").checked = true;
-    chrome.storage.local.set({
-      autopause: true
-    }, function() {});
-  } else {
-    document.getElementById("autopauseswitch").checked = false;
-    chrome.storage.local.set({
-      autopause: false
-    }, function() {});
-  }
-}
+//   if (window.newTab.autopause) {
+//     document.getElementById("autopauseswitch").checked = true;
+//     chrome.storage.local.set({
+//       autopause: true
+//     }, function() {});
+//   } else {
+//     document.getElementById("autopauseswitch").checked = false;
+//     chrome.storage.local.set({
+//       autopause: false
+//     }, function() {});
+//   }
+// }
 
 //change the background repeat
 function updateRepeat() {
@@ -799,11 +995,11 @@ function updateRepeat() {
 
 //function for autoPause, set to check on tab activated
 // function autoPause() {
-//
+
 //   //check if auto pause is on and if
-//   if (!window.newTab.autopause || !window.newTab.back.fileType == "video")
-//     return;
-//
+//   // if (!window.newTab.autopause || !window.newTab.back.fileType == "video")
+//   //   return;
+
 //   //on got tab info function
 //   function onGot(tabInfo) {
 //     var vid = document.getElementById("backdropvid");
@@ -813,14 +1009,45 @@ function updateRepeat() {
 //       vid.pause();
 //     }
 //   }
-//
+
 //   //error function
 //   function onError(error) {
 //     console.log(`Error: ${error}`);
 //   }
-//
+
 //   const gettingCurrent = chrome.tabs.getCurrent();
 //   gettingCurrent.then(onGot, onError);
+// }
+// let backgroundCache = [];
+
+// function ImageLoader(src) {
+//   return new Promise(function(resolve, reject) {
+//     let img = new Image();
+//     img.onload = function() {
+//       resolve(img);
+//     };
+//     img.onerror = function() {
+//       reject('Image load failed: ' + src);
+//     };
+//     img.src = src;
+//   });
+// }
+
+// function loadBackground(backJson) {
+//   console.log("Loaded background.json:");
+//   console.log(backJson.sources);
+//   window.newTab.backlist = [];
+
+  // load the next 5 backgrounds
+  // for (let i = 0; i < 5 && i < backJson.sources.length; i++) {
+  //   if (!backgroundCache[i]) {
+  //     ImageLoader(backJson.sources[i]).then(function(img) {
+  //       backgroundCache[i] = img;
+  //     });
+  //   }
+  // }
+
+  // rest of the loadBackground function...
 // }
 
 
@@ -830,6 +1057,25 @@ function loadBackground(backJson) {
   console.log(backJson.sources);
   window.newTab.backlist = [];
 
+  // let img = document.getElementById("backdropimg");
+  // if (backJson.type == "video") {
+  //   vid.style = "";
+  //   img.style = "display: none;"
+  // } else 
+  // if (backJson.type == "image") {
+  //   img.style = "";
+  //   // vid.style = "display: none;"
+  // }
+
+  // for (let i = 0; i < 5 && i < backJson.sources.length; i++) {
+  //   if (!backgroundCache[i]) {
+  //     ImageLoader(backJson.sources[i]).then(function(img) {
+  //       backgroundCache[i] = img;
+  //        console.log(backgroundCache[i]);
+  //     });
+  //   }
+  // }
+  // let backgroundCache = [];
   //loads the background info panel data
   window.newTab.infoDisplay = backJson.info;
   if (backJson.info_title) {
@@ -853,11 +1099,12 @@ function loadBackground(backJson) {
   }
 
   // let vid = document.getElementById("backdropvid");
-  let img = document.getElementById("backdropimg");
-  // if (backJson.type == "video") {
-  //   // vid.style = "";
-  //   img.style = "display: none;"
-  // } else if (backJson.type == "image") {
+  // let img = document.getElementById("backdropimg");
+  // // if (backJson.type == "video") {
+  // //   vid.style = "";
+  // //   img.style = "display: none;"
+  // // } else 
+  // if (backJson.type == "image") {
   //   img.style = "";
   //   // vid.style = "display: none;"
   // }
@@ -866,19 +1113,14 @@ function loadBackground(backJson) {
   let index = 0;
   bkMenu = document.getElementById("backgroundMenu");
 
+  
   //function to set background
   function setBackground() {
     // let vid = document.getElementById("backdropvid");
     let img = document.getElementById("backdropimg");
     let str = window.newTab.back.link;
 
-    //console logging
-    console.log("Favorites:");
-    console.log(data.fav_list);
-    console.log("Defaulted background:");
-    console.log(str);
-
-    let fext = str.substring(str.length - 3).toLowerCase();
+    // let fext = str.substring(str.length - 3).toLowerCase();
     // if (fext == 'jpg' || fext == 'png' || fext == 'gif') { //the file type is image
       window.newTab.back.fileType = "image";
       img.src = str;
@@ -890,31 +1132,92 @@ function loadBackground(backJson) {
         window.scrollTo(0, 0);
       }
       // vid.style = "display: none;"
-    // } else { //file type is video
-      // window.newTab.back.fileType = "video";
-      // img.style = "display: none;"
-      // vid.style = "";
-      // vid.oncanplay = function() {
-      //   vid.style.opacity = 100;
-      //   $('#progress-line').css("opacity", "0");
-      //   //to counteract a bug that makes the background start from Bottom
-      //   window.scrollTo(0, 0);
-      //
-      // };
-      //fetch the full video to try to force caching (reduce bandwidth)
-      // const videoRequest = fetch(str)
-      //   .then(response => response.blob());
-      // videoRequest.then(blob => {
-      //   vid.src = window.URL.createObjectURL(blob);
-      // });
-      // vid.load();
+    // } 
+    // else { //file type is video
+    //   window.newTab.back.fileType = "video";
+    //   img.style = "display: none;"
+    //   vid.style = "";
+    //   vid.oncanplay = function() {
+    //     vid.style.opacity = 100;
+    //     $('#progress-line').css("opacity", "0");
+    //     //to counteract a bug that makes the background start from Bottom
+    //     window.scrollTo(0, 0);
+
+    //   };
+    //   //fetch the full video to try to force caching (reduce bandwidth)
+    //   const videoRequest = fetch(str)
+    //     .then(response => response.blob());
+    //   videoRequest.then(blob => {
+    //     vid.src = window.URL.createObjectURL(blob);
+    //   });
+    //   vid.load();
     // }
     loadInfo();
   }
 
-  //functional prograamming (recursive but there shouldn't be many calls)
-  function loadSource(backList) {
 
+  // function createBackgroundElement(back, isFav, isBlack) {
+  //   var toPushList = back.sources;
+  //   var previewURL = toPushList[0].link;
+  
+  //   var itemNode = createHTML("<div class=\"prefInfo\" data=\"" + previewURL + "\">");
+  //   var divNode = createHTML("<div class=\" \"> <label class=\"switch\"> <input type=\"checkbox\" ID=\"" + back.id + "\" checked> <span class=\"slider round\"></span> </label>");
+  //   var sourceNode = createHTML("<div class=\"source-name\"><span>" + back.title + "</span><div class=\"rightIcon\"><i class=\"material-icons md-14\">expand_more</i></div></div> </div></div>");
+  //   var sourceImgs = createHTML("<div class=\"sourceImgs\"></div>");
+  //   var favBlackIcon = createHTML("<div class=\"favBlackIcon\"></div>");
+  //   var heartIcon = createHTML("<i class=\"material-icons md-18\">" + (isFav ? "favorite" : "favorite_border") + "</i>");
+  //   var trashIcon = createHTML("<i class=\"material-icons md-18\">" + (isBlack ? "restore_from_trash" : "delete_outline") + "</i>");
+  
+  //   favBlackIcon.appendChild(heartIcon);
+  //   favBlackIcon.appendChild(trashIcon);
+  //   itemNode.appendChild(favBlackIcon);
+  //   itemNode.appendChild(divNode);
+  //   itemNode.appendChild(sourceNode);
+  //   itemNode.appendChild(sourceImgs);
+  
+  //   divNode.style.display = "flex";
+  //   sourceNode.style.display = "flex";
+  //   sourceNode.style.alignItems = "center";
+  //   sourceNode.style.flexGrow = "1";
+  //   sourceNode.addEventListener('click', function() {
+  //     var imgs = toPushList.map(function(item) {
+  //       return "<img src=\"" + item.link + "\">";
+  //     });
+  //     sourceImgs.innerHTML = imgs.join('');
+  //     sourceImgs.style.display = sourceImgs.style.display === "none" ? "block" : "none";
+  //   });
+  
+  //   heartIcon.addEventListener('click', function() {
+  //     if (isFav) {
+  //       heartIcon.innerHTML = "favorite_border";
+  //       removeFav(back);
+  //       isFav = false;
+  //     } else {
+  //       heartIcon.innerHTML = "favorite";
+  //       addFav(back);
+  //       isFav = true;
+  //     }
+  //   });
+  
+  //   trashIcon.addEventListener('click', function() {
+  //     if (isBlack) {
+  //       trashIcon.innerHTML = "delete_outline";
+  //       removeBlack(back);
+  //       isBlack = false;
+  //     } else {
+  //       trashIcon.innerHTML = "restore_from_trash";
+  //       addBlack(back);
+  //       isBlack = true;
+  //     }
+  //   });
+  
+  //   return itemNode;
+  // }
+
+  
+  //functional programming (recursive but there shouldn't be many calls)
+  function loadSource(backList) {
+    
     //end case
     if (index == backList.length) {
 
@@ -1063,21 +1366,31 @@ function loadBackground(backJson) {
       key = name.split(' ').join('-');
       obj[key] = 'on';
 
-      //descriptors shouldn't be more than 34 characters
-//      let descriptor = "Backgrounds from " + name;
-//      if (backList[index].description != null) {
-//        descriptor = backList[index].description;
-//      }
+      var itemNode = createHTML("<div class=\"prefInfo\" data=\"" + "\">");
+      var divNode = createHTML("<div class=\" \"> <label class=\"switch\"> <input type=\"checkbox\" ID=\"" + key + "\" checked> <span class=\"slider round\"></span> </label>");
+      var sourceNode = createHTML("<div class=\"source-name\"><span>" + name + "</span><div class=\"rightIcon\"><i class=\"material-icons md-14\">expand_more</i></div></div>");
+      var sourceImgs = createHTML("<div class=\"sourceImgs\"></div>");
+      // var sourceImgs = createHTML("<div class=\"sourceImgs\"></div>");
 
-      //create the backgroundMenu switch and add it to background menu
-      var itemNode = createHTML("<div class=\"menuItem\" data=\"" + "\"></div>");
-      var textNode = createHTML("<div class=\"menuText\">" + name + "</div>");
-      var divNode = createHTML("<div class=\"sliderWrapper\"> <label class=\"switch\"> <input type=\"checkbox\" ID=\"" + key + "\" checked> <span class=\"slider round\"></span> </label> </div>");
-      itemNode.appendChild(textNode);
+
+      var toPushList = backList[index].list;
+      for (var i = 0; i < toPushList.length; i++) {
+        toPushList[i]["source"] = name;
+      }
+
+            
       itemNode.appendChild(divNode);
+      itemNode.appendChild(sourceNode);
+      itemNode.appendChild(sourceImgs);
+
+      divNode.style.display = "flex";
+      sourceNode.style.display = "flex";
+      sourceNode.style.alignItems = "center";
+      sourceNode.style.flexGrow = "1";
+      
       bkMenu.insertBefore(itemNode, document.getElementById("favoriteSlider"));
 
-      //adding the onClick for the swtiches
+      //adding the onClick for the switches
       document.getElementById(key).parentElement.onclick = function() {
         checkElement = this.firstElementChild;
         obj = {};
@@ -1093,13 +1406,6 @@ function loadBackground(backJson) {
         }
       }
 
-      //add source to each element of the list
-      let toPushList = backList[index].list
-      for (var i = 0; i < toPushList.length; i++) {
-        toPushList[i]["source"] = name;
-      }
-
-      //storing and getting data from chrome to see whether it was on or off
       chrome.storage.local.get(obj, function(data) {
         if (data[key] == 'off') {
           document.getElementById(key).checked = false;
@@ -1107,8 +1413,18 @@ function loadBackground(backJson) {
           window.newTab.backlist.push(...toPushList);
         }
         index += 1;
+        
+        sourceNode.addEventListener('click', function() {
+          var imgs = toPushList.map(function(item) {
+            return "<img class=\"img-summary\" src=\"" + item.link + "\">";
+          });
+          sourceImgs.innerHTML = imgs.join('');
+          sourceImgs.style.display = sourceImgs.style.display === "none" ? "block" : "none";
+        });
+      
         loadSource(backList);
       });
+      
     }
   }
 
@@ -1124,6 +1440,7 @@ function loadLanguage(langJson) {
 function setLanguage(lang) {
   return new Promise(function(resolve, reject) {
     const langUrl = chrome.runtime.getURL('locales/' + lang + '.json');
+    
     fetch(langUrl)
       .then((response) => response.json())
       .then((json) => {
@@ -1173,10 +1490,10 @@ $(document).ready(function() {
   window.newTab.confirmSettings.animation = 'opacity';
 
   //Print console warning
-  console.log("%c--- Danger Zone ---", "color: red; font-size: 25px");
-  console.log("%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature or \"hack\", it is likely a scam.", "font-size: 16px;");
-  console.log("%cIf you ARE a developer, feel free to check this project out here:", "font-size: 16px;");
-  console.log("%chttps://github.com/emilyxietty/", "font-size: 16px;");
+  // console.log("%c--- Danger Zone ---", "color: red; font-size: 25px");
+  // console.log("%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature or \"hack\", it is likely a scam.", "font-size: 16px;");
+  // console.log("%cIf you ARE a developer, feel free to check this project out here:", "font-size: 16px;");
+  console.log("%chttps://github.com/emilyxietty/", "font-size: 14px;");
 
   // $('#progress-line').css("display", "flex");
   const configUrl = chrome.runtime.getURL('resources/config.json');
@@ -1187,7 +1504,7 @@ $(document).ready(function() {
 
       //if Chrome is online
       if (window.navigator.onLine) {
-        //loads the background json
+        //loads the backgorund json
         const jsonUrl = chrome.runtime.getURL('resources/background_' + lang + '.json');
         fetch(jsonUrl)
           .then((response) => response.json())
@@ -1196,10 +1513,10 @@ $(document).ready(function() {
       } else {
         //send an error alert for no internet connection
         $.alert({
-          title: 'Error',
-          content: 'No internet access. Please check your connection and try again.',
+          title: 'error',
+          content: 'no internet access. Please check your connection and try again.',
           type: 'red',
-          boxWidth: '25%',
+          boxWidth: '60%',
           backgroundDismiss: true,
           useBootstrap: false,
           typeAnimated: true,
@@ -1224,7 +1541,7 @@ $(document).ready(function() {
   //get advanced settings
   chrome.storage.local.get({
     animation: true,
-    autopause: true
+    // autopause: true
   }, function(data) {
     if (data.animation) {
       window.newTab.confirmSettings.animation = 'opacity';
@@ -1233,13 +1550,16 @@ $(document).ready(function() {
       window.newTab.confirmSettings.animation = 'none';
       window.newTab.uianimation = false;
       document.getElementById("menu").classList.add('noanimate');
+      // document.getElementById("dateWrapper").classList.add('noanimate');
       document.getElementById("rightMenus").classList.add('noanimate');
       document.getElementById("timeWrapper").classList.add('noanimate');
+      document.getElementById("dateWrapper").classList.add('noanimate');
+      // document.getElementById("greeting-Wrapper").classList.add('noanimate');
       document.getElementById("todoWrapper").classList.add('noanimate');
       document.getElementById("searchWrapper").classList.add('noanimate');
       document.getElementById("infoWrapper").classList.add('noanimate');
     }
-    window.newTab.autopause = data.autopause;
+    // window.newTab.autopause = data.autopause;
   });
 
   //set the search engine list
@@ -1262,13 +1582,13 @@ $(document).ready(function() {
   ];
 
   //add the rightMenus
-  chrome.bookmarks.getTree(function(bkList) {
-    window.newTab.bookmarklist = bkList[0].children[1].children;
+  // chrome.bookmarks.getTree(function(bkList) {
+  //   window.newTab.bookmarklist = bkList[0].children[1].children;
 
-    if (window.newTab.bookmarklist.length == 0) {
-      // document.getElementById("bookmarks").style = "display: none;"
-    } else {
-      let bkHtml = "";
+    // if (window.newTab.bookmarklist.length == 0) {
+    //   // document.getElementById("bookmarks").style = "display: none;"
+    // } else {
+    //   let bkHtml = "";
 
       //builds the bookmark html
       // function recurBkList(bklist) {
@@ -1301,8 +1621,8 @@ $(document).ready(function() {
       //     this.innerText = this.innerText.replace(">", "⮞");
       //   };
       // }
-    }
-  });
+  //   }
+  // });
 
   //add onclick for like and delete buttons
   $('.like-button').click(function() {
@@ -1320,9 +1640,9 @@ $(document).ready(function() {
       $.confirm({
         title: 'Are you sure?',
         content: 'This will remove the background. You can\'t undo this action unless you reset the extension with the reset button in the menu.',
-        boxWidth: '25%',
+        boxWidth: '70%',
         useBootstrap: false,
-        type: 'blue',
+        type: 'dark',
         escapeKey: 'cancel',
         theme: 'dark',
         animation: window.newTab.confirmSettings.animation,
@@ -1357,10 +1677,10 @@ $(document).ready(function() {
     document.getElementById("menu").classList.add("delay");
     let manifest = chrome.runtime.getManifest();
     $.confirm({
-      title: 'About',
+      title: 'about',
       content: manifest.name + ' ' + manifest.version + '<br>' + manifest.description,
-      type: 'blue',
-      boxWidth: '25%',
+      type: 'dark',
+      boxWidth: '80%',
       backgroundDismiss: true,
       useBootstrap: false,
       typeAnimated: true,
@@ -1378,7 +1698,7 @@ $(document).ready(function() {
           }
         },
         ok: {
-          text: "Report Problem",
+          text: "report problem",
           btnClass: 'btn-red',
           action: function() {
             reportBk();
@@ -1401,9 +1721,9 @@ $(document).ready(function() {
       content: '<label class="smallswitch" title="Toggles UI and widget animations"><input id="uianiswitch" type="checkbox"><div><span>UI Animations</span></div></label> <br>' +
         '<label class="smallswitch" title="Avoids repeats of backgrounds"><input id="repeatswitch" type="checkbox"><div><span>Avoid Repeats</span></div></label> <br>' +
         '<label class="smallswitch" title="Automatically pause animated backgrounds when tab is inactive to conserve cpu"><input id="autopauseswitch" type="checkbox"><div><span>Auto-Pause Background</span></div></label><br>',
-      boxWidth: '30%',
+      boxWidth: '80%',
       useBootstrap: false,
-      type: 'blue',
+      type: 'dark',
       escapeKey: 'Close',
       backgroundDismiss: true,
       theme: 'dark',
@@ -1413,8 +1733,8 @@ $(document).ready(function() {
       scrollToPreviousElement: false,
       buttons: {
         ok: {
-          text: "Reset Data",
-          btnClass: 'btn-blue',
+          text: "reset data",
+          btnClass: 'btn-dark',
           action: function() {
             resetData();
           }
@@ -1432,17 +1752,17 @@ $(document).ready(function() {
           autopause: true
         }, function(data) {
           document.getElementById("uianiswitch").checked = data.animation;
-          document.getElementById("autopauseswitch").checked = data.autopause;
+          // document.getElementById("autopauseswitch").checked = data.autopause;
           document.getElementById("repeatswitch").checked = data.repeat;
         });
         document.getElementById("uianiswitch").parentElement.addEventListener('click', function(e) {
           updateUiAni();
           e.preventDefault();
         });
-        document.getElementById("autopauseswitch").parentElement.addEventListener('click', function(e) {
-          updateAutoPause();
-          e.preventDefault();
-        });
+        // document.getElementById("autopauseswitch").parentElement.addEventListener('click', function(e) {
+        //   updateAutoPause();
+        //   e.preventDefault();
+        // });
         document.getElementById("repeatswitch").parentElement.addEventListener('click', function(e) {
           updateRepeat();
           e.preventDefault();
@@ -1451,16 +1771,16 @@ $(document).ready(function() {
     });
   };
 
-  //prevent right click context menu
-  //document.addEventListener('contextmenu', event => event.preventDefault());
-
   window.newTab.clock.military = false; //set default time and initialize variable
 
   // Make the elements draggable:
   dragElement(document.getElementById("timeWrapper"));
+  dragElement(document.getElementById("dateWrapper"));
   dragElement(document.getElementById("searchWrapper"));
   dragElement(document.getElementById("todoWrapper"));
   dragElement(document.getElementById('infoWrapper'));
+  // dragElement(document.getElementById('greeting-Wrapper'));
+  
 
   //data/settings loading from chrome
   //getting the clock settings
@@ -1468,6 +1788,9 @@ $(document).ready(function() {
     time_switch: 'on',
     time_top_data: '',
     time_left_data: '',
+    time_align_data: '',
+    time_text_align_data: '',
+    time_justify_data: '',
     military_switch: 'off'
   }, function(data) {
     if (data.time_switch == 'off') {
@@ -1479,15 +1802,84 @@ $(document).ready(function() {
       document.getElementById("timeWrapper").classList.add("entrance");
     }
     if (data.time_top_data != '') {
+      // document.getElementById("timeWrapper").style.top = pxToPercentage(data.time_top_data, false);
       document.getElementById("timeWrapper").style.top = data.time_top_data;
     }
     if (data.time_left_data != '') {
+      // document.getElementById("timeWrapper").style.left = pxToPercentage(data.time_left_data, true);
       document.getElementById("timeWrapper").style.left = data.time_left_data;
+
     }
+    if (data.time_align_data != '') {
+      document.getElementById("timeWrapper").style.alignContent = data.time_align_data;
+    }
+    if (data.time_text_align_data != '') {
+      document.getElementById("timeWrapper").style.textlign = data.time_text_align_data;
+    }
+    if (data.time_justify_data != '') {
+      document.getElementById("timeWrapper").style.justifyContent = data.time_justify_data;
+    }
+
     window.newTab.clock.military = (data.military_switch == 'on');
 
     startTime(); //start the time
   });
+
+
+function updateDateFormat(format) {
+  const today = moment();
+  const formattedDate = today.format('dddd, MMMM Do');
+
+  // const formattedDate = today.format(format);
+  document.getElementById("dateDisplay").textContent = formattedDate;
+}
+
+chrome.storage.local.get({
+  date_switch: 'on',
+  date_top_data: '',
+  date_left_data: '',
+  date_align_data: '',
+  datetext_align_data: '',
+  date_justify_data: '',
+  date_format: 'dddd, MMMM Do'
+}, function(data) {
+  if (data.date_switch == 'off') {
+    document.getElementById("dateSwitch").checked = false;
+    document.getElementById("dateWrapper").classList.add("exit");
+    document.getElementById("dateWrapper").classList.add("firstStart");
+  } else {
+    document.getElementById("dateSwitch").checked = true;
+    document.getElementById("dateWrapper").classList.add("entrance");
+  }
+
+  if (data.date_top_data != '') {
+    document.getElementById("dateWrapper").style.top = data.date_top_data;
+  }
+  if (data.date_left_data != '') {
+    document.getElementById("dateWrapper").style.left = data.date_left_data;
+
+  }
+
+  if (data.date_align_data != '') {
+    document.getElementById("dateWrapper").style.alignContent = data.date_align_data;
+  }
+  if (data.date_text_align_data != '') {
+    document.getElementById("dateWrapper").style.textlign = data.time_date_align_data;
+  }
+  if (data.date_justify_data != '') {
+    document.getElementById("dateWrapper").style.justifyContent = data.date_justify_data;
+  }
+
+  updateDateFormat(data.date_format);
+
+});
+
+//start updating the date every minute
+setInterval(function() {
+  updateDateFormat(chrome.storage.local.get().date_format);
+}, 60000);
+
+
 
   //getting the info settings
   chrome.storage.local.get({
@@ -1518,7 +1910,7 @@ $(document).ready(function() {
     search_switch: 'on',
     search_top_data: '',
     search_left_data: '',
-    search_engine: 0
+    search_engine: 0,
   }, function(data) {
     if (data.search_switch == 'off') {
       document.getElementById("searchSwitch").checked = false;
@@ -1541,10 +1933,38 @@ $(document).ready(function() {
     searchInput.val(window.newTab.searchEngines[data.search_engine].placeholder);
   });
 
+  //getting the greeting settings
+  // chrome.storage.local.get({
+  //   greeting_switch: 'on',
+  //   greeting_top_data: '',
+  //   greetingleft_data: '',
+  //   greeting_engine: 0
+  // }, function(data) {
+  //   if (data.greeting_switch == 'off') {
+  //     document.getElementById("greetingSwitch").checked = false;
+  //     document.getElementById("greetingWrapper").classList.add("exit");
+  //     document.getElementById("greetingWrapper").classList.add("firstStart");
+  //   } else {
+  //     document.getElementById("greetingSwitch").checked = true;
+  //     document.getElementById("searchWrapper").classList.add("entrance");
+  //   }
+  //   if (data.search_top_data != '') {
+  //     document.getElementById("greetingWrapper").style.top = pxToPercentage(data.search_top_data, false);
+  //   }
+  //   if (data.search_left_data != '') {
+  //     document.getElementById("greetingWrapper").style.left = pxToPercentage(data.search_left_data, true);
+  //   }
+
+  //   // let searchInput = $('#searchInput');
+  //   // searchInput.parent().attr('action', window.newTab.searchEngines[data.search_engine].action);
+  //   // searchInput.attr('data-placeholder', window.newTab.searchEngines[data.search_engine].placeholder);
+  //   // searchInput.val(window.newTab.searchEngines[data.search_engine].placeholder);
+  // });
+
 
   //load the background filters
   chrome.storage.local.get({
-    filter: [35, 90, 100, 0]
+    filter: [50, 90, 100, 0]
   }, function(data) {
     document.getElementById("darkSlider").value = data.filter[0];
     document.getElementById("satuSlider").value = data.filter[1];
@@ -1558,13 +1978,15 @@ $(document).ready(function() {
     todo_switch: 'on',
     todo_top_data: '',
     todo_left_data: '',
-    todo_data: ''
+    todo_data: '',
   }, function(data) {
     if (data.todo_switch == 'off') {
+      // console.log("todo switch is off???");
       document.getElementById("todoSwitch").checked = false;
       document.getElementById("todoWrapper").classList.add("exit");
       document.getElementById("todoWrapper").classList.add("firstStart");
     } else {
+      // console.log("todo switch is one???");
       document.getElementById("todoSwitch").checked = true;
       document.getElementById("todoWrapper").classList.add("entrance");
     }
@@ -1591,6 +2013,8 @@ $(document).ready(function() {
     }
   });
 
+  
+
   //setting the switches click event listeners
   document.getElementById("searchSwitch").parentElement.addEventListener('click', function() {
     updateSearch();
@@ -1600,6 +2024,9 @@ $(document).ready(function() {
   });
   document.getElementById("timeSwitch").parentElement.addEventListener('click', function() {
     updateTime();
+  });
+  document.getElementById("dateSwitch").parentElement.addEventListener('click', function() {
+    updateDate();
   });
   document.getElementById("infoSwitch").parentElement.addEventListener('click', function() {
     updateinfo();
@@ -1616,6 +2043,9 @@ $(document).ready(function() {
   document.getElementById("time").addEventListener("click", function() {
     updateMilitary();
   });
+  document.getElementById("dateDisplay").addEventListener("click", function() {
+    updateDateFormat();
+  });
   document.getElementById("darkSlider").addEventListener("input", function() {
     updateFilter();
   });
@@ -1630,7 +2060,7 @@ $(document).ready(function() {
   });
 
   //window focus and blur listeners
-  chrome.tabs.onActivated.addListener(autoPause);
+  // chrome.tabs.onActivated.addListener(autoPause);
 
 
   // makes the list sortable
@@ -1681,3 +2111,5 @@ $(document).ready(function() {
     }
   });
 });
+
+

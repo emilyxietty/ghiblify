@@ -1,0 +1,121 @@
+.timer-container {
+    position: relative;
+    /* background-image:url(/icons/spirited1.gif); */
+    background-image:url(/icons/break/break1.png);
+    background-size:cover;
+    /* background-position: center center; */
+    background-position: left bottom;
+
+    /* filter: brightness(60%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: #465994;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+  }
+
+  .timer-container > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }  
+  
+  .progress-bar {
+    /* margin-top: 10%; */
+    /* margin-bottom: 10%; */
+    
+    position: absolute;
+    height: 5px;
+    border-radius: 5px;
+    top: 0;
+    left:10px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    width: 80%;
+    background-color: #465994;
+    width: 0%;
+    transition: width 1.5s ease-out;
+  }
+  .progress-container {
+    width: 100%;
+    /* margin: auto; */
+
+  }
+  
+  
+  
+  .timer-display {
+    margin:auto;
+    /* position: absolute; */
+    top: 0;
+    padding-top:10px;
+    padding-bottom:10px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    font-size: 40px;
+    line-height: 20px;
+    /* font-family: Arial, sans-serif; */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .timer-controls {
+    display: flex;
+    align-items: center;
+    /* margin-top: 20px; */
+  }
+  
+  .timer-controls label {
+    margin-right: 10px;
+  }
+  
+  .timer-controls input[type="number"] {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+
+  .btn-control {
+    background-color: transparent;
+    color:white;
+    padding:0;
+    padding-left:3px;
+    padding-right:3px;
+    /* outline:none; */
+  }
+  
+  .btn-control:focus {
+    outline: none;
+  }
+  .btn-control:active {
+outline: none;
+/* border: none; */
+}
+    
+  /* .timer-text {
+    font-size:30px;
+  } */
+
+
+  #study-btn, #break-btn {
+    margin-left: 5px;
+    margin-right:5px;
+    /* height: 20px; */
+    color: white;
+    font-size: 10px;
+  }
