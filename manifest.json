@@ -11,9 +11,9 @@
     "128": "icons/soot_128.png"
   },
   "action": {
-   "default_title": "Test",
-   "default_popup": "options.html"
- },
+    "default_title": "ghiblify info",
+    "default_popup": "options.html"
+  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
