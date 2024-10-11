@@ -5,549 +5,526 @@
 
 <head Set-Cookie: mycookie=myvalue; SameSite=Strict;>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com">
 
-  <title>New Tab</title>
+    <title>New Tab</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="styles/jquery-confirm.min.css">
-  <link rel="stylesheet" href="styles/jquery-ui.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/index.css">
-  <link rel="stylesheet" type="text/css" href="styles/all.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/timer.css">
-  <link rel="stylesheet" type="text/css" href="styles/quickLinks.css">
-  <link rel="stylesheet" type="text/css" href="styles/cursor.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="styles/jquery-confirm.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/timer.css">
+    <link rel="stylesheet" type="text/css" href="styles/quickLinks.css">
+    <link rel="stylesheet" type="text/css" href="styles/cursor.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
 
 </head>
 
 <body>
-  <div class="cursor hidden"></div>
-  <div class="backloader" ID="backloader">
-    <div ID="progress-line"></div>
-    <img src="" ID="backdropimg" class="backdrop" draggable="false" width="100%">
-    <video ID="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
-      <source src="" type="video/mp4">
-    </video>
-  </div>
-
-
-
-
-  <div ID="menu">
-    <div class="sliderWrapper">
-      <div class="btn-group" role="group" aria-label="About Info">
-        <a role="button" class="btn btn-outline-light" href="https://www.ghibli.jp/works/" target="_blank">studio
-          ghibli<br>works</a>
-
-        <a role="button" class="btn btn-outline-light" href="https://github.com/emilyxietty"
-          target="_blank">emilyxietty<br>github</a>
-        <a role="button" class="btn btn-outline-light" href="https://github.com/suitangi/Minimal-Newtab"
-          target="_blank">suitangi<br>github</a>
-      </div>
+    <div class="cursor hidden"></div>
+    <div class="backloader" ID="backloader">
+        <div ID="progress-line"></div>
+        <img src="" ID="backdropimg" class="backdrop" draggable="false" width="100%">
+        <video ID="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
+            <source src="" type="video/mp4">
+        </video>
     </div>
 
-    <div id="infoMenuItem">
-      <div class="sliderWrapper">
-        <label>
-          <input type="checkbox" id="timeSwitch" class="icon-checkbox" checked />
-          <i class="material-icons icon">access_time</i>
-        </label>
-        <label>
-          <input type="checkbox" id="dateSwitch" class="icon-checkbox" checked />
-          <i class="material-icons icon">calendar_month</i>
-        </label>
-        <label>
-          <input type="checkbox" id="searchSwitch" class="icon-checkbox" checked />
-          <i class="material-icons icon">search</i>
-        </label>
-        <label>
-          <input type="checkbox" id="infoSwitch" class="icon-checkbox" checked />
-          <i class="material-icons icon">info</i>
-        </label>
-        <label>
-          <input type="checkbox" id="todoSwitch" class="icon-checkbox" checked />
-          <i class="material-icons icon">task</i>
-        </label>
 
-      </div>
-    </div>
 
-    <!-- favorite button -->
-    <div class="btn-group-2" role="group" aria-label="basic photo options">
-      <div class="menuText">
-        <div class="like-button">
-          <i class="material-icons not-liked bouncy md-25">favorite_border</i>
-          <i class="material-icons is-liked bouncy md-25">favorite</i>
-        </div>
-        <div class="delete-button">
-          <i class="material-icons not-deleted bouncy md-25">delete_outline</i>
-          <i class="material-icons is-deleted bouncy md-25">delete</i>
-        </div>
-      </div>
-    </div>
 
-    <div class="slidecontainer">
-      <h4>brightness</h4><input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
-    </div>
-    <div class="slidecontainer">
-      <h4>saturation</h4><input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
-    </div>
-    <div class="slidecontainer">
-      <h4>contrast</h4><input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
-    </div>
-    <div class="slidecontainer">
-      <h4>blur</h4><input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
-    </div>
+    <div ID="menu">
+        <div class="sliderWrapper">
+            <div class="btn-group" role="group" aria-label="About Info">
+                <a role="button" class="btn btn-outline-light" href="https://www.ghibli.jp/works/"
+                    target="_blank">studio
+                    ghibli<br>works</a>
 
-    <!-- Left Menu Settings Buttons -->
-    <div class="sliderWrapper">
-      <div class="btn-group-3" role="group" aria-label="Basic settings">
-        <button ID="advButton" class="btn btn-accent2"><i class="material-icons md-25">settings</i></button>
-
-        <button ID="aboutButton" class="btn btn-accent2"><i class="material-icons md-25">info</i></button>
-      </div>
-    </div>
-
-    <div id="infoMenuItem">
-      <div class="modalSliderWrapper btn-accent2" data-bs-toggle="modal" data-bs-target="#mouseModal">
-        <i class="material-icons">mouse</i>
-        <span> cursor options </span>
-        <div class="rightIcon"><i class="material-icons">open_in_new</i></div>
-      </div>
-      <div class="modalSliderWrapper btn-accent2" data-bs-toggle="modal" data-bs-target="#bgModal">
-        <i class="material-icons">image</i>
-        <span> background options </span>
-        <div class="rightIcon"><i class="material-icons">open_in_new</i></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- bg modal -->
-  <div class="modal bgmodal fade" id="bgModal" tabindex="-1" aria-labelledby="bgModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content dark-bg white-text">
-        <div class="modal-header">
-          <h3 class="modal-title" id="modal">choose a category</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>double click the title to view its images.</p>
-          <div id="backgroundMenu" class="backgroundMenu">
-            <div ID="favoriteSlider">
-              <div class="menuText">favorites</div>
-              <label class="switch">
-                <input type="checkbox" ID="favSwitch">
-                <span class="slider round"></span>
-              </label>
-              <div class="h-spacer"></div>
-              <span> favourites </span>
+                <a role="button" class="btn btn-outline-light" href="https://github.com/emilyxietty"
+                    target="_blank">emilyxietty<br>github</a>
+                <a role="button" class="btn btn-outline-light" href="https://github.com/suitangi/Minimal-Newtab"
+                    target="_blank">suitangi<br>github</a>
             </div>
-          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        <div id="infoMenuItem">
+            <div class="sliderWrapper">
+                <label>
+                    <input type="checkbox" id="timeSwitch" class="icon-checkbox" checked />
+                    <i class="material-icons icon">access_time</i>
+                </label>
+                <label>
+                    <input type="checkbox" id="dateSwitch" class="icon-checkbox" checked />
+                    <i class="material-icons icon">calendar_month</i>
+                </label>
+                <label>
+                    <input type="checkbox" id="searchSwitch" class="icon-checkbox" checked />
+                    <i class="material-icons icon">search</i>
+                </label>
+                <label>
+                    <input type="checkbox" id="infoSwitch" class="icon-checkbox" checked />
+                    <i class="material-icons icon">info</i>
+                </label>
+                <label>
+                    <input type="checkbox" id="todoSwitch" class="icon-checkbox" checked />
+                    <i class="material-icons icon">task</i>
+                </label>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Cursor modal -->
-  <div class="modal fade" id="mouseModal" tabindex="-1" aria-labelledby="mouseModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content dark-bg">
-        <div class="modal-header">
-          <h3 class="modal-title" id="settingsModalLabel">cursor settings</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div id="imageOptions"></div>
-          <!-- Cursor size slider -->
-          <div id="cursorSizeSlider">
-            <label for="cursorSize">Cursor size:</label>
-            <br>
-            <input type="range" class="rangeSlider" id="cursorSize" name="cursorSize" min="16" max="64" step="2">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Right Bar modal -->
-  <div class="modal fade" id="rightModal" tabindex="-1" aria-labelledby="rightModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content dark-bg">
-        <div class="modal-header">
-          <h3 class="modal-title" id="settingsModalLabel">right bar configurations</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="prefInfo">
-            <!-- quicklinks option -->
-            <!-- <label class="switch">
-              <input type='checkbox' class="hideshow" id='hideshow' data-target="links" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">quicklinks</span>
-            <br> -->
-            <!-- avatar option -->
-            <label class="switch">
-              <input type='checkbox' class="hideshow" id='hideshow' data-target="avatars" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">avatar</span>
-
-            <br>
-            <!-- Weather option -->
-            <label class="switch">
-              <input type='checkbox' class='hideshow weatherswitch' id='hideshow1' data-target="weather-target" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">weather</span>
-
-            <br>
-            <!-- mindfulness option -->
-            <label class="switch">
-              <input type='checkbox' class='hideshow breatheswitch' id='hideshow2' data-target="breathe" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">mindfulness</span>
-
-            <br>
-            <!-- pomo option -->
-            <label class="switch">
-              <input type='checkbox' class='hideshow pomoswitch' id='hideshow4' data-target="content2" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">pomodoro</span>
-
-            <br>
-            <!-- notes option -->
-            <label class="switch">
-              <input type='checkbox' class='hideshow notesswitch' id='hideshow3' data-target="notes" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">notes</span>
-
-            <br>
-
-            <!-- Music option -->
-            <!-- <div class="hideshow3wrapper" id="hideshow3wrapper"> -->
-            <label class="switch">
-              <input type='checkbox' class="hideshow" id='hideshow3' data-target="content3" checked>
-              <span class="slider round"></span>
-            </label><span style="padding-left: 15px;">music</span>
-
-            <!-- </div> -->
-
-            <!-- <div class="break"/> -->
-            <!-- test -->
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="dateWrapper" ID="dateWrapper">
-    <h3 class="dateDisplay" ID="dateDisplay"></h3>
-    <!-- <div class="pa" ID="pa"></div> -->
-  </div>
-  <!-- time widget -->
-  <div class="timeWrapper" ID="timeWrapper">
-    <h1 class="time" ID="time"></h1>
-  </div>
-
-
-  <!-- info widget -->
-  <div class="infoWrapper" ID="infoWrapper">
-    <div class="info" ID="info"></div>
-  </div>
-
-  <!-- search bar widget -->
-  <div class="searchWrapper" ID="searchWrapper">
-    <div class="searchDiv" ID="searchDiv"></div>
-      <form id=search action="https://www.google.com/search" method="get">
-        <input id="searchInput" class="search" data-placeholder="Google Search" type="search" name="q" autocomplete="off" />
-        <input type="submit" style="display: none;"/>
-      </form>
-    <div class="btn-accent1" id="searchChange">
-      <i class="material-icons">swap_vert</i>
-    </div>
-
-  </div>
-
-  <!-- todo list widget -->
-  <div class="todoWrapper" ID="todoWrapper">
-    <div class="todoHover">
-      <div ID="todoDiv" class="header">
-        <h3>todo list</h3>
-      </div>
-      <ul ID="myUL">
-      </ul>
-      <input class="todoInput" autocomplete="off" type="text" id="todoInput" style="display: none;"
-        placeholder="New Item . . ." />
-    </div>
-  </div>
-
-  <!-- rightMenu side panel -->
-  <div ID="rightMenus">
-    <div id="menuText" class="top-space">
-      <div class="widget-container">
-        <div class="large-widget" id="links">
-          <!-- <div class="link-box dark-bg">
-            <div id="linksTitle">
-              Links
-              <div class="btn-group">
-                <div class="btn btn-clear" id="add-link-btn">
-                  <i class="material-icons" id="add-cancel-icon">add</i>
+        <!-- favorite button -->
+        <div class="btn-group-2" role="group" aria-label="basic photo options">
+            <div class="menuText">
+                <div class="like-button">
+                    <i class="material-icons not-liked bouncy md-25">favorite_border</i>
+                    <i class="material-icons is-liked bouncy md-25">favorite</i>
                 </div>
-                <div class="btn btn-clear" id="save-link-btn" style="display: none;">
-                  <i class="material-icons" id="save-link-icon">check</i>
+                <div class="delete-button">
+                    <i class="material-icons not-deleted bouncy md-25">delete_outline</i>
+                    <i class="material-icons is-deleted bouncy md-25">delete</i>
                 </div>
-              </div>
             </div>
-            <div id="link-form" style="display: none;">
-
-              <label for="quick-name">Name</label>
-              <input type="text" id="quick-name">
-              <br>
-              <label for="link-url">URL</label>
-              <input type="url" id="link-url">
-              <br>
-            </div>
-            <ul id="link-list"></ul>
-          </div>
-        </div> -->
-
-        <div class="widget-row">
-
-          <!-- Avatar widget -->
-          <div class="small-widget" id="avatars">
-            <div class="avatar-box">
-              <center>
-                <img class="avatar-img" src="icons/avatars/tot.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/tot2.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/tot3.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/chi.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/ponyo1.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/chi2.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/kiki.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/cal.gif" width="120" />
-                <img class="avatar-img" src="icons/avatars/sop.gif" width="120" />
-            </div>
-            <div class="btn-toolbar avatar-toolbar" role="toolbar" aria-label="avatar controls">
-              <div class="btn-group mr-2 avatar-ctrls dark-bg-hoverShow" role="group"
-                aria-label="Previous and next buttons">
-                <div type="button" class="btn avatar-ctrl" id="prev-btn">
-                  <i class="material-icons md-14">
-                    expand_less
-                  </i>
-                </div>
-                <div type="button" class="btn avatar-ctrl" id="next-btn">
-                  <i class="material-icons md-14">
-                    expand_more
-                  </i>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Weather -->
-          <div class="small-widget" id="weather-target">
-            <div class="weather-box dark-bg">
-              <div class="weather-icon"><img src="icons/heenLoad.gif" width="50" /></div>
-              <div id="weather" class="weather-info"></div>
-              <h2 id="temperature" class="weather-info weather-temp"></h2>
-              <p id="description" class="weather-info"></p>
-              <p id="location" class="weather-info"></p>
-              <div id="ico" class="weather-info"></div>
-            </div>
-
-          </div>
-          <!-- Breathe -->
-          <div class="small-widget" id="breathe">
-            <div class="breathe-box">
-              <img class="breathe-box1" src="icons/breathe/breathe2.gif" width="100%" />
-              <img class="breathe-box2" src="icons/breathe/breathe1.gif" width="100%" />
-              <img class="breathe-box2" src="icons/breathe/breathe2.gif" width="100%" />
-              <img class="breathe-box2" src="icons/breathe/breathe3.gif" width="100%" />
-              <img class="breathe-box2" src="icons/breathe/breathe4.gif" width="100%" />
-              <img class="breathe-box3" src="icons/breathe/breathe5.gif" width="100%" />
-            </div>
-          </div>
-
-          <!-- Notes widget -->
-          <div class="small-widget" id="notes">
-            <div class="notes-box">
-              <textarea id="notes-input" placeholder="type notes here..."></textarea>
-            </div>
-          </div>
         </div>
 
-        <!-- Pomodoro Timer widget -->
-        <div class="large-widget" id="content2">
-          <div class="timer-container">
-            <div class="overlay"></div>
-            <div class="progress-container">
-              <div class="progress-bar"></div>
-            </div>
-            <h1 id="timer" class="timer-display timer-text">25:00</h1>
-            <div class="timer-controls">
-              <div type="button" class="pause-btn btn btn-control">
-                <i class="material-icons md-25" id="playpause">play_arrow </i>
-              </div>
-            </div>
-            <div class="timer-controls">
-              <div class="btn btn-accent2" id="study-btn">Study</div>
-              <div class="btn btn-accent2" id="break-btn">Break</div>
-            </div>
-          </div>
-
+        <div class="slidecontainer">
+            <h4>brightness</h4><input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
         </div>
-        <!-- </div> -->
-        <div class="large-widget" id="content3">
-          <div class="music-box">
-
-            <div class="choicebtns">
-              <!-- Music selection buttons -->
-              <div class="grid-btn float-right">
-                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
-                    <button role="button" class="btn btn-outline-dark music-btn" data-music="one">lofi</button>
-                    <button role="button" class="btn btn-outline-dark music-btn" data-music="two">hisaishi</button>
-                    <button role="button" class="btn btn-outline-dark music-btn" data-music="five">HMC</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Music player sections -->
-            <div id="yt-box">
-              <div class="music-player" id="one">
-                <iframe width="100%" src="https://www.youtube.com/embed/jfKfPfyJRdk?&" title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-              </div>
-              <div class="music-player" id="two">
-                <iframe width="100%" src="https://www.youtube.com/embed/0jZNKV5ROBM?&" title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-              </div>
-              <div class="music-player" id="five">
-                <iframe width="100%" src="https://www.youtube.com/embed/OE7u1IJzac4" title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-              </div>
-            </div>
-          </div>
-
+        <div class="slidecontainer">
+            <h4>saturation</h4><input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
         </div>
-        <div class="break" />
-
-        <div class="large-widget">
-          <!-- <div class="break"/> -->
-          <!-- <button type="button" class="btn edit-button">Edit right menu</button> -->
-          <!-- <div class=" buttonWrapper edit-button"> -->
-          <!-- <div type="button" class="btn edit-button btn-accent2"> -->
-          <div type="button" class="btn edit-button" data-bs-toggle="modal" data-bs-target="#rightModal">
-            <i class="material-icons md-25">settings</i>
-          </div>
-          <!-- </div> -->
-          <!-- <div class="preferences-container"> -->
-
-          <!-- Preferences options -->
-          <!-- <div id="rightpref" class="centeredwidget hidden"> -->
-          <!-- Quicklinks option -->
-          <!-- <span>quicklinks</span>
-           <label class="switch">
-               <input type='checkbox' class ="hideshow" id='hideshow' data-target="links" checked>
-               <span class="slider round"></span>
-           </label>
-           <div class="break"/> -->
-
-          <!-- Avatar option -->
-          <!-- <span>avatar</span>
-           <label class="switch">
-               <input type='checkbox' class ="hideshow" id='hideshow' data-target="avatars" checked>
-               <span class="slider round"></span>
-           </label>
-           <div class="break"/> -->
-
-          <!-- Weather option -->
-          <!-- <span>weather</span>
-          <label class="switch">
-            <input type='checkbox' class='hideshow weatherswitch' id='hideshow1' data-target="weather-target"  checked>
-            <span class="slider round"></span>
-          </label>
-          <div class="break"/> -->
-
-          <!-- Mindfulness option -->
-          <!-- <span>mindfulness</span>
-          <label class="switch">
-            <input type='checkbox' class='hideshow breatheswitch' id='hideshow2' data-target="breathe" checked>
-            <span class="slider round"></span>
-          </label> -->
-          <!-- <div class="break"/> -->
-
-          <!-- notes option -->
-          <!-- <span>notes</span>
-          <label class="switch">
-            <input type='checkbox' class='hideshow notesswitch' id='hideshow3' data-target="notes" checked>
-            <span class="slider round"></span>
-          </label> -->
-          <!-- <div class="break"/> -->
-
-          <!-- Timer option -->
-          <!-- <span>pomodoro</span>
-          <label class="switch">
-            <input type='checkbox' class='hideshow pomoswitch' id='hideshow4' data-target="content2" checked>
-            <span class="slider round"></span>
-          </label>
-          <div class="break"/> -->
-
-          <!-- Music option -->
-          <!-- <div class="hideshow3wrapper" id="hideshow3wrapper">
-            <span>music</span>
-            <label class="switch">
-              <input type='checkbox' class="hideshow" id='hideshow3' data-target="content3"  checked>
-              <span class="slider round"></span>
-            </label>
-          </div> -->
-          <!-- </div> -->
-          <!-- <div class="break"/> -->
-
-          <!-- </div> -->
+        <div class="slidecontainer">
+            <h4>contrast</h4><input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
         </div>
-      </div>
+        <div class="slidecontainer">
+            <h4>blur</h4><input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
+        </div>
+
+        <!-- Left Menu Settings Buttons -->
+        <div class="sliderWrapper">
+            <div class="btn-group-3" role="group" aria-label="Basic settings">
+                <button ID="advButton" class="btn btn-accent2"><i class="material-icons md-25">settings</i></button>
+
+                <button ID="aboutButton" class="btn btn-accent2"><i class="material-icons md-25">info</i></button>
+            </div>
+        </div>
+
+        <div id="infoMenuItem">
+            <div class="modalSliderWrapper btn-accent2" data-bs-toggle="modal" data-bs-target="#mouseModal">
+                <i class="material-icons">mouse</i>
+                <span> cursor options </span>
+                <div class="rightIcon"><i class="material-icons">open_in_new</i></div>
+            </div>
+            <div class="modalSliderWrapper btn-accent2" data-bs-toggle="modal" data-bs-target="#bgModal">
+                <i class="material-icons">image</i>
+                <span> background options </span>
+                <div class="rightIcon"><i class="material-icons">open_in_new</i></div>
+            </div>
+        </div>
+
     </div>
-  </div>
 
-  <script src="scripts/jquery-3.6.0.min.js"></script>
-  <script src="scripts/popper.min.js"></script>
-  <script src="scripts/moment.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/jquery-confirm.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/rightbar.js"></script>
-  <script src="scripts/timer.js"></script>
-  <script src="scripts/quickLinks.js"></script>
-  <script src="scripts/backgroundpref.js"></script>
+    <!-- bg modal -->
+    <div class="modal bgmodal fade" id="bgModal" tabindex="-1" aria-labelledby="bgModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content dark-bg white-text">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal">choose a category</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>double click the title to view its images.</p>
+                    <div id="backgroundMenu" class="backgroundMenu">
+                        <div ID="favoriteSlider">
+                            <div class="menuText">favorites</div>
+                            <label class="switch">
+                                <input type="checkbox" ID="favSwitch">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="h-spacer"></div>
+                            <span> favourites </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <script src="scripts/weather.js"></script>
-  <script src="scripts/cursor.js"></script>
-  <script src="scripts/prefImg.js"></script>
+    <!-- Cursor modal -->
+    <div class="modal fade" id="mouseModal" tabindex="-1" aria-labelledby="mouseModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content dark-bg">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="settingsModalLabel">cursor settings</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="imageOptions"></div>
+                    <!-- Cursor size slider -->
+                    <div id="cursorSizeSlider">
+                        <label for="cursorSize">Cursor size:</label>
+                        <br>
+                        <input type="range" class="rangeSlider" id="cursorSize" name="cursorSize" min="16" max="64"
+                            step="2">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Bar modal -->
+    <div class="modal fade" id="rightModal" tabindex="-1" aria-labelledby="rightModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content dark-bg">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="settingsModalLabel">right bar configurations</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="prefInfo">
+                        <!-- quicklinks option -->
+                        <label class="switch">
+                            <input type='checkbox' class="hideshow" id='hideshow' data-target="links" checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">quicklinks</span>
+                        <br>
+                        <!-- avatar option -->
+                        <label class="switch">
+                            <input type='checkbox' class="hideshow" id='hideshow' data-target="avatars" checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">avatar</span>
+
+                        <br>
+                        <!-- Weather option -->
+                        <label class="switch">
+                            <input type='checkbox' class='hideshow weatherswitch' id='hideshow1'
+                                data-target="weather-target" checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">weather</span>
+
+                        <br>
+                        <!-- mindfulness option -->
+                        <label class="switch">
+                            <input type='checkbox' class='hideshow breatheswitch' id='hideshow2' data-target="breathe"
+                                checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">mindfulness</span>
+
+                        <br>
+                        <!-- pomo option -->
+                        <label class="switch">
+                            <input type='checkbox' class='hideshow pomoswitch' id='hideshow4' data-target="content2"
+                                checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">pomodoro</span>
+
+                        <br>
+                        <!-- notes option -->
+                        <label class="switch">
+                            <input type='checkbox' class='hideshow notesswitch' id='hideshow3' data-target="notes"
+                                checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">notes</span>
+
+                        <br>
+
+                        <!-- Music option -->
+                        <!-- <div class="hideshow3wrapper" id="hideshow3wrapper"> -->
+                        <label class="switch">
+                            <input type='checkbox' class="hideshow" id='hideshow3' data-target="content3" checked>
+                            <span class="slider round"></span>
+                        </label><span style="padding-left: 15px;">music</span>
+
+                        <!-- </div> -->
+
+                        <!-- <div class="break"/> -->
+                        <!-- test -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dateWrapper" ID="dateWrapper">
+        <h3 class="dateDisplay" ID="dateDisplay"></h3>
+        <!-- <div class="pa" ID="pa"></div> -->
+    </div>
+    <!-- time widget -->
+    <div class="timeWrapper" ID="timeWrapper">
+        <h1 class="time" ID="time"></h1>
+    </div>
+
+
+    <!-- info widget -->
+    <div class="infoWrapper" ID="infoWrapper">
+        <div class="info" ID="info"></div>
+    </div>
+
+    <!-- search bar widget -->
+    <div class="searchWrapper" ID="searchWrapper">
+        <div class="searchDiv" ID="searchDiv"></div>
+        <form id=search action="https://www.google.com/search" method="get">
+            <input id="searchInput" class="search" data-placeholder="Google Search" type="search" name="q"
+                autocomplete="off" />
+            <input type="submit" style="display: none;" />
+        </form>
+        <div class="btn-accent1" id="searchChange">
+            <i class="material-icons">swap_vert</i>
+        </div>
+
+    </div>
+
+    <!-- todo list widget -->
+    <div class="todoWrapper" ID="todoWrapper">
+        <div class="todoHover">
+            <div ID="todoDiv" class="header">
+                <h3>todo list</h3>
+            </div>
+            <ul ID="myUL">
+            </ul>
+            <input class="todoInput" autocomplete="off" type="text" id="todoInput" style="display: none;"
+                placeholder="New Item . . ." />
+        </div>
+    </div>
+
+    <!-- rightMenu side panel -->
+    <div ID="rightMenus">
+        <div id="menuText" class="top-space">
+            <div class="widget-container">
+                <div class="large-widget" id="links">
+                    <div class="link-box dark-bg">
+                        <div id="linksTitle">
+                            Links
+                            <div class="btn-group">
+                                <div class="btn btn-clear" id="add-link-btn">
+                                    <i class="material-icons" id="add-cancel-icon">add</i>
+                                </div>
+                                <div class="btn btn-clear" id="save-link-btn" style="display: none;">
+                                    <i class="material-icons" id="save-link-icon">check</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="link-form" style="display: none;">
+
+                            <label for="quick-name">Name</label>
+                            <input type="text" id="quick-name">
+                            <br>
+                            <label for="link-url">URL</label>
+                            <input type="url" id="link-url">
+                            <br>
+                        </div>
+                        <ul id="link-list"></ul>
+                    </div>
+                </div>
+
+                <div class="widget-row">
+
+                    <!-- Avatar widget -->
+                    <div class="small-widget" id="avatars">
+                        <div class="avatar-box">
+                            <center>
+                                <img class="avatar-img" src="icons/avatars/tot.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/tot2.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/tot3.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/chi.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/ponyo1.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/chi2.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/kiki.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/cal.gif" width="120" />
+                                <img class="avatar-img" src="icons/avatars/sop.gif" width="120" />
+                        </div>
+                        <div class="btn-toolbar avatar-toolbar" role="toolbar" aria-label="avatar controls">
+                            <div class="btn-group mr-2 avatar-ctrls dark-bg-hoverShow" role="group"
+                                aria-label="Previous and next buttons">
+                                <div type="button" class="btn avatar-ctrl" id="prev-btn">
+                                    <i class="material-icons md-14">
+                                        expand_less
+                                    </i>
+                                </div>
+                                <div type="button" class="btn avatar-ctrl" id="next-btn">
+                                    <i class="material-icons md-14">
+                                        expand_more
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Weather -->
+                    <div class="small-widget" id="weather-target">
+                        <div class="weather-box dark-bg">
+                            <div class="weather-icon"><img src="icons/heenLoad.gif" width="50" /></div>
+                            <div id="weather" class="weather-info"></div>
+                            <h2 id="temperature" class="weather-info weather-temp"></h2>
+                            <p id="description" class="weather-info"></p>
+                            <p id="location" class="weather-info"></p>
+                            <div id="ico" class="weather-info"></div>
+                        </div>
+
+                    </div>
+                    <!-- Breathe -->
+                    <div class="small-widget" id="breathe">
+                        <div class="breathe-box">
+                            <img class="breathe-box1" src="icons/breathe/breathe2.gif" width="100%" />
+                            <img class="breathe-box2" src="icons/breathe/breathe1.gif" width="100%" />
+                            <img class="breathe-box2" src="icons/breathe/breathe2.gif" width="100%" />
+                            <img class="breathe-box2" src="icons/breathe/breathe3.gif" width="100%" />
+                            <img class="breathe-box2" src="icons/breathe/breathe4.gif" width="100%" />
+                            <img class="breathe-box3" src="icons/breathe/breathe5.gif" width="100%" />
+                        </div>
+                    </div>
+
+                    <!-- Notes widget -->
+                    <div class="small-widget" id="notes">
+                        <div class="notes-box">
+                            <textarea id="notes-input" placeholder="type notes here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pomodoro Timer widget -->
+                <div class="large-widget" id="content2">
+                    <div class="timer-container">
+                        <div class="overlay"></div>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <h1 id="timer" class="timer-display timer-text">25:00</h1>
+                        <div class="timer-controls">
+                            <div type="button" class="pause-btn btn btn-control">
+                                <i class="material-icons md-25" id="playpause">play_arrow </i>
+                            </div>
+                        </div>
+                        <div class="timer-controls">
+                            <div class="btn btn-accent2" id="study-btn">Study</div>
+                            <div class="btn btn-accent2" id="break-btn">Break</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- </div> -->
+                <div class="large-widget" id="content3">
+                    <div class="music-box">
+
+                        <div class="choicebtns">
+                            <!-- Music selection buttons -->
+                            <div class="grid-btn float-right">
+                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                    <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
+                                        <button role="button" class="btn btn-outline-dark music-btn"
+                                            data-music="one">lofi</button>
+                                        <button role="button" class="btn btn-outline-dark music-btn"
+                                            data-music="two">synthwave</button>
+                                        <button role="button" class="btn btn-outline-dark music-btn"
+                                            data-music="three">asian lofi</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="grid-btn float-right">
+                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups"></div>
+                                <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
+                                    <button role="button" class="btn btn-outline-dark music-btn"
+                                        data-music="four">gentle
+                                        rain</button>
+                                    <button role="button" class="btn btn-outline-dark music-btn" data-music="five">dark
+                                        ambient</button>
+                                    <button role="button" class="btn btn-outline-dark music-btn"
+                                        data-music="six">piano</button>
+                                    <!-- <button role="button" class="btn btn-outline-dark music-btn"
+                                        data-music="seven">HMC</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Music player sections -->
+                    <div id="yt-box">
+                        <div class="music-player" id="one">
+                            <iframe width="100%" src="https://www.youtube.com/embed/jfKfPfyJRdk?&" title="Lofi girl"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="music-player" id="two">
+                            <iframe width="100%" src="https://www.youtube.com/embed/4xDzrJKXOOY"
+                                title="synthwave lofi girl" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="music-player" id="three">
+                            <iframe width="100%" src="https://www.youtube.com/embed/Na0w3Mz46GA"
+                                title="asian lofi beats" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="music-player" id="four">
+                            <iframe width="100%" src="https://www.youtube.com/embed/-OekvEFm1lo"
+                                title="gentle rain lofi girl" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="music-player" id="five">
+                            <iframe width="100%" src="https://www.youtube.com/embed/S_MOd40zlYU"
+                                title="dark ambient lofi boy" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="music-player" id="six">
+                            <iframe width="100%" src="https://www.youtube.com/embed/TtkFsfOP9QI" title="piano lofi girl"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <!-- <div class="music-player" id="seven">
+                                <iframe width="100%" src="https://www.youtube.com/embed/OE7u1IJzac4"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </div> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="break"></div>
+
+            <div class="large-widget">
+                <div type="button" class="btn edit-button" data-bs-toggle="modal" data-bs-target="#rightModal">
+                    <i class="material-icons md-25">settings</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/moment.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery-confirm.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/rightbar.js"></script>
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/quickLinks.js"></script>
+    <script src="scripts/backgroundpref.js"></script>
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/cursor.js"></script>
+    <script src="scripts/prefImg.js"></script>
 </body>
 
 </html>
