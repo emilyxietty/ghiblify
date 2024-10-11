@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ghiblify - new tab",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "short_name": "ghiblify",
   "options_page": "options.html",
   "description": "Add some magic into your everyday life. Photos sourced from the studio ghibli website, free for personal use.",
