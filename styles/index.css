@@ -753,7 +753,6 @@ input:checked+.slider:before {
     --b: var(--dot);
 }
 
-/* effect rangesliders */
 .slidecontainer {
     margin-left: auto;
     margin-right: auto;
@@ -768,7 +767,6 @@ input:checked+.slider:before {
     height: 4px;
     border-radius: 4px;
     background: rgba(150, 210, 244, 0.7);
-    /* background: #2196F3; */
     outline: none;
     -webkit-transition: .2s;
     transition: opacity .2s;
