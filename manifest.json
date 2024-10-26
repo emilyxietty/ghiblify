@@ -16,5 +16,11 @@
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
-  }
+  },
+  "host_permissions": [
+    "https://api.openweathermap.org/*",
+    "https://www.youtube.com/*",
+    "https://www.google.com/",
+    "http://fonts.googleapis.com/*"
+  ]
 }

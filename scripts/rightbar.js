@@ -68,7 +68,6 @@ function updateAvatarDisplay() {
       $(this).slideUp("fast");
     }
   });
-  //   $('#avatar-counter').text(`${currentAvatar + 1}/${maxAvatar + 1}`);
 }
 
 jQuery(document).ready(function () {
@@ -77,7 +76,6 @@ jQuery(document).ready(function () {
 
   toggleElements.forEach(function (element) {
     const targetId = element.dataset.target;
-    // const targetElement = document.getElementById(targetId);
     const isChecked = localStorage.getItem(targetId) === "true";
 
     element.checked = isChecked;
@@ -102,7 +100,6 @@ jQuery(document).ready(function () {
   const breatheBox = document.querySelector(".breathe-box");
   const images = breatheBox.querySelectorAll("img");
   let currentBreatheIndex = 0;
-  // $('.breathe-box img:not(:first-child)').hide();
 
   breatheBox.addEventListener("click", () => {
     $(images[currentBreatheIndex]).fadeOut(200, function () {

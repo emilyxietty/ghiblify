@@ -1,19 +1,17 @@
 <!-- immense credit to suitangi https://suitangi.github.io/Minimal-Newtab/ - using minimal tab as basis for this extension -->
 <!DOCTYPE html>
 <html>
+
 <!-- head, scripts and fonts -->
 
 <head Set-Cookie: mycookie=myvalue; SameSite=Strict;>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com">
 
     <title>New Tab</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/jquery-confirm.min.css">
     <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
@@ -24,9 +22,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
 
 </head>
@@ -40,9 +35,6 @@
             <source src="" type="video/mp4">
         </video>
     </div>
-
-
-
 
     <div ID="menu">
         <div class="sliderWrapper">
@@ -246,16 +238,10 @@
                         <br>
 
                         <!-- Music option -->
-                        <!-- <div class="hideshow3wrapper" id="hideshow3wrapper"> -->
                         <label class="switch">
                             <input type='checkbox' class="hideshow" id='hideshow3' data-target="content3" checked>
                             <span class="slider round"></span>
                         </label><span style="padding-left: 15px;">music</span>
-
-                        <!-- </div> -->
-
-                        <!-- <div class="break"/> -->
-                        <!-- test -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -267,7 +253,6 @@
 
     <div class="dateWrapper" ID="dateWrapper">
         <h3 class="dateDisplay" ID="dateDisplay"></h3>
-        <!-- <div class="pa" ID="pa"></div> -->
     </div>
     <!-- time widget -->
     <div class="timeWrapper" ID="timeWrapper">
@@ -342,16 +327,15 @@
                     <!-- Avatar widget -->
                     <div class="small-widget" id="avatars">
                         <div class="avatar-box">
-                            <center>
-                                <img class="avatar-img" src="icons/avatars/tot.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/tot2.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/tot3.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/chi.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/ponyo1.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/chi2.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/kiki.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/cal.gif" width="120" />
-                                <img class="avatar-img" src="icons/avatars/sop.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/tot.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/tot2.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/tot3.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/chi.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/ponyo1.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/chi2.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/kiki.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/cal.gif" width="120" />
+                            <img class="avatar-img" src="icons/avatars/sop.gif" width="120" />
                         </div>
                         <div class="btn-toolbar avatar-toolbar" role="toolbar" aria-label="avatar controls">
                             <div class="btn-group mr-2 avatar-ctrls dark-bg-hoverShow" role="group"
@@ -452,8 +436,6 @@
                                         ambient</button>
                                     <button role="button" class="btn btn-outline-dark music-btn"
                                         data-music="six">piano</button>
-                                    <!-- <button role="button" class="btn btn-outline-dark music-btn"
-                                        data-music="seven">HMC</button> -->
                                 </div>
                             </div>
                         </div>
@@ -490,11 +472,6 @@
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                         </div>
-                        <!-- <div class="music-player" id="seven">
-                                <iframe width="100%" src="https://www.youtube.com/embed/OE7u1IJzac4"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                            </div> -->
                     </div>
                 </div>
 
@@ -521,7 +498,6 @@
     <script src="scripts/timer.js"></script>
     <script src="scripts/quickLinks.js"></script>
     <script src="scripts/backgroundpref.js"></script>
-
     <script src="scripts/weather.js"></script>
     <script src="scripts/cursor.js"></script>
     <script src="scripts/prefImg.js"></script>

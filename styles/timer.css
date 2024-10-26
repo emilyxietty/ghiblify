@@ -1,12 +1,8 @@
 .timer-container {
     position: relative;
-    /* background-image:url(/icons/spirited1.gif); */
-    background-image:url(/icons/break/break1.png);
-    background-size:cover;
-    /* background-position: center center; */
+    background-image: url(/icons/break/break1.png);
+    background-size: cover;
     background-position: left bottom;
-
-    /* filter: brightness(60%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,14 +14,14 @@
     overflow: hidden;
     padding: 20px;
     position: relative;
-  }
+}
 
-  .timer-container > * {
+.timer-container>* {
     position: relative;
     z-index: 2;
-  }
+}
 
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,89 +29,71 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
-  }  
-  
-  .progress-bar {
-    /* margin-top: 10%; */
-    /* margin-bottom: 10%; */
-    
+}
+
+.progress-bar {
     position: absolute;
     height: 5px;
     border-radius: 5px;
     top: 0;
-    left:10px;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+    left: 10px;
     width: 80%;
     background-color: #465994;
     width: 0%;
     transition: width 1.5s ease-out;
-  }
-  .progress-container {
-    width: 100%;
-    /* margin: auto; */
+}
 
-  }
-  
-  
-  
-  .timer-display {
-    margin:auto;
-    /* position: absolute; */
+.progress-container {
+    width: 100%;
+
+}
+
+.timer-display {
+    margin: auto;
     top: 0;
-    padding-top:10px;
-    padding-bottom:10px;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 40px;
     line-height: 20px;
-    /* font-family: Arial, sans-serif; */
     font-weight: bold;
     color: white;
-  }
-  
-  .timer-controls {
+}
+
+.timer-controls {
     display: flex;
     align-items: center;
-    /* margin-top: 20px; */
-  }
-  
-  .timer-controls label {
+}
+
+.timer-controls label {
     margin-right: 10px;
-  }
-  
-  .timer-controls input[type="number"] {
+}
+
+.timer-controls input[type="number"] {
     width: 40px;
     margin-right: 10px;
-  }
-
-
-  .btn-control {
-    background-color: transparent;
-    color:white;
-    padding:0;
-    padding-left:3px;
-    padding-right:3px;
-    /* outline:none; */
-  }
-  
-  .btn-control:focus {
-    outline: none;
-  }
-  .btn-control:active {
-outline: none;
-/* border: none; */
 }
-    
-  /* .timer-text {
-    font-size:30px;
-  } */
 
 
-  #study-btn, #break-btn {
+.btn-control {
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.btn-control:focus {
+    outline: none;
+}
+
+.btn-control:active {
+    outline: none;
+}
+
+#study-btn,
+#break-btn {
     margin-left: 5px;
-    margin-right:5px;
-    /* height: 20px; */
+    margin-right: 5px;
     color: white;
     font-size: 10px;
-  }
+}
