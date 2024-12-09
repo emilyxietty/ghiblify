@@ -167,19 +167,21 @@ function dragElement(elmnt) {
     const widgetPos = elmnt.getBoundingClientRect();
     const widgetWidth = widgetPos.width;
 
-    if (widgetPos.left + widgetWidth > (3 * ww) / 4) {
-      elmnt.style.textAlign = "right";
-      elmnt.style.alignItems = "right";
-      elmnt.style.justifyContent = "right";
-    } else if (widgetPos.left + widgetWidth > (2 * ww) / 4) {
-      elmnt.style.textAlign = "center";
-      elmnt.style.alignItems = "center";
-      elmnt.style.justifyContent = "center";
-    } else {
-      elmnt.style.textAlign = "left";
-      elmnt.style.justifyContent = "left";
+    if (elmnt.id !== "todoWrapper") {
+      if (widgetPos.left + widgetWidth > (3 * ww) / 4) {
+        elmnt.style.textAlign = "right";
+        elmnt.style.alignItems = "right";
+        elmnt.style.justifyContent = "right";
+      } else if (widgetPos.left + widgetWidth > (2 * ww) / 4) {
+        elmnt.style.textAlign = "center";
+        elmnt.style.alignItems = "center";
+        elmnt.style.justifyContent = "center";
+      } else {
+        elmnt.style.textAlign = "left";
+        elmnt.style.justifyContent = "left";
 
-      elmnt.style.alignItems = "left";
+        elmnt.style.alignItems = "left";
+      }
     }
   }
 
@@ -1031,43 +1033,42 @@ function updateRepeat() {
   }
 }
 
-//loads a random background
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch the background JSON data
+  fetch("path/to/background.json")
+    .then((response) => response.json())
+    .then((backJson) => loadBackground(backJson))
+    .catch((error) => console.error("Error loading background.json:", error));
+});
+
 function loadBackground(backJson) {
   console.log("Loaded background.json:");
   console.log(backJson.sources);
   window.newTab.backlist = [];
 
-  //loads the background info panel data
+  // Load the background info panel data
   window.newTab.infoDisplay = backJson.info;
   if (backJson.info_title) {
-    infoTitle = backJson.info_title;
+    const infoTitle = backJson.info_title;
     $("#infoMenuText").text(infoTitle);
     $("#infoMenuItem").attr("data", "Toggles the " + infoTitle);
   }
 
-  //loads the support link
-  if (backJson.support_link) {
-    window.newTab.support_link = backJson.support_link;
-  } else {
-    window.newTab.support_link = "https://emilyxietty.github.io/";
-  }
+  // Load the support link
+  window.newTab.support_link =
+    backJson.support_link || "https://emilyxietty.github.io/";
 
-  //loads the support link
-  if (backJson.report_embed) {
-    window.newTab.report_embed = backJson.report_embed;
-  } else {
-    window.newTab.report_embed = "";
-  }
+  // Load the report embed
+  window.newTab.report_embed = backJson.report_embed || "";
 
-  backList = backJson.sources;
+  const backList = backJson.sources;
   let index = 0;
-  bkMenu = document.getElementById("backgroundMenu");
+  const bkMenu = document.getElementById("backgroundMenu");
 
-  //function to set background
+  // Function to set background
   function setBackground() {
-    // let vid = document.getElementById("backdropvid");
-    let img = document.getElementById("backdropimg");
-    let str = window.newTab.back.link;
+    const img = document.getElementById("backdropimg");
+    const str = window.newTab.back.link;
 
     window.newTab.back.fileType = "image";
     img.src = str;
@@ -1075,16 +1076,14 @@ function loadBackground(backJson) {
     img.onload = function () {
       img.style.opacity = 100;
       $("#progress-line").css("opacity", "0");
-      //to counteract a bug that makes the background start from Bottom
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); // Counteract a bug that makes the background start from bottom
     };
     loadInfo();
   }
 
-  //functional programming (recursive but there shouldn't be many calls)
-  function loadSource(backList) {
-    //end case
-    if (index == backList.length) {
+  // Function to load source
+  function loadSource() {
+    if (index >= backList.length) {
       chrome.storage.local.get(
         {
           lastShown: "",
@@ -1094,16 +1093,14 @@ function loadBackground(backJson) {
           repeat: false,
         },
         function (data) {
-          //set repeat global variable
           window.newTab.avoidRepeat = data.repeat;
 
-          //if none of the sources are selected, use the defualt provided and give warning alert
           if (
-            window.newTab.backlist.length == 0 &&
-            (data.fav_switch == "off" ||
-              (data.fav_switch == "on" && data.fav_list.length == 0))
+            window.newTab.backlist.length === 0 &&
+            (data.fav_switch === "off" ||
+              (data.fav_switch === "on" && data.fav_list.length === 0))
           ) {
-            if (backJson.default != null) {
+            if (backJson.default) {
               window.newTab.back = backJson.default;
               setBackground();
             }
@@ -1125,45 +1122,29 @@ function loadBackground(backJson) {
                 Okay: {
                   text: "Okay",
                   action: function () {
-                    chrome.storage.local.set(
-                      {
-                        fav_switch: "off",
-                      },
-                      function () {}
-                    );
+                    chrome.storage.local.set({ fav_switch: "off" });
                   },
                 },
               },
             });
           } else {
-            //loading ended: choose a random background
-
-            //adds the favorite list to the list of possible
-            if (data.fav_switch == "on") {
+            if (data.fav_switch === "on") {
               window.newTab.backlist.push(...data.fav_list);
             }
 
-            //if not the specific case that user only wants one faved background
             if (
-              !(data.fav_list.length == 1 && window.newTab.backlist.length == 1)
+              !(
+                data.fav_list.length === 1 &&
+                window.newTab.backlist.length === 1
+              )
             ) {
-              //then remove the blacklisted backgrounds from the list
-              for (var i = 0; i < window.newTab.backlist.length; i++) {
-                for (var j = 0; j < data.black_list.length; j++) {
-                  if (
-                    window.newTab.backlist[i] !== null &&
-                    window.newTab.backlist[i].link == data.black_list[j]
-                  ) {
-                    window.newTab.backlist.splice(i, 1);
-                    i--;
-                  }
-                }
-              }
+              window.newTab.backlist = window.newTab.backlist.filter(
+                (item) => !data.black_list.includes(item.link)
+              );
             }
 
-            // problematic user removed all source-selected backgrounds
-            if (window.newTab.backlist.length == 0) {
-              if (backJson.default != null) {
+            if (window.newTab.backlist.length === 0) {
+              if (backJson.default) {
                 window.newTab.back = backJson.default;
                 setBackground();
               }
@@ -1187,14 +1168,9 @@ function loadBackground(backJson) {
                     btnClass: "btn-red",
                     keys: ["enter"],
                     action: function () {
-                      chrome.storage.local.set(
-                        {
-                          black_list: [],
-                        },
-                        function () {
-                          location.reload();
-                        }
-                      );
+                      chrome.storage.local.set({ black_list: [] }, function () {
+                        location.reload();
+                      });
                     },
                   },
                   cancel: function () {},
@@ -1202,130 +1178,105 @@ function loadBackground(backJson) {
               });
               loadInfo();
             } else {
-              // remove the last shown if there is more than one
               if (
                 window.newTab.avoidRepeat &&
-                window.newTab.backlist.length != 1
+                window.newTab.backlist.length !== 1
               ) {
-                for (var i = 0; i < window.newTab.backlist.length; i++) {
-                  if (
-                    window.newTab.backlist[i] != null &&
-                    window.newTab.backlist[i].link == data.lastShown
-                  ) {
-                    window.newTab.backlist.splice(i, 1);
-                    i--;
-                  }
-                }
+                window.newTab.backlist = window.newTab.backlist.filter(
+                  (item) => item.link !== data.lastShown
+                );
               }
 
-              //get the random image number
-              let imn = Math.floor(
+              const imn = Math.floor(
                 Math.random() * window.newTab.backlist.length
               );
               window.newTab.back = window.newTab.backlist[imn];
               setBackground();
 
-              //save the last shown in chrome
-              chrome.storage.local.set(
-                {
-                  lastShown: window.newTab.backlist[imn].link,
-                },
-                function () {}
-              );
+              chrome.storage.local.set({
+                lastShown: window.newTab.backlist[imn].link,
+              });
 
-              //setting the fav switch and like buttons
-              if (data.fav_switch == "on" && data.fav_list.length > 0) {
+              if (data.fav_switch === "on" && data.fav_list.length > 0) {
                 document.getElementById("favSwitch").checked = true;
               }
 
-              //if the current image is in favorites, make the heart button filled
-              for (var i = 0; i < data.fav_list.length; i++) {
-                if (data.fav_list[i].link == window.newTab.back.link) {
-                  $(".like-button").toggleClass("is-active");
-                  break;
-                }
+              if (
+                data.fav_list.some(
+                  (item) => item.link === window.newTab.back.link
+                )
+              ) {
+                $(".like-button").toggleClass("is-active");
               }
             }
           }
         }
       );
       return;
-    } else {
-      let name = backList[index].name;
-
-      //build the json object to store data
-      obj = {};
-      key = name.split(" ").join("-");
-      obj[key] = "on";
-
-      var itemNode = createHTML('<div class="prefInfo" data="' + '">');
-      var divNode = createHTML(
-        '<div class=" "> <label class="switch"> <input type="checkbox" ID="' +
-          key +
-          '" checked> <span class="slider round"></span> </label>'
-      );
-      var sourceNode = createHTML(
-        '<div class="source-name"><span>' +
-          name +
-          '</span><div class="rightIcon"><i class="material-icons md-14">expand_more</i></div></div>'
-      );
-      var sourceImgs = createHTML('<div class="sourceImgs"></div>');
-
-      var toPushList = backList[index].list;
-      for (var i = 0; i < toPushList.length; i++) {
-        toPushList[i]["source"] = name;
-      }
-
-      itemNode.appendChild(divNode);
-      itemNode.appendChild(sourceNode);
-      itemNode.appendChild(sourceImgs);
-
-      divNode.style.display = "flex";
-      sourceNode.style.display = "flex";
-      sourceNode.style.alignItems = "center";
-      sourceNode.style.flexGrow = "1";
-
-      bkMenu.insertBefore(itemNode, document.getElementById("favoriteSlider"));
-
-      //adding the onClick for the switches
-      document.getElementById(key).parentElement.onclick = function () {
-        checkElement = this.firstElementChild;
-        obj = {};
-        key = checkElement.id;
-        if (checkElement.checked) {
-          checkElement.checked = false;
-          obj[key] = "off";
-          chrome.storage.local.set(obj, function () {});
-        } else {
-          checkElement.checked = true;
-          obj[key] = "on";
-          chrome.storage.local.set(obj, function () {});
-        }
-      };
-
-      chrome.storage.local.get(obj, function (data) {
-        if (data[key] == "off") {
-          document.getElementById(key).checked = false;
-        } else {
-          window.newTab.backlist.push(...toPushList);
-        }
-        index += 1;
-
-        sourceNode.addEventListener("click", function () {
-          var imgs = toPushList.map(function (item) {
-            return '<img class="img-summary" src="' + item.link + '">';
-          });
-          sourceImgs.innerHTML = imgs.join("");
-          sourceImgs.style.display =
-            sourceImgs.style.display === "none" ? "block" : "none";
-        });
-
-        loadSource(backList);
-      });
     }
+
+    const name = backList[index].name;
+    const key = name.split(" ").join("-");
+    const obj = { [key]: "on" };
+
+    const itemNode = createHTML('<div class="prefInfo" data="' + '">');
+    const divNode = createHTML(
+      '<div class=" "> <label class="switch"> <input type="checkbox" ID="' +
+        key +
+        '" checked> <span class="slider round"></span> </label>'
+    );
+    const sourceNode = createHTML(
+      '<div class="source-name"><span>' +
+        name +
+        '</span><div class="rightIcon"><i class="material-icons md-14">expand_more</i></div></div>'
+    );
+    const sourceImgs = createHTML('<div class="sourceImgs"></div>');
+
+    const toPushList = backList[index].list.map((item) => ({
+      ...item,
+      source: name,
+    }));
+
+    itemNode.appendChild(divNode);
+    itemNode.appendChild(sourceNode);
+    itemNode.appendChild(sourceImgs);
+
+    divNode.style.display = "flex";
+    sourceNode.style.display = "flex";
+    sourceNode.style.alignItems = "center";
+    sourceNode.style.flexGrow = "1";
+
+    bkMenu.insertBefore(itemNode, document.getElementById("favoriteSlider"));
+
+    document.getElementById(key).parentElement.onclick = function () {
+      const checkElement = this.firstElementChild;
+      const obj = { [checkElement.id]: checkElement.checked ? "off" : "on" };
+      checkElement.checked = !checkElement.checked;
+      chrome.storage.local.set(obj);
+    };
+
+    chrome.storage.local.get(obj, function (data) {
+      if (data[key] === "off") {
+        document.getElementById(key).checked = false;
+      } else {
+        window.newTab.backlist.push(...toPushList);
+      }
+      index += 1;
+
+      sourceNode.addEventListener("click", function () {
+        const imgs = toPushList
+          .map((item) => '<img class="img-summary" src="' + item.link + '">')
+          .join("");
+        sourceImgs.innerHTML = imgs;
+        sourceImgs.style.display =
+          sourceImgs.style.display === "none" ? "block" : "none";
+      });
+
+      loadSource();
+    });
   }
 
-  loadSource(backList);
+  loadSource();
 }
 
 //function to loadLanguage into UI and strings
